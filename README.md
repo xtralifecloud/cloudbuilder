@@ -1,4 +1,4 @@
-# cloudbuilder
+# CloudBuilder
 Native C++ SDK for Clan of the Cloud
 
 In order to compile, you need the delivery directory. You can obtain it by checking out the cloudbuilder-tools repository and putting it side-by-side with the cloudbuilder repository on your local machine. Compiling all the sub-projects will put their results ready for use in a directory cloudbuilder-tools/../cloudbuilder/delivery.
