@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9BD9C16D90167509E16F0DF9C54C2D2864782700",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9BD9C16D90167509E16F0DF9C54C2D2864782700" : 0,
+    "62DEA8649721FCF351EC88DA34E6F54622B4E6E5" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E69EA572-A21F-4177-AA77-EF969D4BEDDE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9BD9C16D90167509E16F0DF9C54C2D2864782700" : "cloudbuilder\/",
+    "62DEA8649721FCF351EC88DA34E6F54622B4E6E5" : "sources"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CLI",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CLI\/MacOS\/CLI.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/gitlab.clanofthecloud.com:20022\/sdk\/sources.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "62DEA8649721FCF351EC88DA34E6F54622B4E6E5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/clanofthecloud\/cloudbuilder.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9BD9C16D90167509E16F0DF9C54C2D2864782700"
+    }
+  ]
+}

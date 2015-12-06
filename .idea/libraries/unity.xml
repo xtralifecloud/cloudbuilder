@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="unity">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/otherlibs/unity.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

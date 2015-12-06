@@ -1,3 +1,6 @@
+**/.DS_Store
+**/xcuserdata
 delivery
 **/*.sdf
 **/*.opensdf
+build

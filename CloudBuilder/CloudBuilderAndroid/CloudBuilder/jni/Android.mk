@@ -33,7 +33,7 @@ LOCAL_CXXFLAGS		:= -std=c++11
 CLOUDBUILDER_DIR	:= ../../..
 
 LOCAL_C_INCLUDES	:= $(LOCAL_PATH)
-LOCAL_C_INCLUDES 	+=  $(LOCAL_PATH)/../../../../curl-7.23.1/include       \
+LOCAL_C_INCLUDES 	+=  $(LOCAL_PATH)/../../../../delivery/curl/Headers       \
 						$(LOCAL_PATH)/../../../../delivery/openssl/Android/include
 LOCAL_C_INCLUDES 	+=  $(LOCAL_PATH)/$(CLOUDBUILDER_DIR)/Headers			\
 						$(LOCAL_PATH)/$(CLOUDBUILDER_DIR)/sources			\

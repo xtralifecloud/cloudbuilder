@@ -490,7 +490,7 @@
 					"$(inherited)",
 				);
 				HEADER_SEARCH_PATHS = (
-					"../curl-7.23.1/include",
+					../delivery/curl/Headers,
 					sources,
 					../delivery/openssl/iOS/include,
 				);
@@ -517,7 +517,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = (
-					"../curl-7.23.1/include",
+					../delivery/curl/Headers,
 					sources,
 					../delivery/openssl/iOS/include,
 				);
