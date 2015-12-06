@@ -229,7 +229,7 @@ copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../../pthreads-w32-2.9.1/pthreads.2;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../delivery/curl/Headers;../../delivery/pthread/Headers;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -295,7 +295,7 @@ copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../../pthreads-w32-2.9.1/pthreads.2;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../delivery/curl/Headers;../../delivery/pthread/Headers;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -361,7 +361,7 @@ copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../../pthreads-w32-2.9.1/pthreads.2;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../delivery/curl/Headers;../../delivery/pthread/Headers;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;DEBUG;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -429,7 +429,7 @@ copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>../../pthreads-w32-2.9.1/pthreads.2;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../delivery/curl/Headers;../../delivery/pthread/Headers;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;NDEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -495,7 +495,7 @@ copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\vc*.pdb ..\..
 copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
     </PostBuildEvent>
     <ClCompile>
-      <AdditionalIncludeDirectories>../../pthreads-w32-2.9.1/pthreads.2;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../delivery/curl/Headers;../../delivery/pthread/Headers;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;NDEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
