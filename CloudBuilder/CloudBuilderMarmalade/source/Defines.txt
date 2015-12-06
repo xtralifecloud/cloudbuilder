@@ -1,0 +1,15 @@
+BUILDING_LIBCURL libcurl option
+CURL_STATICLIB libcurl option
+HTTP_ONLY libcurl option
+CURL_DISABLE_RTSP libcurl option
+CURL_DISABLE_GOPHER libcurl option
+CURL_DISABLE_POP3 libcurl option
+CURL_DISABLE_DICT libcurl option
+CURL_DISABLE_FILE  libcurl option
+CURL_DISABLE_FTP  libcurl option
+CURL_DISABLE_IMAP  libcurl option
+CURL_DISABLE_LDAP libcurl option
+CURL_DISABLE_SMTP  libcurl option
+CURL_DISABLE_TELNET  libcurl option
+CURL_DISABLE_TFTP  libcurl option
+USE_CYASSL  libcurl option

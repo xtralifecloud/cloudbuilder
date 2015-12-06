@@ -1,0 +1,8 @@
+setup
+# {"$._error" : 0 }
+
+loginwith facebook
+# {"$._error" : 0 }
+
+publishon facebook
+# {"$._error" : 0 }

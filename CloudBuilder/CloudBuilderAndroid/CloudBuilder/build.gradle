@@ -1,0 +1,97 @@
+apply plugin: 'com.android.library'
+import org.apache.tools.ant.taskdefs.condition.Os
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile fileTree(dir: 'libs', include: '*.jar')
+	compile fileTree(dir: 'otherlibs', include: '*.jar')
+//  Facebook SDK and GooglePlayServices lib are not needed anymore
+//  since we do not manage social network authentication
+//	Hack for errors such as: com.android.dex.DexException: Multiple dex files define………
+//	compile('com.facebook.android:facebook-android-sdk:3.23.1') {
+//		exclude module: 'support-v4'
+// }
+//	compile project(':delivery:Google:Android:gcm')
+//	compile project(':delivery:Google:Android:google-play-services_lib')
+	compile 'com.google.android.gms:play-services-gcm:7.5.0'
+}
+
+android {
+	compileSdkVersion 20
+	buildToolsVersion "20.0.0"
+
+	sourceSets {
+		main {
+			manifest.srcFile 'AndroidManifest.xml'
+			java {
+				srcDir '../../sources/Android/Java'
+			}
+			resources {
+				srcDir 'src'
+			}
+			aidl.srcDirs = ['../../sources/Android/Aidl']
+			renderscript.srcDirs = ['src']
+			res.srcDirs = ['res']
+			assets.srcDirs = ['assets']
+			jniLibs.srcDir 'src/main/libs'
+			jni.srcDirs = [] //disable automatic ndk-build call
+		}
+
+		// Move the tests to tests/java, tests/res, etc...
+		instrumentTest.setRoot('tests')
+
+		// Move the build types to build-types/<type>
+		// For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+		// This moves them out of them default location under src/<type>/... which would
+		// conflict with src/ being used by the main source set.
+		// Adding new build types or product flavors should be accompanied
+		// by a similar customization.
+		debug.setRoot('build-types/debug')
+		release.setRoot('build-types/release')
+	}
+
+	// call regular ndk-build(.cmd) script from app directory
+	task ndkBuild(type: Exec) {
+		if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+			commandLine 'ndk-build.cmd', '-C', file('jni').absolutePath
+		} else {
+			commandLine '/opt/android-ndk/ndk-build', '-C', file('jni').absolutePath
+		}
+	}
+
+	task zipAndCopyNativeLibs(type: Copy) {
+		mustRunAfter ndkBuild
+		from 'libs'
+		into('../../../delivery/CloudBuilder/Android/prebuilt')
+	}
+
+	task copyHeaders(type: Copy) {
+		mustRunAfter ndkBuild
+		from '../../Headers'
+		into '../../../delivery/CloudBuilder/Headers'
+	}
+
+	tasks.withType(JavaCompile) { compileTask ->
+		compileTask.dependsOn ndkBuild
+		compileTask.dependsOn zipAndCopyNativeLibs
+		compileTask.dependsOn copyHeaders
+	}
+
+	def publish = project.tasks.create("publishAll")
+	android.libraryVariants.all { variant ->
+//		variant.outputs.each { output ->
+			def task = project.tasks.create("publish${variant.name}Apk", Copy)
+//			task.from(output.outputFile)
+			task.from('build/outputs/aar/CloudBuilder-release.aar')
+			task.into('../../../delivery/CloudBuilder/Android/libs')
+
+			task.dependsOn variant.assemble
+			publish.dependsOn task
+//		}
+	}
+
+	build.dependsOn 'publishAll'
+}

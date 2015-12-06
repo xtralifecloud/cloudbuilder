@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CloudBuilder" default="CopyFiles" basedir=".">
+	<target name="CopyFiles">
+	<copy todir="../../../delivery/CloudBuilder/Headers">
+    <fileset dir="../../Headers">
+		<include name="**/*.h"/>
+	</fileset>
+	</copy>
+    <copy file="bin/cloudbuilder.jar" tofile="../../../delivery/CloudBuilder/Android/Cloudbuilder_lib/libs/cloudbuilder.jar"/>
+    <copy file="libs/armeabi/libCloudBuilder.so" tofile="../../../delivery/CloudBuilder/Android/Cloudbuilder_native/libCloudBuilder.so"/>
+  </target>
+</project>

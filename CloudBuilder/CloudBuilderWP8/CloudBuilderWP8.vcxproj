@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6917574b-fba0-49d6-8ef8-5c40621a7b6a}</ProjectGuid>
+    <RootNamespace>CloudBuilderWP8</RootNamespace>
+    <DefaultLanguage>fr-FR</DefaultLanguage>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_USRDLL;__WP8__;CLOUDBUILDERWIN32_EXPORTS;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../delivery/curl/WP8/$(PlatformName)/$(ConfigurationName);../../delivery/cyassl/WP8/$(PlatformName)/$(ConfigurationName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;curl.lib;cyassl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\CloudBuilder
+mkdir ..\..\delivery\CloudBuilder\WP8
+mkdir ..\..\delivery\CloudBuilder\WP8\$(PlatformName)\$(Configuration)
+copy $(Configuration)\$(ProjectName)\CloudBuilderWP8.lib ..\..\delivery\CloudBuilder\WP8\$(PlatformName)\$(Configuration)
+copy $(Configuration)\$(ProjectName)\CloudBuilderWP8.dll ..\..\delivery\CloudBuilder\WP8\$(PlatformName)\$(Configuration)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_USRDLL;NDEBUG;__WP8__;CLOUDBUILDERWIN32_EXPORTS;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../delivery/curl/WP8/$(PlatformName)/$(ConfigurationName);../../delivery/cyassl/WP8/$(PlatformName)/$(ConfigurationName)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;curl.lib;cyassl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\CloudBuilder
+mkdir ..\..\delivery\CloudBuilder\WP8
+mkdir ..\..\delivery\CloudBuilder\WP8\$(PlatformName)\$(Configuration)
+copy $(Configuration)\$(ProjectName)\CloudBuilderWP8.lib ..\..\delivery\CloudBuilder\WP8\$(PlatformName)\$(Configuration)
+copy $(Configuration)\$(ProjectName)\CloudBuilderWP8.dll ..\..\delivery\CloudBuilder\WP8\$(PlatformName)\$(Configuration)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_USRDLL;__WP8__;CLOUDBUILDERWIN32_EXPORTS;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../delivery/curl/WP8/$(PlatformName)/$(ConfigurationName);../../delivery/cyassl/WP8/$(PlatformName)/$(ConfigurationName)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;curl.lib;cyassl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\CloudBuilder
+mkdir ..\..\delivery\CloudBuilder\WP8
+mkdir ..\..\delivery\CloudBuilder\WP8\$(PlatformName)\$(Configuration)
+copy $(PlatformName)\$(Configuration)\$(ProjectName)\CloudBuilderWP8.lib ..\..\delivery\CloudBuilder\WP8\$(PlatformName)\$(Configuration)
+copy $(PlatformName)\$(Configuration)\$(ProjectName)\CloudBuilderWP8.dll ..\..\delivery\CloudBuilder\WP8\$(PlatformName)\$(Configuration)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_USRDLL;NDEBUG;__WP8__;CLOUDBUILDERWIN32_EXPORTS;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../delivery/curl/WP8/$(PlatformName)/$(ConfigurationName);../../delivery/cyassl/WP8/$(PlatformName)/$(ConfigurationName)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;curl.lib;cyassl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\CloudBuilder
+mkdir ..\..\delivery\CloudBuilder\WP8
+mkdir ..\..\delivery\CloudBuilder\WP8\$(PlatformName)\$(Configuration)
+copy $(PlatformName)\$(Configuration)\$(ProjectName)\CloudBuilderWP8.lib ..\..\delivery\CloudBuilder\WP8\$(PlatformName)\$(Configuration)
+copy $(PlatformName)\$(Configuration)\$(ProjectName)\CloudBuilderWP8.dll ..\..\delivery\CloudBuilder\WP8\$(PlatformName)\$(Configuration)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Headers\CChallengeManager.h" />
+    <ClInclude Include="..\Headers\CClan.h" />
+    <ClInclude Include="..\Headers\CGameManager.h" />
+    <ClInclude Include="..\Headers\CGooglePlay.h" />
+    <ClInclude Include="..\Headers\CHJSON.h" />
+    <ClInclude Include="..\Headers\CloudBuilder.h" />
+    <ClInclude Include="..\Headers\CMatchManager.h" />
+    <ClInclude Include="..\Headers\CMatchRoom.h" />
+    <ClInclude Include="..\Headers\CNotificationManager.h" />
+    <ClInclude Include="..\Headers\CotCHelpers.h" />
+    <ClInclude Include="..\Headers\CTribeManager.h" />
+    <ClInclude Include="..\Headers\CUserManager.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\sources\aws\aws4c.c" />
+    <ClCompile Include="..\sources\aws\s3.cpp" />
+    <ClCompile Include="..\sources\CCallback.cpp" />
+    <ClCompile Include="..\sources\CClannishRESTproxy.cpp" />
+    <ClCompile Include="..\sources\CClannishS3Proxy.cpp" />
+    <ClCompile Include="..\sources\CCloudSocket.cpp" />
+    <ClCompile Include="..\sources\CHjSON.cpp" />
+    <ClCompile Include="..\sources\cJSON\cJSON.c" />
+    <ClCompile Include="..\sources\CLogger.cpp" />
+    <ClCompile Include="..\sources\CNotificationProxy.cpp" />
+    <ClCompile Include="..\sources\CNotifySocket.cpp" />
+    <ClCompile Include="..\sources\CotCHelpers.cpp" />
+    <ClCompile Include="..\sources\cotc_thread.cpp" />
+    <ClCompile Include="..\sources\CSharedDB.cpp" />
+    <ClCompile Include="..\sources\CSharedDBProxy.cpp" />
+    <ClCompile Include="..\sources\CSharedQueue.cpp" />
+    <ClCompile Include="..\sources\CSharedQueueProxy.cpp" />
+    <ClCompile Include="..\sources\dummyClass.cpp" />
+    <ClCompile Include="..\sources\ErrorStrings.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CChallengeManager.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CClan.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CGameManager.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CGooglePlay.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CMatchManager.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CNotificationManager.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CTribeManager.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CUserManager.cpp" />
+    <ClCompile Include="..\sources\hmac\sha1.c" />
+    <ClCompile Include="..\sources\hmac\sha2.c" />
+    <ClCompile Include="..\sources\idea\idea.cpp" />
+    <ClCompile Include="..\sources\sdb\base64.cpp" />
+    <ClCompile Include="..\sources\sdb\private.cpp" />
+    <ClCompile Include="..\sources\sdb\response.cpp" />
+    <ClCompile Include="..\sources\sdb\sdb.cpp" />
+    <ClCompile Include="..\sources\sdb\util.cpp" />
+    <ClCompile Include="..\sources\sqs\sqs_response.cpp" />
+    <ClCompile Include="..\sources\tinyxml\tinystr.cpp" />
+    <ClCompile Include="..\sources\tinyxml\tinyxml.cpp" />
+    <ClCompile Include="..\sources\tinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="..\sources\tinyxml\tinyxmlparser.cpp" />
+    <ClCompile Include="..\sources\tools\curltool.cpp" />
+    <ClCompile Include="..\sources\Win32\RegisterDevice.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Windows">
+      <IsWinMDFile>true</IsWinMDFile>
+    </Reference>
+    <Reference Include="platform.winmd">
+      <IsWinMDFile>true</IsWinMDFile>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsPhone\v$(TargetPlatformVersion)\Microsoft.Cpp.WindowsPhone.$(TargetPlatformVersion).targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

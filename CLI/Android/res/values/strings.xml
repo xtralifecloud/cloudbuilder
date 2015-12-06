@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CloudBuilder CLI</string>
+    <string name="send">Send</string>
+    
+    <!--  Menu -->
+    <string name="option1">Connect to Local Server SAT</string>
+    <string name="option2">Connect to Local Server FREE</string>
+    <string name="option3">Previous Cmd</string>
+    <string name="option4">Next Cmd</string>
+    <string name="app_fb_id" translatable="false">607231959287574</string>
+</resources>

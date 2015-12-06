@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<trgtproject id="com.qnx.tools.ide.target.core.target">
+<data>
+<item id="com.qnx.tools.ide.target">
+<qconnport value="8000"/>
+<qconnguid value="b345ea00-4656-405a-8c37-4c35d29174dc"/>
+<qconnostype value="nto"/>
+<qconnhostname value="169.254.0.1"/>
+<project>
+<name value="usb"/>
+</project>
+<targettmpdir value="/var/tmp"/>
+</item>
+</data>
+</trgtproject>

@@ -1,0 +1,52 @@
+setup cloudbuilder local-parallels
+# {"$._error" : 0 }
+
+resumesession &gamer_id &gamer_secret
+# {"$._httpcode" : 200, "gamer_id" : "&gamer_id" }
+
+-- We need to have a few achievements in the DB to perform that, it will fail here if not
+achievements
+# {"achievements.testOnce.config.maxValue": 1000, "achievements.testOnce.config.unit": "score", "achievements.testOnce.gameData.hidden": true}
+
+-- First reset the state of achievements
+transaction {"score": "-auto"}
+# {"balance.score": 0}
+resetachs
+# {"$._httpcode": 200}
+
+-- The trigger is at 1000, so first issue a transaction for 500, it shouldn't return any completed achievements
+transaction {"score": 500}
+# {"balance.score": 500, "achievements": {"empty": true}}
+
+-- The second should trigger the achievement
+transaction {"score": 500}
+# {"balance.score": 1000, "achievements.testOnce.progress": 1}
+
+-- But not further ones
+transaction {"score": 500}
+# {"balance.score": 1500, "achievements": {"empty": true}}
+
+-- Now let's test gamer data
+achgamerdata testOnce {"test": "value", "other": "key"}
+# {"achievement.gamerData.test": "value", "achievement.gamerData.other": "key"}
+
+-- Earn achievement should not only post data, but also gamer data which we can fetch in a second time
+-- Also check that modifying the gamer data doesn't overwrite previous data (unless the same key, here 'other' is passed)
+earnach testOnce 123 {"sample": "value", "other": "modifiedKey"}
+# {"balance.testOnce": {"exist": true}}
+achievements
+# {"achievements.testOnce.gamerData.sample": "value", "achievements.testOnce.gamerData.test": "value", "achievements.testOnce.gamerData.other": "modifiedKey"}
+
+-- Check that the transaction v1 still works and doesn't check the achievements like v2
+transaction {"score": "-auto"}
+# {"balance.score": 0}
+resetachs
+# {"$._httpcode": 200}
+transactionv1 {"score": 1000}
+# {"score": 1000}
+-- Should still trigger the achievement (silently)
+achievements
+# {"achievements.testOnce.progress": 1}
+
+logout
+# {"$._httpcode" : 200 }

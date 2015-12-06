@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\tools">
+      <UniqueIdentifier>{7d7ccb55-f8a2-4812-baf6-7bbd50167580}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cJSON">
+      <UniqueIdentifier>{c4737fec-5f04-48f4-a652-98eb7c26d263}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sdb">
+      <UniqueIdentifier>{333b6ab3-8c3d-429a-a464-ab76b4cf31a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HighLevel">
+      <UniqueIdentifier>{90caf600-d85c-45ec-95c0-98897ab4832c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CloudBuilder">
+      <UniqueIdentifier>{57649ae4-e5b1-4ad9-92f2-b60d674f4e98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Win32">
+      <UniqueIdentifier>{934d2b11-e53f-41a4-8247-6755808a57ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files\optional">
+      <UniqueIdentifier>{bd6c1344-ae84-4051-a629-0524fdd76105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dummy">
+      <UniqueIdentifier>{a55f9ea0-8a92-4cbd-bbd4-1fd1a236c389}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\sources\CCallback.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\CHjSON.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\cotc_thread.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\ErrorStrings.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\tools\curltool.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\cJSON\cJSON.c">
+      <Filter>Source Files\cJSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\sdb\base64.cpp">
+      <Filter>Source Files\sdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\sdb\util.cpp">
+      <Filter>Source Files\sdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CClan.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CGameManager.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CTribeManager.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CUserManager.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\CotCHelpers.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\Win32\RegisterDevice.cpp">
+      <Filter>Source Files\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\CClannishRESTproxy.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\dummyClass.cpp">
+      <Filter>Source Files\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\tools\helpers.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\Win32\CWindowsFilesystemHandlerImpl.cpp">
+      <Filter>Source Files\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\optional\CStdioBasedFileImpl.cpp">
+      <Filter>Source Files\optional</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CFilesystem.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\tools\ssl_bio.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\dummy\DummyGameCenterHandler.cpp">
+      <Filter>Source Files\dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CMatchManager.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CStoreManager.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CIndexManager.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\sources\CloudBuilder_private.h">
+      <Filter>CloudBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\cotc_thread.h">
+      <Filter>CloudBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\tools\curltool.h">
+      <Filter>Source Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\cJSON\cJSON.h">
+      <Filter>Source Files\cJSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\sdb\base64.h">
+      <Filter>Source Files\sdb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\sdb\util.h">
+      <Filter>Source Files\sdb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CHJSON.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CloudBuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CotCHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CClan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CGameManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CTribeManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CUserManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\CClannishRESTProxy.h">
+      <Filter>CloudBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\tools\helpers.h">
+      <Filter>Source Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\optional\CStdioBasedFileImpl.h">
+      <Filter>Source Files\optional</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CFilesystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CDelegate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CFastDelegate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\CCallback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CMatchManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CStoreManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\CStoreGlue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CIndexManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CHttpFailureEventArgs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

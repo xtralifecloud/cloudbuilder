@@ -1,0 +1,120 @@
+
+resumesession &gamer_id &gamer_secret
+# {"$._httpcode" : 200, "gamer_id" : "&gamer_id" }
+
+setprofile {"addr1" : "truc"}
+# {"$._httpcode" : 200, "done" : 1, "profile.addr1" : "truc" }
+
+profile
+# {"$._httpcode" : 200, "addr1" : "truc" }
+
+setprofile {"addr1" : "test"}
+# {"$._httpcode" : 200, "done" : 1, "profile.addr1" : "test" }
+
+userexist &networkid anonymous
+# {"$._httpcode" : 200, "profile.displayName":	{ "exist" : true } }
+
+listusers Guest 3 0
+# {"$._httpcode" : 200, "count" : {"gt" : 1 } }
+
+score "testboard" 140 "with Donald"
+# {"$._httpcode" : 200, "done" : { "in" : [0, 1] } }
+
+highscore "testboard"
+# {"$._httpcode" : 200, "testboard.maxpage" : {"is" : "number"} , "testboard.scores" : {"is" : "array"}}
+
+friendstatus {"id" : "&friend_id", "status": "add", "osn" : {"en": "relation change"}}
+# {"$._httpcode" : 200, "done" : { "in" : [0, 1] } }
+
+friends
+# {"$._httpcode" : 200, "friends" : { "contains" : {"gamer_id": "&friend_id"} } }
+
+friendstatus {"id" : "&friend_id", "status": "blacklist", "osn" : {"en": "relation blacklisted"}}
+# {"$._httpcode" : 200 , "done" : { "in" : [0, 1] }}
+
+blacklist
+# {"$._httpcode" : 200 , "blacklisted" : { "contains" : {"gamer_id": "&friend_id"} } }
+
+friendstatus {"id" : "&friend_id", "status": "forget", "osn" : {"en": "relation reset"}}
+# {"$._httpcode" : 200, "done" : { "in" : [0, 1] } }
+
+friends
+# {"$._httpcode" : 200, "friends" : { "notContains" : {"gamer_id": "&friend_id"} }  }
+
+friends com.clanofthecloud.cloudbuilder.test
+
+transaction {"Candy" : 100} "this is Candy +100"
+# {"$._httpcode" : 200 , "balance.Candy" : { "gt" : 99} }
+
+txhistory {"unit" : "Candy"}
+# {"$._httpcode" : 200 , "history" : {"contains" : { "desc": "this is Candy +100" }} }
+
+balance
+# {"$._httpcode" : 200 , "Candy" : { "gt" : 99} }
+
+transaction {"Cow" : 100} "this is Cow +100" com.clanofthecloud.cloudbuilder.test
+# {"$._httpcode" : 200 , "balance.Cow" : { "gt" : 1} }
+
+balance com.clanofthecloud.cloudbuilder.test
+# {"$._httpcode" : 200 , "Cow" : { "gt" : 1} }
+
+balance
+# {"$._httpcode" : 200 , "Cow" : { "exist" : false} }
+
+setproperties {"level" : 20}
+# {"$._httpcode" : 200, "done" : 1 }
+
+properties
+# {"$._httpcode" : 200, "properties.level" : 20 }
+
+setproperty {"key" : "board", "value": "easy"}
+# {"$._httpcode" : 200, "done" : 1 }
+
+property board
+# {"$._httpcode" : 200, "properties.board" : "easy" }
+
+properties
+# {"$._httpcode" : 200, "properties.level" : 20, "properties.board" : "easy" }
+
+delproperty board
+# {"$._httpcode" : 200, "done" : 1 }
+
+properties
+# {"$._httpcode" : 200 }
+
+godfathercode
+# {"_httpcode" : 200 , "@godfathercode" : { "exist" : true} }
+
+setgodfather &godfatherCode
+# {"_httpcode" : 400, "name": "cantBeSelfGodchild"}
+
+kvwrite * {"test" : 100}
+# {"$._httpcode" : 200, "done" : 1 }
+
+kvread *
+# {"$._httpcode" : 200, "test" : 100 }
+
+kvwrite * {"test" : "hello"} com.clanofthecloud.cloudbuilder.test
+# {"$._httpcode" : 200, "done" : 1 }
+
+kvread * com.clanofthecloud.cloudbuilder.test
+# {"$._httpcode" : 200, "test" : "hello" }
+
+kvwrite * {} com.clanofthecloud.cloudbuilder.test
+# {"$._httpcode" : 200, "done" : 1 }
+
+kvwrite * {}
+# {"$._httpcode" : 200, "done" : 1 }
+
+binwrite binkey 200
+# {"$._httpcode" : 200, "url" : { "exist" : true} }
+
+binread binkey
+# {"$._httpcode" : 200, "url" : { "exist" : true} }
+
+transaction {"death" : 1} "dead again!" private Y
+# {"$._httpcode" : 200 , "balance" : { "exist" : true},  "achievements" : { "exist" : true}}
+
+logout
+# {"$._httpcode" : 200 }
+

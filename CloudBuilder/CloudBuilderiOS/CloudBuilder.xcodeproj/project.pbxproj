@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		172FFF2119D3250D009FC0AD /* CStdioBasedFileImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 172FFF1F19D3250D009FC0AD /* CStdioBasedFileImpl.cpp */; };
+		172FFF2219D3250D009FC0AD /* CStdioBasedFileImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 172FFF2019D3250D009FC0AD /* CStdioBasedFileImpl.h */; };
+		173F86BB1A6D65A100E9DBE6 /* AppStoreHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 173F86B91A6D65A100E9DBE6 /* AppStoreHandler.h */; };
+		173F86BC1A6D65A100E9DBE6 /* AppStoreHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 173F86BA1A6D65A100E9DBE6 /* AppStoreHandler.mm */; };
+		173FFAA21A700792005E4F49 /* CStoreManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 173FFAA11A700792005E4F49 /* CStoreManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1764E3F719F0F94A0073694F /* CMacAndIosFilesystemHandlerImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1764E3F619F0F94A0073694F /* CMacAndIosFilesystemHandlerImpl.mm */; };
+		177B2A921A70070700BC670C /* CStoreGlue.h in Headers */ = {isa = PBXBuildFile; fileRef = 177B2A911A70070700BC670C /* CStoreGlue.h */; };
+		177B2A941A70071700BC670C /* CStoreManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 177B2A931A70071700BC670C /* CStoreManager.cpp */; };
+		177BEDDA19EFCC0900019FB3 /* GameCenterHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 177BEDD819EFCC0900019FB3 /* GameCenterHandler.h */; };
+		177BEDDB19EFCC0900019FB3 /* GameCenterHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 177BEDD919EFCC0900019FB3 /* GameCenterHandler.mm */; };
+		1798C89419CEE4040062644A /* ssl_bio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1798C89319CEE4040062644A /* ssl_bio.cpp */; };
+		179DCB1A1C0EFE2C00DB37EB /* CLogLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = 179DCB191C0EFE2C00DB37EB /* CLogLevel.h */; };
+		17C3E6C81A120DAC001E48DF /* ObjCHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 17C3E6C71A120DAC001E48DF /* ObjCHelpers.h */; };
+		2A05F7161A31D37C00B80C77 /* CMatchManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A05F7151A31D37C00B80C77 /* CMatchManager.cpp */; };
+		2A331CE41BBD0DAE003576EA /* CIndexManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A331CE21BBD0DAE003576EA /* CIndexManager.h */; };
+		2A331CE51BBD0DAE003576EA /* CHttpFailureEventArgs.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A331CE31BBD0DAE003576EA /* CHttpFailureEventArgs.h */; };
+		2A331CE71BBD0DC5003576EA /* CIndexManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A331CE61BBD0DC5003576EA /* CIndexManager.cpp */; };
+		2AD5AF9519BDB12600E3B039 /* CFilesystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AD5AF9219BDB12600E3B039 /* CFilesystem.cpp */; };
+		2AD5AF9C19BDB13C00E3B039 /* CDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AD5AF9819BDB13C00E3B039 /* CDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2AD5AF9D19BDB13C00E3B039 /* CFastDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AD5AF9919BDB13C00E3B039 /* CFastDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2AD5AF9E19BDB13C00E3B039 /* CFilesystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AD5AF9A19BDB13C00E3B039 /* CFilesystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2AD805E61A30B2E6005C9D14 /* CMatchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AD805E51A30B2E6005C9D14 /* CMatchManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2AF5CA4F19AF2D7700E0B636 /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AF5CA4D19AF2D7700E0B636 /* helpers.cpp */; };
+		2AF5CA5019AF2D7700E0B636 /* helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AF5CA4E19AF2D7700E0B636 /* helpers.h */; };
+		3710F7E215340B950091AE67 /* CClan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3710F7DD153408530091AE67 /* CClan.cpp */; };
+		3730231C1447F5060045E9F4 /* CCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3730231B1447F5060045E9F4 /* CCallback.cpp */; };
+		3734B499142F255200B72758 /* CloudBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3728AEC9142B670F0066C4D2 /* CloudBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3734B4B4142F25A200B72758 /* CloudBuilder_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 37D4AB7714286C15005CFE23 /* CloudBuilder_private.h */; };
+		3734B4BF142F25A200B72758 /* ErrorStrings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37A283B6142C5A83003E2D74 /* ErrorStrings.cpp */; };
+		3734B4C0142F25A200B72758 /* cotc_thread.h in Headers */ = {isa = PBXBuildFile; fileRef = 37466CF4142CC59600A23AE5 /* cotc_thread.h */; };
+		3734B4C1142F25A200B72758 /* cotc_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37466CF6142CC5DE00A23AE5 /* cotc_thread.cpp */; };
+		3750FC2A1549AD4C006F8ECB /* CUserManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3750FC291549AD4C006F8ECB /* CUserManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3750FC2D1549B03B006F8ECB /* CUserManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3750FC2C1549B03B006F8ECB /* CUserManager.cpp */; };
+		3763C5F0165DFF3900CEE975 /* CClannishRESTproxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3763C5EE165DFF3900CEE975 /* CClannishRESTproxy.cpp */; };
+		3763C5F1165DFF3900CEE975 /* CClannishRESTProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3763C5EF165DFF3900CEE975 /* CClannishRESTProxy.h */; };
+		3767BFC314307FDE00383DC6 /* CHjSON.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3767BFC214307FDE00383DC6 /* CHjSON.cpp */; };
+		3767BFD21430878200383DC6 /* CHJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 3767BFD11430878200383DC6 /* CHJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		379D558C162EB91500B849BC /* performOnMain.mm in Sources */ = {isa = PBXBuildFile; fileRef = 379D558B162EB91500B849BC /* performOnMain.mm */; };
+		379F33FB153C77B4009E9049 /* CTribeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 379F33F9153C773B009E9049 /* CTribeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37B510961553CB9600A8B273 /* CotCHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 37B510951553CB9600A8B273 /* CotCHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37B510991553CBD100A8B273 /* CotCHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37B510981553CBD100A8B273 /* CotCHelpers.cpp */; };
+		37E7E23D1541B52200DDB55F /* CTribeManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37E7E23C1541B52200DDB55F /* CTribeManager.cpp */; };
+		37EF487415340D9500D64E2D /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = 37EF482C15340D9500D64E2D /* cJSON.c */; };
+		37EF487515340D9500D64E2D /* cJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 37EF482E15340D9500D64E2D /* cJSON.h */; };
+		37EF489015340D9500D64E2D /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37EF485115340D9500D64E2D /* base64.cpp */; };
+		37EF489115340D9500D64E2D /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 37EF485215340D9500D64E2D /* base64.h */; };
+		37EF489A15340D9500D64E2D /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37EF485B15340D9500D64E2D /* util.cpp */; };
+		37EF489B15340D9500D64E2D /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = 37EF485C15340D9500D64E2D /* util.h */; };
+		37EF48A415340D9500D64E2D /* curltool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37EF486815340D9500D64E2D /* curltool.cpp */; };
+		37EF48A515340D9500D64E2D /* curltool.h in Headers */ = {isa = PBXBuildFile; fileRef = 37EF486915340D9500D64E2D /* curltool.h */; };
+		37EF48B31534404B00D64E2D /* CCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 37EF48AD1534404B00D64E2D /* CCallback.h */; settings = {ATTRIBUTES = (); }; };
+		37EF48BB1534409D00D64E2D /* CClan.h in Headers */ = {isa = PBXBuildFile; fileRef = 37EF48B91534409D00D64E2D /* CClan.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37EF48BC1534409D00D64E2D /* CGameManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 37EF48BA1534409D00D64E2D /* CGameManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37EF48BE153449C600D64E2D /* CGameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37EF48BD153449C600D64E2D /* CGameManager.cpp */; };
+		C2556BA61AB82DB200104A85 /* user_related_data.md in Sources */ = {isa = PBXBuildFile; fileRef = C2556BA51AB82DB200104A85 /* user_related_data.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		172FFF1F19D3250D009FC0AD /* CStdioBasedFileImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CStdioBasedFileImpl.cpp; path = sources/optional/CStdioBasedFileImpl.cpp; sourceTree = "<group>"; };
+		172FFF2019D3250D009FC0AD /* CStdioBasedFileImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CStdioBasedFileImpl.h; path = sources/optional/CStdioBasedFileImpl.h; sourceTree = "<group>"; };
+		173F86B91A6D65A100E9DBE6 /* AppStoreHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppStoreHandler.h; path = sources/iOS/AppStoreHandler.h; sourceTree = "<group>"; };
+		173F86BA1A6D65A100E9DBE6 /* AppStoreHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppStoreHandler.mm; path = sources/iOS/AppStoreHandler.mm; sourceTree = "<group>"; };
+		173FFAA11A700792005E4F49 /* CStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CStoreManager.h; path = Headers/CStoreManager.h; sourceTree = SOURCE_ROOT; };
+		1764E3F619F0F94A0073694F /* CMacAndIosFilesystemHandlerImpl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CMacAndIosFilesystemHandlerImpl.mm; path = sources/MacOSX/CMacAndIosFilesystemHandlerImpl.mm; sourceTree = "<group>"; };
+		177B2A911A70070700BC670C /* CStoreGlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CStoreGlue.h; path = sources/CStoreGlue.h; sourceTree = SOURCE_ROOT; };
+		177B2A931A70071700BC670C /* CStoreManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CStoreManager.cpp; path = sources/HighLevel/CStoreManager.cpp; sourceTree = "<group>"; };
+		177BEDD819EFCC0900019FB3 /* GameCenterHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCenterHandler.h; path = sources/iOS/GameCenterHandler.h; sourceTree = "<group>"; };
+		177BEDD919EFCC0900019FB3 /* GameCenterHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GameCenterHandler.mm; path = sources/iOS/GameCenterHandler.mm; sourceTree = "<group>"; };
+		1798C89319CEE4040062644A /* ssl_bio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ssl_bio.cpp; sourceTree = "<group>"; };
+		179DCB191C0EFE2C00DB37EB /* CLogLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLogLevel.h; path = Headers/CLogLevel.h; sourceTree = SOURCE_ROOT; };
+		17C3E6C71A120DAC001E48DF /* ObjCHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjCHelpers.h; path = sources/iOS/ObjCHelpers.h; sourceTree = "<group>"; };
+		2A05F7151A31D37C00B80C77 /* CMatchManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CMatchManager.cpp; path = sources/HighLevel/CMatchManager.cpp; sourceTree = "<group>"; };
+		2A331CE21BBD0DAE003576EA /* CIndexManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CIndexManager.h; path = Headers/CIndexManager.h; sourceTree = SOURCE_ROOT; };
+		2A331CE31BBD0DAE003576EA /* CHttpFailureEventArgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHttpFailureEventArgs.h; path = Headers/CHttpFailureEventArgs.h; sourceTree = SOURCE_ROOT; };
+		2A331CE61BBD0DC5003576EA /* CIndexManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CIndexManager.cpp; path = sources/HighLevel/CIndexManager.cpp; sourceTree = "<group>"; };
+		2AD5AF9219BDB12600E3B039 /* CFilesystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFilesystem.cpp; path = sources/HighLevel/CFilesystem.cpp; sourceTree = SOURCE_ROOT; };
+		2AD5AF9819BDB13C00E3B039 /* CDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDelegate.h; path = Headers/CDelegate.h; sourceTree = SOURCE_ROOT; };
+		2AD5AF9919BDB13C00E3B039 /* CFastDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFastDelegate.h; path = Headers/CFastDelegate.h; sourceTree = SOURCE_ROOT; };
+		2AD5AF9A19BDB13C00E3B039 /* CFilesystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFilesystem.h; path = Headers/CFilesystem.h; sourceTree = SOURCE_ROOT; };
+		2AD805E51A30B2E6005C9D14 /* CMatchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMatchManager.h; path = Headers/CMatchManager.h; sourceTree = SOURCE_ROOT; };
+		2AF5CA4D19AF2D7700E0B636 /* helpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = helpers.cpp; path = sources/tools/helpers.cpp; sourceTree = SOURCE_ROOT; };
+		2AF5CA4E19AF2D7700E0B636 /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = helpers.h; path = sources/tools/helpers.h; sourceTree = SOURCE_ROOT; };
+		3710F7DD153408530091AE67 /* CClan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CClan.cpp; path = sources/HighLevel/CClan.cpp; sourceTree = "<group>"; };
+		3727F07517453ECD00F9C461 /* changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = changelog.md; path = Docs/changelog.md; sourceTree = "<group>"; };
+		3728AEC9142B670F0066C4D2 /* CloudBuilder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CloudBuilder.h; path = Headers/CloudBuilder.h; sourceTree = SOURCE_ROOT; };
+		3730231B1447F5060045E9F4 /* CCallback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CCallback.cpp; path = sources/CCallback.cpp; sourceTree = SOURCE_ROOT; };
+		37345CA2163C1FC40089489C /* CloudBuilderJNI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CloudBuilderJNI.cpp; path = sources/Android/CloudBuilderJNI.cpp; sourceTree = "<group>"; };
+		37345CA3163C1FC40089489C /* CloudBuilderJNI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CloudBuilderJNI.h; path = sources/Android/CloudBuilderJNI.h; sourceTree = "<group>"; };
+		3734B48C142F251100B72758 /* libCloudBuilderStub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCloudBuilderStub.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3743DABA16A821670087A4F4 /* dummyClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dummyClass.cpp; path = sources/dummyClass.cpp; sourceTree = "<group>"; };
+		37466CF4142CC59600A23AE5 /* cotc_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cotc_thread.h; path = sources/cotc_thread.h; sourceTree = SOURCE_ROOT; };
+		37466CF6142CC5DE00A23AE5 /* cotc_thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cotc_thread.cpp; path = sources/cotc_thread.cpp; sourceTree = SOURCE_ROOT; };
+		3750FC291549AD4C006F8ECB /* CUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CUserManager.h; path = Headers/CUserManager.h; sourceTree = SOURCE_ROOT; };
+		3750FC2C1549B03B006F8ECB /* CUserManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CUserManager.cpp; path = sources/HighLevel/CUserManager.cpp; sourceTree = "<group>"; };
+		3763C5EE165DFF3900CEE975 /* CClannishRESTproxy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CClannishRESTproxy.cpp; path = sources/CClannishRESTproxy.cpp; sourceTree = SOURCE_ROOT; };
+		3763C5EF165DFF3900CEE975 /* CClannishRESTProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CClannishRESTProxy.h; path = sources/CClannishRESTProxy.h; sourceTree = SOURCE_ROOT; };
+		3767BFC214307FDE00383DC6 /* CHjSON.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CHjSON.cpp; path = sources/CHjSON.cpp; sourceTree = SOURCE_ROOT; };
+		3767BFD11430878200383DC6 /* CHJSON.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = CHJSON.h; path = Headers/CHJSON.h; sourceTree = SOURCE_ROOT; };
+		379D558B162EB91500B849BC /* performOnMain.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = performOnMain.mm; path = sources/iOS/performOnMain.mm; sourceTree = "<group>"; };
+		379F33F9153C773B009E9049 /* CTribeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTribeManager.h; path = Headers/CTribeManager.h; sourceTree = SOURCE_ROOT; };
+		37A283B6142C5A83003E2D74 /* ErrorStrings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ErrorStrings.cpp; path = sources/ErrorStrings.cpp; sourceTree = SOURCE_ROOT; };
+		37B510951553CB9600A8B273 /* CotCHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CotCHelpers.h; path = Headers/CotCHelpers.h; sourceTree = SOURCE_ROOT; };
+		37B510981553CBD100A8B273 /* CotCHelpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CotCHelpers.cpp; path = sources/CotCHelpers.cpp; sourceTree = SOURCE_ROOT; };
+		37CD9B85169D458100D4AA0D /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		37CD9B86169D458100D4AA0D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		37CD9B87169D458100D4AA0D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		37D4AB7714286C15005CFE23 /* CloudBuilder_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CloudBuilder_private.h; path = sources/CloudBuilder_private.h; sourceTree = SOURCE_ROOT; };
+		37E7E23C1541B52200DDB55F /* CTribeManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CTribeManager.cpp; path = sources/HighLevel/CTribeManager.cpp; sourceTree = "<group>"; };
+		37EF482C15340D9500D64E2D /* cJSON.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cJSON.c; sourceTree = "<group>"; };
+		37EF482E15340D9500D64E2D /* cJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON.h; sourceTree = "<group>"; };
+		37EF485115340D9500D64E2D /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base64.cpp; path = ../sdb/base64.cpp; sourceTree = "<group>"; };
+		37EF485215340D9500D64E2D /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base64.h; path = ../sdb/base64.h; sourceTree = "<group>"; };
+		37EF485B15340D9500D64E2D /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = util.cpp; path = ../sdb/util.cpp; sourceTree = "<group>"; };
+		37EF485C15340D9500D64E2D /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = util.h; path = ../sdb/util.h; sourceTree = "<group>"; };
+		37EF486815340D9500D64E2D /* curltool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = curltool.cpp; sourceTree = "<group>"; };
+		37EF486915340D9500D64E2D /* curltool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curltool.h; sourceTree = "<group>"; };
+		37EF48AD1534404B00D64E2D /* CCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCallback.h; path = sources/CCallback.h; sourceTree = SOURCE_ROOT; };
+		37EF48B91534409D00D64E2D /* CClan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CClan.h; path = Headers/CClan.h; sourceTree = SOURCE_ROOT; };
+		37EF48BA1534409D00D64E2D /* CGameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGameManager.h; path = Headers/CGameManager.h; sourceTree = SOURCE_ROOT; };
+		37EF48BD153449C600D64E2D /* CGameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CGameManager.cpp; path = sources/HighLevel/CGameManager.cpp; sourceTree = "<group>"; };
+		C21B490119ED167A000ED267 /* sample.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sample.md; path = Docs/sample.md; sourceTree = "<group>"; };
+		C21B490319ED16D5000ED267 /* unity.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = unity.md; path = Docs/unity.md; sourceTree = "<group>"; };
+		C23FFF101A6D07D400020915 /* achievements.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = achievements.md; path = Docs/achievements.md; sourceTree = "<group>"; };
+		C23FFF111A6D07D400020915 /* backoffice.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = backoffice.md; path = Docs/backoffice.md; sourceTree = "<group>"; };
+		C23FFF121A6D07D400020915 /* facebook.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = facebook.md; path = Docs/facebook.md; sourceTree = "<group>"; };
+		C23FFF131A6D07D400020915 /* googleplus.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = googleplus.md; path = Docs/googleplus.md; sourceTree = "<group>"; };
+		C23FFF141A6D07D400020915 /* matches.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = matches.md; path = Docs/matches.md; sourceTree = "<group>"; };
+		C23FFF151A6D07D400020915 /* more_advanced.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = more_advanced.md; path = Docs/more_advanced.md; sourceTree = "<group>"; };
+		C23FFF161A6D07D400020915 /* push.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = push.md; path = Docs/push.md; sourceTree = "<group>"; };
+		C23FFF171A6D07D400020915 /* restapi.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = restapi.md; path = Docs/restapi.md; sourceTree = "<group>"; };
+		C2556BA51AB82DB200104A85 /* user_related_data.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = user_related_data.md; path = Docs/user_related_data.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3734B489142F251100B72758 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3710F7D9153407F70091AE67 /* HighLevel */ = {
+			isa = PBXGroup;
+			children = (
+				2A331CE61BBD0DC5003576EA /* CIndexManager.cpp */,
+				2A05F7151A31D37C00B80C77 /* CMatchManager.cpp */,
+				2AD5AF9219BDB12600E3B039 /* CFilesystem.cpp */,
+				3710F7DD153408530091AE67 /* CClan.cpp */,
+				3750FC2C1549B03B006F8ECB /* CUserManager.cpp */,
+				37EF48BD153449C600D64E2D /* CGameManager.cpp */,
+				177B2A931A70071700BC670C /* CStoreManager.cpp */,
+				37E7E23C1541B52200DDB55F /* CTribeManager.cpp */,
+			);
+			name = HighLevel;
+			sourceTree = "<group>";
+		};
+		3766308E1557B8E100780F94 /* Doc */ = {
+			isa = PBXGroup;
+			children = (
+				C23FFF101A6D07D400020915 /* achievements.md */,
+				C23FFF111A6D07D400020915 /* backoffice.md */,
+				C23FFF121A6D07D400020915 /* facebook.md */,
+				C23FFF131A6D07D400020915 /* googleplus.md */,
+				C23FFF141A6D07D400020915 /* matches.md */,
+				C23FFF151A6D07D400020915 /* more_advanced.md */,
+				C23FFF161A6D07D400020915 /* push.md */,
+				C23FFF171A6D07D400020915 /* restapi.md */,
+				3727F07517453ECD00F9C461 /* changelog.md */,
+				C21B490119ED167A000ED267 /* sample.md */,
+				C21B490319ED16D5000ED267 /* unity.md */,
+				C2556BA51AB82DB200104A85 /* user_related_data.md */,
+			);
+			name = Doc;
+			sourceTree = "<group>";
+		};
+		379D558A162EB8FF00B849BC /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				173F86B91A6D65A100E9DBE6 /* AppStoreHandler.h */,
+				173F86BA1A6D65A100E9DBE6 /* AppStoreHandler.mm */,
+				1764E3F619F0F94A0073694F /* CMacAndIosFilesystemHandlerImpl.mm */,
+				177BEDD819EFCC0900019FB3 /* GameCenterHandler.h */,
+				177BEDD919EFCC0900019FB3 /* GameCenterHandler.mm */,
+				172FFF1F19D3250D009FC0AD /* CStdioBasedFileImpl.cpp */,
+				172FFF2019D3250D009FC0AD /* CStdioBasedFileImpl.h */,
+				379D558B162EB91500B849BC /* performOnMain.mm */,
+				17C3E6C71A120DAC001E48DF /* ObjCHelpers.h */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		379D558D162EB92A00B849BC /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				C24C2BF017C263960091F8FE /* Others */,
+				379D558E162EB93500B849BC /* Android */,
+				379D558A162EB8FF00B849BC /* iOS */,
+			);
+			name = Platforms;
+			sourceTree = "<group>";
+		};
+		379D558E162EB93500B849BC /* Android */ = {
+			isa = PBXGroup;
+			children = (
+				37345CA2163C1FC40089489C /* CloudBuilderJNI.cpp */,
+				37345CA3163C1FC40089489C /* CloudBuilderJNI.h */,
+			);
+			name = Android;
+			sourceTree = "<group>";
+		};
+		379E02EB142316AE004AE6ED = {
+			isa = PBXGroup;
+			children = (
+				379D558D162EB92A00B849BC /* Platforms */,
+				3766308E1557B8E100780F94 /* Doc */,
+				379E0312142316E1004AE6ED /* Headers */,
+				3710F7D9153407F70091AE67 /* HighLevel */,
+				379E02FB142316AE004AE6ED /* CloudBuilder */,
+				37EF481E15340D9500D64E2D /* sources */,
+				379E02F8142316AE004AE6ED /* Frameworks */,
+				379E02F7142316AE004AE6ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		379E02F7142316AE004AE6ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3734B48C142F251100B72758 /* libCloudBuilderStub.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		379E02F8142316AE004AE6ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37CD9B85169D458100D4AA0D /* Accounts.framework */,
+				37CD9B86169D458100D4AA0D /* AdSupport.framework */,
+				37CD9B87169D458100D4AA0D /* Social.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		379E02FB142316AE004AE6ED /* CloudBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				177B2A911A70070700BC670C /* CStoreGlue.h */,
+				2AF5CA4D19AF2D7700E0B636 /* helpers.cpp */,
+				2AF5CA4E19AF2D7700E0B636 /* helpers.h */,
+				3763C5EF165DFF3900CEE975 /* CClannishRESTProxy.h */,
+				3763C5EE165DFF3900CEE975 /* CClannishRESTproxy.cpp */,
+				37D4AB7714286C15005CFE23 /* CloudBuilder_private.h */,
+				37EF48AD1534404B00D64E2D /* CCallback.h */,
+				3767BFC214307FDE00383DC6 /* CHjSON.cpp */,
+				37A283B6142C5A83003E2D74 /* ErrorStrings.cpp */,
+				3730231B1447F5060045E9F4 /* CCallback.cpp */,
+				37466CF4142CC59600A23AE5 /* cotc_thread.h */,
+				37466CF6142CC5DE00A23AE5 /* cotc_thread.cpp */,
+				37B510981553CBD100A8B273 /* CotCHelpers.cpp */,
+			);
+			name = CloudBuilder;
+			path = CotClib;
+			sourceTree = "<group>";
+		};
+		379E0312142316E1004AE6ED /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				179DCB191C0EFE2C00DB37EB /* CLogLevel.h */,
+				2A331CE21BBD0DAE003576EA /* CIndexManager.h */,
+				2A331CE31BBD0DAE003576EA /* CHttpFailureEventArgs.h */,
+				2AD805E51A30B2E6005C9D14 /* CMatchManager.h */,
+				2AD5AF9819BDB13C00E3B039 /* CDelegate.h */,
+				2AD5AF9919BDB13C00E3B039 /* CFastDelegate.h */,
+				2AD5AF9A19BDB13C00E3B039 /* CFilesystem.h */,
+				3728AEC9142B670F0066C4D2 /* CloudBuilder.h */,
+				37B510951553CB9600A8B273 /* CotCHelpers.h */,
+				3767BFD11430878200383DC6 /* CHJSON.h */,
+				37EF48B91534409D00D64E2D /* CClan.h */,
+				3750FC291549AD4C006F8ECB /* CUserManager.h */,
+				37EF48BA1534409D00D64E2D /* CGameManager.h */,
+				173FFAA11A700792005E4F49 /* CStoreManager.h */,
+				379F33F9153C773B009E9049 /* CTribeManager.h */,
+			);
+			name = Headers;
+			path = ../../../Dev/ClanOfTheCloud/CotCSDK/CloudBuilder/Headers;
+			sourceTree = SOURCE_ROOT;
+		};
+		37EF481E15340D9500D64E2D /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				37EF482B15340D9500D64E2D /* cJSON */,
+				37EF486715340D9500D64E2D /* tools */,
+			);
+			path = sources;
+			sourceTree = "<group>";
+		};
+		37EF482B15340D9500D64E2D /* cJSON */ = {
+			isa = PBXGroup;
+			children = (
+				37EF482C15340D9500D64E2D /* cJSON.c */,
+				37EF482E15340D9500D64E2D /* cJSON.h */,
+			);
+			path = cJSON;
+			sourceTree = "<group>";
+		};
+		37EF486715340D9500D64E2D /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				37EF485115340D9500D64E2D /* base64.cpp */,
+				37EF485215340D9500D64E2D /* base64.h */,
+				37EF485B15340D9500D64E2D /* util.cpp */,
+				37EF485C15340D9500D64E2D /* util.h */,
+				1798C89319CEE4040062644A /* ssl_bio.cpp */,
+				37EF486815340D9500D64E2D /* curltool.cpp */,
+				37EF486915340D9500D64E2D /* curltool.h */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		C24C2BF017C263960091F8FE /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				3743DABA16A821670087A4F4 /* dummyClass.cpp */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3734B48A142F251100B72758 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AD805E61A30B2E6005C9D14 /* CMatchManager.h in Headers */,
+				3734B499142F255200B72758 /* CloudBuilder.h in Headers */,
+				3734B4B4142F25A200B72758 /* CloudBuilder_private.h in Headers */,
+				3734B4C0142F25A200B72758 /* cotc_thread.h in Headers */,
+				3767BFD21430878200383DC6 /* CHJSON.h in Headers */,
+				173F86BB1A6D65A100E9DBE6 /* AppStoreHandler.h in Headers */,
+				37EF487515340D9500D64E2D /* cJSON.h in Headers */,
+				2A331CE51BBD0DAE003576EA /* CHttpFailureEventArgs.h in Headers */,
+				37EF489115340D9500D64E2D /* base64.h in Headers */,
+				2AF5CA5019AF2D7700E0B636 /* helpers.h in Headers */,
+				37EF489B15340D9500D64E2D /* util.h in Headers */,
+				37EF48A515340D9500D64E2D /* curltool.h in Headers */,
+				37EF48B31534404B00D64E2D /* CCallback.h in Headers */,
+				2AD5AF9C19BDB13C00E3B039 /* CDelegate.h in Headers */,
+				17C3E6C81A120DAC001E48DF /* ObjCHelpers.h in Headers */,
+				37EF48BB1534409D00D64E2D /* CClan.h in Headers */,
+				173FFAA21A700792005E4F49 /* CStoreManager.h in Headers */,
+				37EF48BC1534409D00D64E2D /* CGameManager.h in Headers */,
+				379F33FB153C77B4009E9049 /* CTribeManager.h in Headers */,
+				3750FC2A1549AD4C006F8ECB /* CUserManager.h in Headers */,
+				179DCB1A1C0EFE2C00DB37EB /* CLogLevel.h in Headers */,
+				37B510961553CB9600A8B273 /* CotCHelpers.h in Headers */,
+				2A331CE41BBD0DAE003576EA /* CIndexManager.h in Headers */,
+				3763C5F1165DFF3900CEE975 /* CClannishRESTProxy.h in Headers */,
+				2AD5AF9E19BDB13C00E3B039 /* CFilesystem.h in Headers */,
+				177BEDDA19EFCC0900019FB3 /* GameCenterHandler.h in Headers */,
+				2AD5AF9D19BDB13C00E3B039 /* CFastDelegate.h in Headers */,
+				172FFF2219D3250D009FC0AD /* CStdioBasedFileImpl.h in Headers */,
+				177B2A921A70070700BC670C /* CStoreGlue.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3734B48B142F251100B72758 /* CloudBuilder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3734B497142F251100B72758 /* Build configuration list for PBXNativeTarget "CloudBuilder" */;
+			buildPhases = (
+				3734B488142F251100B72758 /* Sources */,
+				3734B489142F251100B72758 /* Frameworks */,
+				3734B48A142F251100B72758 /* Headers */,
+				37F0C6EC1537E0CD009B6D77 /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloudBuilder;
+			productName = CloudBuilder2;
+			productReference = 3734B48C142F251100B72758 /* libCloudBuilderStub.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		379E02ED142316AE004AE6ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Clan of the Cloud";
+			};
+			buildConfigurationList = 379E02F0142316AE004AE6ED /* Build configuration list for PBXProject "CloudBuilder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 379E02EB142316AE004AE6ED;
+			productRefGroup = 379E02F7142316AE004AE6ED /* Products */;
+			projectDirPath = ..;
+			projectRoot = ..;
+			targets = (
+				3734B48B142F251100B72758 /* CloudBuilder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37F0C6EC1537E0CD009B6D77 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\n#  CloudBuilder\n#\n#  Created by Roland Van Leeuwen on 23/09/11.\n#  Copyright 2011 Clan of the Cloud. All rights reserved.\n\nmkdir -p \"$PROJECT_DIR\"/../delivery/CloudBuilder/headers\nmkdir -p \"$PROJECT_DIR\"/../delivery/CloudBuilder/iOS/$CONFIGURATION\n\ncp \"$CONFIGURATION_BUILD_DIR\"/usr/local/include/*  \"$PROJECT_DIR\"/../delivery/CloudBuilder/headers/\n\n/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create \"$BUILD_DIR\"/$CONFIGURATION-iphoneos/libCloudBuilderStub.a  \"$BUILD_DIR\"/$CONFIGURATION-iphonesimulator/libCloudBuilderStub.a  -output \"$PROJECT_DIR\"/../delivery/CloudBuilder/iOS/$CONFIGURATION/libCloudBuilderSlim.a\n\nlibtool -static -o \"$PROJECT_DIR\"/../delivery/CloudBuilder/iOS/$CONFIGURATION/libCloudBuilder.a \"$PROJECT_DIR\"/../delivery/CloudBuilder/iOS/$CONFIGURATION/libCloudBuilderSlim.a \"$PROJECT_DIR\"/../delivery/openssl/iOS/lib/*.a \"$PROJECT_DIR\"/../delivery/curl/iOS/$CONFIGURATION/*.a\n                                            \n                                                ";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3734B488142F251100B72758 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3734B4BF142F25A200B72758 /* ErrorStrings.cpp in Sources */,
+				3734B4C1142F25A200B72758 /* cotc_thread.cpp in Sources */,
+				1798C89419CEE4040062644A /* ssl_bio.cpp in Sources */,
+				3767BFC314307FDE00383DC6 /* CHjSON.cpp in Sources */,
+				3730231C1447F5060045E9F4 /* CCallback.cpp in Sources */,
+				3710F7E215340B950091AE67 /* CClan.cpp in Sources */,
+				C2556BA61AB82DB200104A85 /* user_related_data.md in Sources */,
+				37EF487415340D9500D64E2D /* cJSON.c in Sources */,
+				173F86BC1A6D65A100E9DBE6 /* AppStoreHandler.mm in Sources */,
+				172FFF2119D3250D009FC0AD /* CStdioBasedFileImpl.cpp in Sources */,
+				37EF489015340D9500D64E2D /* base64.cpp in Sources */,
+				177BEDDB19EFCC0900019FB3 /* GameCenterHandler.mm in Sources */,
+				37EF489A15340D9500D64E2D /* util.cpp in Sources */,
+				37EF48A415340D9500D64E2D /* curltool.cpp in Sources */,
+				1764E3F719F0F94A0073694F /* CMacAndIosFilesystemHandlerImpl.mm in Sources */,
+				37EF48BE153449C600D64E2D /* CGameManager.cpp in Sources */,
+				2A05F7161A31D37C00B80C77 /* CMatchManager.cpp in Sources */,
+				37E7E23D1541B52200DDB55F /* CTribeManager.cpp in Sources */,
+				3750FC2D1549B03B006F8ECB /* CUserManager.cpp in Sources */,
+				37B510991553CBD100A8B273 /* CotCHelpers.cpp in Sources */,
+				2AF5CA4F19AF2D7700E0B636 /* helpers.cpp in Sources */,
+				379D558C162EB91500B849BC /* performOnMain.mm in Sources */,
+				2A331CE71BBD0DC5003576EA /* CIndexManager.cpp in Sources */,
+				2AD5AF9519BDB12600E3B039 /* CFilesystem.cpp in Sources */,
+				3763C5F0165DFF3900CEE975 /* CClannishRESTproxy.cpp in Sources */,
+				177B2A941A70071700BC670C /* CStoreManager.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3734B495142F251100B72758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"../curl-7.23.1/include",
+					sources,
+					../delivery/openssl/iOS/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					../delivery/curl/iOS/Debug,
+					../delivery/openssl/iOS/lib,
+				);
+				OTHER_CFLAGS = "-D__IOS__";
+				PRODUCT_NAME = "$(TARGET_NAME)Stub";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		3734B496142F251100B72758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = (
+					"../curl-7.23.1/include",
+					sources,
+					../delivery/openssl/iOS/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					../delivery/curl/iOS/Debug,
+					../delivery/openssl/iOS/lib,
+				);
+				OTHER_CFLAGS = "-D__IOS__";
+				PRODUCT_NAME = "$(TARGET_NAME)Stub";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		379E0301142316AE004AE6ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../curl-7.23.1/include";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				LIBRARY_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-D__IOS__",
+					"-ObjC",
+				);
+				SDKROOT = iphoneos;
+				SYMROOT = CloudBuilderiOS/build;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		379E0302142316AE004AE6ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../curl-7.23.1/include";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				LIBRARY_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-D__IOS__",
+					"-ObjC",
+				);
+				SDKROOT = iphoneos;
+				SYMROOT = CloudBuilderiOS/build;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3734B497142F251100B72758 /* Build configuration list for PBXNativeTarget "CloudBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3734B495142F251100B72758 /* Debug */,
+				3734B496142F251100B72758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		379E02F0142316AE004AE6ED /* Build configuration list for PBXProject "CloudBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				379E0301142316AE004AE6ED /* Debug */,
+				379E0302142316AE004AE6ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 379E02ED142316AE004AE6ED /* Project object */;
+}

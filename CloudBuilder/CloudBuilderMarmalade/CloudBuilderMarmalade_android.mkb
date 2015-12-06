@@ -1,0 +1,17 @@
+#!/usr/bin/env mkb
+# Builder mkb file for the CloudBuilderMarmalade extension on android
+platform LINUX
+
+buildtype (SCONS, ARM)
+
+define S3E_ANDROID
+
+options
+{
+    dll
+    output-name="lib/android/libCloudBuilderMarmalade.so"
+    output-name-debug="lib/android/libCloudBuilderMarmalade_d.so"
+}
+define S3E_BUILD_EXT
+
+subproject CloudBuilderMarmalade_build

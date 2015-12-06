@@ -1,0 +1,800 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		172FFF1619D3176A009FC0AD /* CStdioBasedFileImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 172FFF1419D3176A009FC0AD /* CStdioBasedFileImpl.cpp */; };
+		172FFF1919D3176A009FC0AD /* CStdioBasedFileImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 172FFF1419D3176A009FC0AD /* CStdioBasedFileImpl.cpp */; };
+		172FFF1A19D3176A009FC0AD /* CStdioBasedFileImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 172FFF1519D3176A009FC0AD /* CStdioBasedFileImpl.h */; };
+		17310B2619E41987005573D3 /* CMacAndIosFilesystemHandlerImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17310B2519E41987005573D3 /* CMacAndIosFilesystemHandlerImpl.mm */; };
+		17310B2919E41987005573D3 /* CMacAndIosFilesystemHandlerImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17310B2519E41987005573D3 /* CMacAndIosFilesystemHandlerImpl.mm */; };
+		178C8D751A305A7C000C961D /* CMatchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 178C8D741A305A7C000C961D /* CMatchManager.h */; };
+		178C8D7D1A305C8F000C961D /* CMatchManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 178C8D7C1A305C8F000C961D /* CMatchManager.cpp */; };
+		178C8D801A305C8F000C961D /* CMatchManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 178C8D7C1A305C8F000C961D /* CMatchManager.cpp */; };
+		17BCFFF119E557F000C76A3A /* GameCenterHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 17BCFFEF19E557F000C76A3A /* GameCenterHandler.h */; };
+		17BCFFF219E557F000C76A3A /* GameCenterHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17BCFFF019E557F000C76A3A /* GameCenterHandler.mm */; };
+		17E085C019CDE405001221EA /* ssl_bio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17E085BF19CDE405001221EA /* ssl_bio.cpp */; };
+		17F1A75D1A92035000D39953 /* AppStoreHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F1A75B1A92035000D39953 /* AppStoreHandler.h */; };
+		17F1A75E1A92035000D39953 /* AppStoreHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17F1A75C1A92035000D39953 /* AppStoreHandler.mm */; };
+		2A40E6EA1A02714E0049267B /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A40E6E61A02714E0049267B /* base64.cpp */; };
+		2A40E6ED1A02714E0049267B /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A40E6E61A02714E0049267B /* base64.cpp */; };
+		2A40E6EE1A02714E0049267B /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A40E6E71A02714E0049267B /* base64.h */; };
+		2A40E6F11A02714E0049267B /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A40E6E81A02714E0049267B /* util.cpp */; };
+		2A40E6F41A02714E0049267B /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A40E6E81A02714E0049267B /* util.cpp */; };
+		2A40E6F51A02714E0049267B /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A40E6E91A02714E0049267B /* util.h */; };
+		2A85D92819A48FA500727DE0 /* CFilesystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A85D92719A48FA500727DE0 /* CFilesystem.cpp */; };
+		2A85D92A19A48FCF00727DE0 /* CFilesystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A85D92919A48FCF00727DE0 /* CFilesystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A85D92D19A4987A00727DE0 /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A85D92B19A4987A00727DE0 /* helpers.cpp */; };
+		2A85D92E19A4987A00727DE0 /* helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A85D92C19A4987A00727DE0 /* helpers.h */; };
+		2A9C111519F24E88009A93B1 /* GameCenterHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17BCFFF019E557F000C76A3A /* GameCenterHandler.mm */; };
+		2AA14CB719D4233400FEE494 /* CFilesystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A85D92719A48FA500727DE0 /* CFilesystem.cpp */; };
+		2AD093951A7236A7001CD9A9 /* CStoreManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AD093941A7236A7001CD9A9 /* CStoreManager.cpp */; };
+		2AD5AF8819BDAD9300E3B039 /* CDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AD5AF8519BDAD9300E3B039 /* CDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2AD5AF8A19BDAD9300E3B039 /* CFastDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AD5AF8619BDAD9300E3B039 /* CFastDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		378EE72E155A358800EA80C2 /* CClan.h in Headers */ = {isa = PBXBuildFile; fileRef = 378EE723155A358800EA80C2 /* CClan.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		378EE72F155A358800EA80C2 /* CGameManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 378EE724155A358800EA80C2 /* CGameManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		378EE730155A358800EA80C2 /* CHJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 378EE725155A358800EA80C2 /* CHJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		378EE731155A358800EA80C2 /* CloudBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 378EE726155A358800EA80C2 /* CloudBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		378EE734155A358800EA80C2 /* CotCHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 378EE729155A358800EA80C2 /* CotCHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		378EE735155A358800EA80C2 /* CTribeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 378EE72A155A358800EA80C2 /* CTribeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		378EE736155A358800EA80C2 /* CUserManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 378EE72B155A358800EA80C2 /* CUserManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		378EE791155A359200EA80C2 /* CCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE73D155A359200EA80C2 /* CCallback.cpp */; };
+		378EE792155A359200EA80C2 /* CCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 378EE73E155A359200EA80C2 /* CCallback.h */; };
+		378EE797155A359200EA80C2 /* CHjSON.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE743155A359200EA80C2 /* CHjSON.cpp */; };
+		378EE798155A359200EA80C2 /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = 378EE745155A359200EA80C2 /* cJSON.c */; };
+		378EE799155A359200EA80C2 /* cJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 378EE747155A359200EA80C2 /* cJSON.h */; };
+		378EE79D155A359200EA80C2 /* CloudBuilder_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 378EE74C155A359200EA80C2 /* CloudBuilder_private.h */; };
+		378EE7A0155A359200EA80C2 /* cotc_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE74F155A359200EA80C2 /* cotc_thread.cpp */; };
+		378EE7A1155A359200EA80C2 /* cotc_thread.h in Headers */ = {isa = PBXBuildFile; fileRef = 378EE750155A359200EA80C2 /* cotc_thread.h */; };
+		378EE7A2155A359200EA80C2 /* CotCHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE751155A359200EA80C2 /* CotCHelpers.cpp */; };
+		378EE7AB155A359200EA80C2 /* ErrorStrings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE75A155A359200EA80C2 /* ErrorStrings.cpp */; };
+		378EE7AD155A359200EA80C2 /* CClan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE75D155A359200EA80C2 /* CClan.cpp */; };
+		378EE7AE155A359200EA80C2 /* CGameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE75E155A359200EA80C2 /* CGameManager.cpp */; };
+		378EE7B1155A359200EA80C2 /* CTribeManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE761155A359200EA80C2 /* CTribeManager.cpp */; };
+		378EE7B2155A359200EA80C2 /* CUserManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE762155A359200EA80C2 /* CUserManager.cpp */; };
+		378EE7D2155A359200EA80C2 /* curltool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE78B155A359200EA80C2 /* curltool.cpp */; };
+		378EE7D3155A359200EA80C2 /* curltool.h in Headers */ = {isa = PBXBuildFile; fileRef = 378EE78C155A359200EA80C2 /* curltool.h */; };
+		C2079F0D19D1AC140051259C /* ssl_bio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17E085BF19CDE405001221EA /* ssl_bio.cpp */; };
+		C20C3F7D19BEF78600234FA2 /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A85D92B19A4987A00727DE0 /* helpers.cpp */; };
+		C228F3F21BBD2FF0007AEE5B /* CIndexManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C228F3F11BBD2FF0007AEE5B /* CIndexManager.cpp */; };
+		C228F3F31BBD3006007AEE5B /* CIndexManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C228F3F11BBD2FF0007AEE5B /* CIndexManager.cpp */; };
+		C244ED141A8CE66600208F55 /* CStoreManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C244ED131A8CE66600208F55 /* CStoreManager.h */; };
+		C244ED1C1A93448100208F55 /* AppStoreHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17F1A75C1A92035000D39953 /* AppStoreHandler.mm */; };
+		C244ED211A9344FB00208F55 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C244ED1D1A9344F400208F55 /* StoreKit.framework */; };
+		C2865BA716415DE100757C37 /* RegisterDevice.mm in Sources */ = {isa = PBXBuildFile; fileRef = C2865BA616415DE100757C37 /* RegisterDevice.mm */; };
+		C29A044518AE3BC800D26C27 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29A044418AE3BC800D26C27 /* CoreFoundation.framework */; };
+		C29A044B18AE3BC800D26C27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C29A044918AE3BC800D26C27 /* InfoPlist.strings */; };
+		C29A045118AE3C3B00D26C27 /* dummyClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2C928C716A946BF00108D3F /* dummyClass.cpp */; };
+		C29A045218AE3C4000D26C27 /* RegisterDevice.mm in Sources */ = {isa = PBXBuildFile; fileRef = C2865BA616415DE100757C37 /* RegisterDevice.mm */; };
+		C29A045518AE3C5B00D26C27 /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = 378EE745155A359200EA80C2 /* cJSON.c */; };
+		C29A046318AE41EA00D26C27 /* curltool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE78B155A359200EA80C2 /* curltool.cpp */; };
+		C29A046418AE41F800D26C27 /* CCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE73D155A359200EA80C2 /* CCallback.cpp */; };
+		C29A046518AE41F800D26C27 /* CClannishRESTproxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2C928CA16A946EB00108D3F /* CClannishRESTproxy.cpp */; };
+		C29A046718AE41F800D26C27 /* CHjSON.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE743155A359200EA80C2 /* CHjSON.cpp */; };
+		C29A046B18AE41F800D26C27 /* cotc_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE74F155A359200EA80C2 /* cotc_thread.cpp */; };
+		C29A046C18AE41F800D26C27 /* CotCHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE751155A359200EA80C2 /* CotCHelpers.cpp */; };
+		C29A047118AE41F800D26C27 /* ErrorStrings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE75A155A359200EA80C2 /* ErrorStrings.cpp */; };
+		C29A047318AE456F00D26C27 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29A047218AE456F00D26C27 /* GameKit.framework */; };
+		C29A047518AE45CA00D26C27 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29A047418AE45CA00D26C27 /* AppKit.framework */; };
+		C29A047918AE461E00D26C27 /* CClan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE75D155A359200EA80C2 /* CClan.cpp */; };
+		C29A047A18AE461E00D26C27 /* CGameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE75E155A359200EA80C2 /* CGameManager.cpp */; };
+		C29A047D18AE461E00D26C27 /* CTribeManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE761155A359200EA80C2 /* CTribeManager.cpp */; };
+		C29A047E18AE461E00D26C27 /* CUserManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE762155A359200EA80C2 /* CUserManager.cpp */; };
+		C2B1B4B81A88B704009BBC70 /* CStoreManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AD093941A7236A7001CD9A9 /* CStoreManager.cpp */; };
+		C2C928C816A946BF00108D3F /* dummyClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2C928C716A946BF00108D3F /* dummyClass.cpp */; };
+		C2C928CC16A946EB00108D3F /* CClannishRESTproxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2C928CA16A946EB00108D3F /* CClannishRESTproxy.cpp */; };
+		C2C928CD16A946EB00108D3F /* CClannishRESTProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C928CB16A946EB00108D3F /* CClannishRESTProxy.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		172FFF1419D3176A009FC0AD /* CStdioBasedFileImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CStdioBasedFileImpl.cpp; path = optional/CStdioBasedFileImpl.cpp; sourceTree = "<group>"; };
+		172FFF1519D3176A009FC0AD /* CStdioBasedFileImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CStdioBasedFileImpl.h; path = optional/CStdioBasedFileImpl.h; sourceTree = "<group>"; };
+		17310B2519E41987005573D3 /* CMacAndIosFilesystemHandlerImpl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CMacAndIosFilesystemHandlerImpl.mm; path = MacOSX/CMacAndIosFilesystemHandlerImpl.mm; sourceTree = "<group>"; };
+		178C8D741A305A7C000C961D /* CMatchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMatchManager.h; sourceTree = "<group>"; };
+		178C8D7C1A305C8F000C961D /* CMatchManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CMatchManager.cpp; sourceTree = "<group>"; };
+		17BCFFEF19E557F000C76A3A /* GameCenterHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCenterHandler.h; path = iOS/GameCenterHandler.h; sourceTree = "<group>"; };
+		17BCFFF019E557F000C76A3A /* GameCenterHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GameCenterHandler.mm; path = iOS/GameCenterHandler.mm; sourceTree = "<group>"; };
+		17E085BF19CDE405001221EA /* ssl_bio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ssl_bio.cpp; sourceTree = "<group>"; };
+		17F1A75B1A92035000D39953 /* AppStoreHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppStoreHandler.h; path = iOS/AppStoreHandler.h; sourceTree = "<group>"; };
+		17F1A75C1A92035000D39953 /* AppStoreHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppStoreHandler.mm; path = iOS/AppStoreHandler.mm; sourceTree = "<group>"; };
+		2A3B501F19C1C123006CB4F8 /* MacConsole.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MacConsole.cpp; path = MacOSX/MacConsole.cpp; sourceTree = "<group>"; };
+		2A40E6E61A02714E0049267B /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base64.cpp; path = ../sdb/base64.cpp; sourceTree = "<group>"; };
+		2A40E6E71A02714E0049267B /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base64.h; path = ../sdb/base64.h; sourceTree = "<group>"; };
+		2A40E6E81A02714E0049267B /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = util.cpp; path = ../sdb/util.cpp; sourceTree = "<group>"; };
+		2A40E6E91A02714E0049267B /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = util.h; path = ../sdb/util.h; sourceTree = "<group>"; };
+		2A85D92719A48FA500727DE0 /* CFilesystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CFilesystem.cpp; sourceTree = "<group>"; };
+		2A85D92919A48FCF00727DE0 /* CFilesystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFilesystem.h; sourceTree = "<group>"; };
+		2A85D92B19A4987A00727DE0 /* helpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = helpers.cpp; sourceTree = "<group>"; };
+		2A85D92C19A4987A00727DE0 /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
+		2AD093941A7236A7001CD9A9 /* CStoreManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CStoreManager.cpp; sourceTree = "<group>"; };
+		2AD5AF8519BDAD9300E3B039 /* CDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDelegate.h; sourceTree = "<group>"; };
+		2AD5AF8619BDAD9300E3B039 /* CFastDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFastDelegate.h; sourceTree = "<group>"; };
+		378EE716155A347000EA80C2 /* libCloudBuilderMacOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCloudBuilderMacOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		378EE723155A358800EA80C2 /* CClan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CClan.h; sourceTree = "<group>"; };
+		378EE724155A358800EA80C2 /* CGameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGameManager.h; sourceTree = "<group>"; };
+		378EE725155A358800EA80C2 /* CHJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHJSON.h; sourceTree = "<group>"; };
+		378EE726155A358800EA80C2 /* CloudBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudBuilder.h; sourceTree = "<group>"; };
+		378EE729155A358800EA80C2 /* CotCHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CotCHelpers.h; sourceTree = "<group>"; };
+		378EE72A155A358800EA80C2 /* CTribeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTribeManager.h; sourceTree = "<group>"; };
+		378EE72B155A358800EA80C2 /* CUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUserManager.h; sourceTree = "<group>"; };
+		378EE73D155A359200EA80C2 /* CCallback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCallback.cpp; sourceTree = "<group>"; };
+		378EE73E155A359200EA80C2 /* CCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCallback.h; sourceTree = "<group>"; };
+		378EE743155A359200EA80C2 /* CHjSON.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CHjSON.cpp; sourceTree = "<group>"; };
+		378EE745155A359200EA80C2 /* cJSON.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cJSON.c; sourceTree = "<group>"; };
+		378EE747155A359200EA80C2 /* cJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON.h; sourceTree = "<group>"; };
+		378EE748155A359200EA80C2 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		378EE74C155A359200EA80C2 /* CloudBuilder_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudBuilder_private.h; sourceTree = "<group>"; };
+		378EE74F155A359200EA80C2 /* cotc_thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cotc_thread.cpp; sourceTree = "<group>"; };
+		378EE750155A359200EA80C2 /* cotc_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cotc_thread.h; sourceTree = "<group>"; };
+		378EE751155A359200EA80C2 /* CotCHelpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CotCHelpers.cpp; sourceTree = "<group>"; };
+		378EE75A155A359200EA80C2 /* ErrorStrings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ErrorStrings.cpp; sourceTree = "<group>"; };
+		378EE75D155A359200EA80C2 /* CClan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CClan.cpp; sourceTree = "<group>"; };
+		378EE75E155A359200EA80C2 /* CGameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CGameManager.cpp; sourceTree = "<group>"; };
+		378EE761155A359200EA80C2 /* CTribeManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTribeManager.cpp; sourceTree = "<group>"; };
+		378EE762155A359200EA80C2 /* CUserManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CUserManager.cpp; sourceTree = "<group>"; };
+		378EE78B155A359200EA80C2 /* curltool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = curltool.cpp; sourceTree = "<group>"; };
+		378EE78C155A359200EA80C2 /* curltool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curltool.h; sourceTree = "<group>"; };
+		C228F3F11BBD2FF0007AEE5B /* CIndexManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CIndexManager.cpp; sourceTree = "<group>"; };
+		C244ED131A8CE66600208F55 /* CStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CStoreManager.h; sourceTree = "<group>"; };
+		C244ED1D1A9344F400208F55 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C2865BA616415DE100757C37 /* RegisterDevice.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RegisterDevice.mm; path = MacOSX/RegisterDevice.mm; sourceTree = "<group>"; };
+		C29A044218AE3BC800D26C27 /* CloudBuilder.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudBuilder.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		C29A044418AE3BC800D26C27 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		C29A044818AE3BC800D26C27 /* CloudBuilder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CloudBuilder-Info.plist"; sourceTree = "<group>"; };
+		C29A044A18AE3BC800D26C27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C29A047218AE456F00D26C27 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		C29A047418AE45CA00D26C27 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C2C928C716A946BF00108D3F /* dummyClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dummyClass.cpp; sourceTree = "<group>"; };
+		C2C928CA16A946EB00108D3F /* CClannishRESTproxy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CClannishRESTproxy.cpp; sourceTree = "<group>"; };
+		C2C928CB16A946EB00108D3F /* CClannishRESTProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CClannishRESTProxy.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		378EE713155A347000EA80C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C29A043F18AE3BC800D26C27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C29A047518AE45CA00D26C27 /* AppKit.framework in Frameworks */,
+				C29A047318AE456F00D26C27 /* GameKit.framework in Frameworks */,
+				C29A044518AE3BC800D26C27 /* CoreFoundation.framework in Frameworks */,
+				C244ED211A9344FB00208F55 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		378EE70B155A347000EA80C2 = {
+			isa = PBXGroup;
+			children = (
+				378EE737155A359200EA80C2 /* sources */,
+				C29A044618AE3BC800D26C27 /* CloudBuilder */,
+				C29A044318AE3BC800D26C27 /* Frameworks */,
+				378EE717155A347000EA80C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		378EE717155A347000EA80C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				378EE716155A347000EA80C2 /* libCloudBuilderMacOSX.a */,
+				C29A044218AE3BC800D26C27 /* CloudBuilder.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		378EE721155A358800EA80C2 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				C244ED131A8CE66600208F55 /* CStoreManager.h */,
+				178C8D741A305A7C000C961D /* CMatchManager.h */,
+				378EE725155A358800EA80C2 /* CHJSON.h */,
+				378EE729155A358800EA80C2 /* CotCHelpers.h */,
+				2AD5AF8519BDAD9300E3B039 /* CDelegate.h */,
+				2AD5AF8619BDAD9300E3B039 /* CFastDelegate.h */,
+				2A85D92919A48FCF00727DE0 /* CFilesystem.h */,
+				378EE726155A358800EA80C2 /* CloudBuilder.h */,
+				378EE723155A358800EA80C2 /* CClan.h */,
+				378EE72B155A358800EA80C2 /* CUserManager.h */,
+				378EE724155A358800EA80C2 /* CGameManager.h */,
+				378EE72A155A358800EA80C2 /* CTribeManager.h */,
+			);
+			name = Headers;
+			path = ../Headers;
+			sourceTree = "<group>";
+		};
+		378EE737155A359200EA80C2 /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				C2865BA516415DBC00757C37 /* MacOSX */,
+				378EE744155A359200EA80C2 /* cJSON */,
+				378EE75B155A359200EA80C2 /* HighLevel */,
+				378EE721155A358800EA80C2 /* Headers */,
+				378EE78A155A359200EA80C2 /* tools */,
+				C29A04A718AE5D5D00D26C27 /* Unity */,
+				378EE73E155A359200EA80C2 /* CCallback.h */,
+				378EE73D155A359200EA80C2 /* CCallback.cpp */,
+				C2C928CA16A946EB00108D3F /* CClannishRESTproxy.cpp */,
+				C2C928CB16A946EB00108D3F /* CClannishRESTProxy.h */,
+				378EE743155A359200EA80C2 /* CHjSON.cpp */,
+				378EE74C155A359200EA80C2 /* CloudBuilder_private.h */,
+				378EE74F155A359200EA80C2 /* cotc_thread.cpp */,
+				378EE750155A359200EA80C2 /* cotc_thread.h */,
+				378EE751155A359200EA80C2 /* CotCHelpers.cpp */,
+				378EE75A155A359200EA80C2 /* ErrorStrings.cpp */,
+			);
+			name = sources;
+			path = ../sources;
+			sourceTree = "<group>";
+		};
+		378EE744155A359200EA80C2 /* cJSON */ = {
+			isa = PBXGroup;
+			children = (
+				378EE745155A359200EA80C2 /* cJSON.c */,
+				378EE747155A359200EA80C2 /* cJSON.h */,
+				378EE748155A359200EA80C2 /* README */,
+			);
+			path = cJSON;
+			sourceTree = "<group>";
+		};
+		378EE75B155A359200EA80C2 /* HighLevel */ = {
+			isa = PBXGroup;
+			children = (
+				C228F3F11BBD2FF0007AEE5B /* CIndexManager.cpp */,
+				2AD093941A7236A7001CD9A9 /* CStoreManager.cpp */,
+				178C8D7C1A305C8F000C961D /* CMatchManager.cpp */,
+				2A85D92719A48FA500727DE0 /* CFilesystem.cpp */,
+				378EE75D155A359200EA80C2 /* CClan.cpp */,
+				378EE75E155A359200EA80C2 /* CGameManager.cpp */,
+				378EE761155A359200EA80C2 /* CTribeManager.cpp */,
+				378EE762155A359200EA80C2 /* CUserManager.cpp */,
+			);
+			path = HighLevel;
+			sourceTree = "<group>";
+		};
+		378EE78A155A359200EA80C2 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				2A40E6E61A02714E0049267B /* base64.cpp */,
+				2A40E6E71A02714E0049267B /* base64.h */,
+				2A40E6E81A02714E0049267B /* util.cpp */,
+				2A40E6E91A02714E0049267B /* util.h */,
+				17E085BF19CDE405001221EA /* ssl_bio.cpp */,
+				2A85D92B19A4987A00727DE0 /* helpers.cpp */,
+				2A85D92C19A4987A00727DE0 /* helpers.h */,
+				378EE78B155A359200EA80C2 /* curltool.cpp */,
+				378EE78C155A359200EA80C2 /* curltool.h */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		C2865BA516415DBC00757C37 /* MacOSX */ = {
+			isa = PBXGroup;
+			children = (
+				17F1A75B1A92035000D39953 /* AppStoreHandler.h */,
+				17F1A75C1A92035000D39953 /* AppStoreHandler.mm */,
+				17BCFFEF19E557F000C76A3A /* GameCenterHandler.h */,
+				17BCFFF019E557F000C76A3A /* GameCenterHandler.mm */,
+				17310B2519E41987005573D3 /* CMacAndIosFilesystemHandlerImpl.mm */,
+				172FFF1419D3176A009FC0AD /* CStdioBasedFileImpl.cpp */,
+				172FFF1519D3176A009FC0AD /* CStdioBasedFileImpl.h */,
+				C2C928C716A946BF00108D3F /* dummyClass.cpp */,
+				C2865BA616415DE100757C37 /* RegisterDevice.mm */,
+				2A3B501F19C1C123006CB4F8 /* MacConsole.cpp */,
+			);
+			name = MacOSX;
+			sourceTree = "<group>";
+		};
+		C29A044318AE3BC800D26C27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C244ED1D1A9344F400208F55 /* StoreKit.framework */,
+				C29A047418AE45CA00D26C27 /* AppKit.framework */,
+				C29A047218AE456F00D26C27 /* GameKit.framework */,
+				C29A044418AE3BC800D26C27 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C29A044618AE3BC800D26C27 /* CloudBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				C29A044718AE3BC800D26C27 /* Supporting Files */,
+			);
+			path = CloudBuilder;
+			sourceTree = "<group>";
+		};
+		C29A044718AE3BC800D26C27 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C29A044818AE3BC800D26C27 /* CloudBuilder-Info.plist */,
+				C29A044918AE3BC800D26C27 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C29A04A718AE5D5D00D26C27 /* Unity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Unity;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		378EE714155A347000EA80C2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A85D92A19A48FCF00727DE0 /* CFilesystem.h in Headers */,
+				378EE72E155A358800EA80C2 /* CClan.h in Headers */,
+				378EE72F155A358800EA80C2 /* CGameManager.h in Headers */,
+				378EE730155A358800EA80C2 /* CHJSON.h in Headers */,
+				178C8D751A305A7C000C961D /* CMatchManager.h in Headers */,
+				378EE731155A358800EA80C2 /* CloudBuilder.h in Headers */,
+				378EE734155A358800EA80C2 /* CotCHelpers.h in Headers */,
+				378EE735155A358800EA80C2 /* CTribeManager.h in Headers */,
+				C244ED141A8CE66600208F55 /* CStoreManager.h in Headers */,
+				378EE736155A358800EA80C2 /* CUserManager.h in Headers */,
+				378EE792155A359200EA80C2 /* CCallback.h in Headers */,
+				378EE799155A359200EA80C2 /* cJSON.h in Headers */,
+				378EE79D155A359200EA80C2 /* CloudBuilder_private.h in Headers */,
+				2AD5AF8819BDAD9300E3B039 /* CDelegate.h in Headers */,
+				378EE7A1155A359200EA80C2 /* cotc_thread.h in Headers */,
+				172FFF1A19D3176A009FC0AD /* CStdioBasedFileImpl.h in Headers */,
+				2A40E6F51A02714E0049267B /* util.h in Headers */,
+				17BCFFF119E557F000C76A3A /* GameCenterHandler.h in Headers */,
+				2A85D92E19A4987A00727DE0 /* helpers.h in Headers */,
+				2AD5AF8A19BDAD9300E3B039 /* CFastDelegate.h in Headers */,
+				17F1A75D1A92035000D39953 /* AppStoreHandler.h in Headers */,
+				378EE7D3155A359200EA80C2 /* curltool.h in Headers */,
+				C2C928CD16A946EB00108D3F /* CClannishRESTProxy.h in Headers */,
+				2A40E6EE1A02714E0049267B /* base64.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		378EE715155A347000EA80C2 /* CloudBuilderMacOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 378EE71A155A347000EA80C2 /* Build configuration list for PBXNativeTarget "CloudBuilderMacOSX" */;
+			buildPhases = (
+				378EE712155A347000EA80C2 /* Sources */,
+				378EE713155A347000EA80C2 /* Frameworks */,
+				378EE714155A347000EA80C2 /* Headers */,
+				378EE826155A461300EA80C2 /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloudBuilderMacOSX;
+			productName = CloudBuilderMacOSX;
+			productReference = 378EE716155A347000EA80C2 /* libCloudBuilderMacOSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C29A044118AE3BC800D26C27 /* CloudBuilder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C29A044F18AE3BC800D26C27 /* Build configuration list for PBXNativeTarget "CloudBuilder" */;
+			buildPhases = (
+				C29A043E18AE3BC800D26C27 /* Sources */,
+				C29A043F18AE3BC800D26C27 /* Frameworks */,
+				C29A044018AE3BC800D26C27 /* Resources */,
+				C27BECE018EAF23D003CE68A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloudBuilder;
+			productName = CloudBuilder;
+			productReference = C29A044218AE3BC800D26C27 /* CloudBuilder.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		378EE70D155A347000EA80C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 378EE710155A347000EA80C2 /* Build configuration list for PBXProject "CloudBuilderMacOSX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 378EE70B155A347000EA80C2;
+			productRefGroup = 378EE717155A347000EA80C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				378EE715155A347000EA80C2 /* CloudBuilderMacOSX */,
+				C29A044118AE3BC800D26C27 /* CloudBuilder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C29A044018AE3BC800D26C27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C29A044B18AE3BC800D26C27 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		378EE826155A461300EA80C2 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nmkdir -p \"$PROJECT_DIR\"/../../delivery/CloudBuilder/headers\n\ncp \"$CONFIGURATION_BUILD_DIR\"/usr/local/include/*  \"$PROJECT_DIR\"/../../delivery/CloudBuilder/headers/\n\nmkdir -p \"$PROJECT_DIR\"/../../delivery/CloudBuilder/MacOSX/$CONFIGURATION\n\nlibtool -static -o \"$PROJECT_DIR\"/../../delivery/CloudBuilder/MacOSX/$CONFIGURATION/libCloudBuilder.a \"$CONFIGURATION_BUILD_DIR\"/*.a \"$PROJECT_DIR\"/../../delivery/curl/MacOSX/$CONFIGURATION/*.a \"$PROJECT_DIR/../../delivery/openssl/MacOSX/lib/libcrypto.a\" \"$PROJECT_DIR/../../delivery/openssl/MacOSX/lib/libssl.a\"\n\n";
+		};
+		C27BECE018EAF23D003CE68A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"$PROJECT_DIR\"/../../delivery/CloudBuilder/MacOSX/$CONFIGURATION\n                                                \ncp -r \"$CONFIGURATION_BUILD_DIR\"/CloudBuilder.bundle \"$PROJECT_DIR\"/../../delivery/CloudBuilder/MacOSX/$CONFIGURATION\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		378EE712155A347000EA80C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				378EE791155A359200EA80C2 /* CCallback.cpp in Sources */,
+				378EE797155A359200EA80C2 /* CHjSON.cpp in Sources */,
+				378EE798155A359200EA80C2 /* cJSON.c in Sources */,
+				378EE7A0155A359200EA80C2 /* cotc_thread.cpp in Sources */,
+				378EE7A2155A359200EA80C2 /* CotCHelpers.cpp in Sources */,
+				378EE7AB155A359200EA80C2 /* ErrorStrings.cpp in Sources */,
+				378EE7AD155A359200EA80C2 /* CClan.cpp in Sources */,
+				378EE7AE155A359200EA80C2 /* CGameManager.cpp in Sources */,
+				2A40E6EA1A02714E0049267B /* base64.cpp in Sources */,
+				378EE7B1155A359200EA80C2 /* CTribeManager.cpp in Sources */,
+				378EE7B2155A359200EA80C2 /* CUserManager.cpp in Sources */,
+				17BCFFF219E557F000C76A3A /* GameCenterHandler.mm in Sources */,
+				2A85D92819A48FA500727DE0 /* CFilesystem.cpp in Sources */,
+				2A85D92D19A4987A00727DE0 /* helpers.cpp in Sources */,
+				17E085C019CDE405001221EA /* ssl_bio.cpp in Sources */,
+				17F1A75E1A92035000D39953 /* AppStoreHandler.mm in Sources */,
+				2A40E6F11A02714E0049267B /* util.cpp in Sources */,
+				378EE7D2155A359200EA80C2 /* curltool.cpp in Sources */,
+				C2865BA716415DE100757C37 /* RegisterDevice.mm in Sources */,
+				17310B2619E41987005573D3 /* CMacAndIosFilesystemHandlerImpl.mm in Sources */,
+				C228F3F21BBD2FF0007AEE5B /* CIndexManager.cpp in Sources */,
+				C2C928C816A946BF00108D3F /* dummyClass.cpp in Sources */,
+				C2C928CC16A946EB00108D3F /* CClannishRESTproxy.cpp in Sources */,
+				2AD093951A7236A7001CD9A9 /* CStoreManager.cpp in Sources */,
+				172FFF1619D3176A009FC0AD /* CStdioBasedFileImpl.cpp in Sources */,
+				178C8D7D1A305C8F000C961D /* CMatchManager.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C29A043E18AE3BC800D26C27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2079F0D19D1AC140051259C /* ssl_bio.cpp in Sources */,
+				C2B1B4B81A88B704009BBC70 /* CStoreManager.cpp in Sources */,
+				172FFF1919D3176A009FC0AD /* CStdioBasedFileImpl.cpp in Sources */,
+				C29A047A18AE461E00D26C27 /* CGameManager.cpp in Sources */,
+				2AA14CB719D4233400FEE494 /* CFilesystem.cpp in Sources */,
+				C29A046B18AE41F800D26C27 /* cotc_thread.cpp in Sources */,
+				17310B2919E41987005573D3 /* CMacAndIosFilesystemHandlerImpl.mm in Sources */,
+				C29A047E18AE461E00D26C27 /* CUserManager.cpp in Sources */,
+				2A40E6ED1A02714E0049267B /* base64.cpp in Sources */,
+				C29A045518AE3C5B00D26C27 /* cJSON.c in Sources */,
+				C244ED1C1A93448100208F55 /* AppStoreHandler.mm in Sources */,
+				2A9C111519F24E88009A93B1 /* GameCenterHandler.mm in Sources */,
+				C29A046418AE41F800D26C27 /* CCallback.cpp in Sources */,
+				C29A047118AE41F800D26C27 /* ErrorStrings.cpp in Sources */,
+				C20C3F7D19BEF78600234FA2 /* helpers.cpp in Sources */,
+				C29A046318AE41EA00D26C27 /* curltool.cpp in Sources */,
+				C29A047D18AE461E00D26C27 /* CTribeManager.cpp in Sources */,
+				C29A046718AE41F800D26C27 /* CHjSON.cpp in Sources */,
+				C29A045218AE3C4000D26C27 /* RegisterDevice.mm in Sources */,
+				C29A047918AE461E00D26C27 /* CClan.cpp in Sources */,
+				C29A046C18AE41F800D26C27 /* CotCHelpers.cpp in Sources */,
+				C29A046518AE41F800D26C27 /* CClannishRESTproxy.cpp in Sources */,
+				C228F3F31BBD3006007AEE5B /* CIndexManager.cpp in Sources */,
+				C29A045118AE3C3B00D26C27 /* dummyClass.cpp in Sources */,
+				2A40E6F41A02714E0049267B /* util.cpp in Sources */,
+				178C8D801A305C8F000C961D /* CMatchManager.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C29A044918AE3BC800D26C27 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C29A044A18AE3BC800D26C27 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		378EE718155A347000EA80C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../sources,
+					../Headers,
+					../sources/iOS,
+				);
+				LIBRARY_SEARCH_PATHS = "../../delivery/CloudBuilder/MacOS/$(CONFIGURATION)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-D__MACOS__";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "../sources ../Headers ../sources/iOS";
+			};
+			name = Debug;
+		};
+		378EE719155A347000EA80C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../sources,
+					../Headers,
+					../sources/iOS,
+				);
+				LIBRARY_SEARCH_PATHS = "../../delivery/CloudBuilder/MacOS/$(CONFIGURATION)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "-D__MACOS__";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "../sources ../Headers ../sources/iOS";
+			};
+			name = Release;
+		};
+		378EE71B155A347000EA80C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					../sources,
+					../Headers,
+					../sources/iOS,
+					"$(SRCROOT)/../../delivery/openssl/MacOSX/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../delivery/curl/MacOSX/Debug\"",
+					"\"$(SRCROOT)/../../delivery/openssl/MacOSX/lib\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		378EE71C155A347000EA80C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					../sources,
+					../Headers,
+					../sources/iOS,
+					"$(SRCROOT)/../../delivery/openssl/MacOSX/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../delivery/curl/MacOSX/Debug\"",
+					"\"$(SRCROOT)/../../delivery/openssl/MacOSX/lib\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+		C29A044D18AE3BC800D26C27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				HEADER_SEARCH_PATHS = (
+					../sources,
+					../Headers,
+					../sources/iOS,
+					"$(SRCROOT)/../../delivery/openssl/MacOSX/include",
+				);
+				INFOPLIST_FILE = "CloudBuilder/CloudBuilder-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					../../delivery/openssl/MacOSX/lib,
+					"../../delivery/curl/MacOSX/$(CONFIGURATION)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lcrypto",
+					"-lssl",
+					"-lMacosXCurl",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		C29A044E18AE3BC800D26C27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				HEADER_SEARCH_PATHS = (
+					../sources,
+					../Headers,
+					../sources/iOS,
+					"$(SRCROOT)/../../delivery/openssl/MacOSX/include",
+				);
+				INFOPLIST_FILE = "CloudBuilder/CloudBuilder-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					../../delivery/openssl/MacOSX/lib,
+					"../../delivery/curl/MacOSX/$(CONFIGURATION)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lcrypto",
+					"-lssl",
+					"-lMacosXCurl",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		378EE710155A347000EA80C2 /* Build configuration list for PBXProject "CloudBuilderMacOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				378EE718155A347000EA80C2 /* Debug */,
+				378EE719155A347000EA80C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		378EE71A155A347000EA80C2 /* Build configuration list for PBXNativeTarget "CloudBuilderMacOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				378EE71B155A347000EA80C2 /* Debug */,
+				378EE71C155A347000EA80C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C29A044F18AE3BC800D26C27 /* Build configuration list for PBXNativeTarget "CloudBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C29A044D18AE3BC800D26C27 /* Debug */,
+				C29A044E18AE3BC800D26C27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 378EE70D155A347000EA80C2 /* Project object */;
+}

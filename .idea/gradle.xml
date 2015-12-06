@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/CLI" />
+            <option value="$PROJECT_DIR$/CLI/Android" />
+            <option value="$PROJECT_DIR$/CloudBuilder" />
+            <option value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
+            <option value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
+            <option value="$PROJECT_DIR$/delivery" />
+            <option value="$PROJECT_DIR$/delivery/Google" />
+            <option value="$PROJECT_DIR$/delivery/Google/Android" />
+            <option value="$PROJECT_DIR$/delivery/Google/Android/gcm" />
+            <option value="$PROJECT_DIR$/delivery/Google/Android/google-play-services_lib" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

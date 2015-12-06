@@ -1,0 +1,4 @@
+include ':CloudBuilder:CloudBuilderAndroid:CloudBuilder'
+include ':delivery:Google:Android:google-play-services_lib'
+include ':delivery:Google:Android:gcm'
+include ':CLI:Android'

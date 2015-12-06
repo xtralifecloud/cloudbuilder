@@ -1,0 +1,77 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
+apply plugin: 'com.android.application'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile fileTree(dir: 'libs', include: '*.jar')
+	compile fileTree(dir: 'libs', include: '*.so')
+	compile project(':CloudBuilder:CloudBuilderAndroid:CloudBuilder')
+//    Facebook SDK and GooglePlayServices lib are not needed anymore
+//    since we do not manage social network authentication
+//    Hack for errors such as: com.android.dex.DexException: Multiple dex files define………
+//    compile('com.facebook.android:facebook-android-sdk:3.23.1') {
+//    	exclude module: 'support-v4'
+//    }
+//    compile project(':delivery:Google:Android:gcm')
+//    compile project(':delivery:Google:Android:google-play-services_lib')
+}
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion "20.0.0"
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDir 'src/main/libs'
+            jni.srcDirs = [] //disable automatic ndk-build call
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    // call regular ndk-build(.cmd) script from app directory
+    task ndkBuild(type: Exec) {
+        if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+            commandLine 'ndk-build.cmd', '-C', file('jni').absolutePath
+        } else {
+            commandLine '/opt/android-ndk/ndk-build', '-C', file('jni').absolutePath
+        }
+    }
+
+    tasks.withType(JavaCompile) {
+        compileTask -> compileTask.dependsOn ndkBuild
+    }
+
+    tasks.withType(com.android.build.gradle.tasks.PackageApplication) { pkgTask ->
+        pkgTask.jniFolders = new HashSet<File>()
+        pkgTask.jniFolders.add(new File(projectDir, 'libs'))
+    }
+
+	// Helper (run :CLI:Android:recompileAll to quickly assemble the libCloudBuilder + Android app)
+	task quickBuild1(dependsOn: [':CloudBuilder:CloudBuilderAndroid:CloudBuilder:assembleDebug'])
+
+	task quickBuild(dependsOn: ['assembleDebug', 'quickBuild1']) {
+		mustRunAfter quickBuild1
+	}
+}

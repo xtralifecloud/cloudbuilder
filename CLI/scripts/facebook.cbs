@@ -1,0 +1,8 @@
+setup cloudbuilder dev
+
+loginwith facebookId 820847345 CAAIoRjU6xxYBAFPzLfZChXcUyxhvYq2iAa9ioN8LNWr1aRFddqZBCifnWAMsk1DRTGuVrdSHq0cEoyVcybtwA08F9Is8uVDMmXqJEhrR6oWyK0MVtsoYhkqaZCWXWempWqLTw6Spn9Xx2EYQUdcf6M2ij5kVCWvw1KzP97gPPOONhzWD5mlDCPrwF3i9yGBPPFON3ZBXdgZDZD
+
+friendsof { "network" : "facebookId", "automatching" : true, "friends" : {"571377632": {"name": "Michael El Baki","id": "571377632","firstName": "Michael","lastName": "Baki"},"100005995985880": {"name": "Roro Leheros","id": "100005995985880","firstName": "Roro","lastName": "Leheros"} } }
+
+logout
+

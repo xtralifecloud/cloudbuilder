@@ -1,0 +1,11 @@
+setup cloudbuilder sandbox
+
+loginwith googleplusId 109253273142063520043 ya29.EwIKFbsz2XMT2XFlr5iVtaTpqynXFlQZPUulr2LWBFmA1dKDmYBACXxsLHmC0aGu2hBDQJ9T1F5ggKH6
+
+friends
+
+friendsof { "network" : "googleplusId", "automatching" : true, "friends" : {"117284775663179833810" : {"displayName" : "Michael El Baki"}, "107698499646911630827" : {"displayName" : "roland van leeuwen"}} }
+
+friends
+
+logout

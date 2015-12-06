@@ -1,0 +1,274 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		378EE7E4155A363000EA80C2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 378EE7E3155A363000EA80C2 /* main.cpp */; };
+		378EE801155A38A200EA80C2 /* libCloudBuilderMacOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 378EE800155A38A200EA80C2 /* libCloudBuilderMacOSX.a */; };
+		378EE81D155A441400EA80C2 /* libMacosXCurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 378EE81C155A441400EA80C2 /* libMacosXCurl.a */; };
+		378EE81F155A442700EA80C2 /* libcyassl-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 378EE81E155A442700EA80C2 /* libcyassl-macosx.a */; };
+		37A39DC215679F9F009204DD /* testsocketio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37A39DC115679F9F009204DD /* testsocketio.cpp */; };
+		37A39DD215680470009204DD /* testcloudsocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37A39DD115680470009204DD /* testcloudsocket.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		378EE7DD155A363000EA80C2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		378EE7DF155A363000EA80C2 /* testCloudBuilder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testCloudBuilder; sourceTree = BUILT_PRODUCTS_DIR; };
+		378EE7E3155A363000EA80C2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		378EE7ED155A365300EA80C2 /* CChallengeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CChallengeManager.h; sourceTree = "<group>"; };
+		378EE7EE155A365300EA80C2 /* CClan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CClan.h; sourceTree = "<group>"; };
+		378EE7EF155A365300EA80C2 /* CGameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGameManager.h; sourceTree = "<group>"; };
+		378EE7F0155A365300EA80C2 /* CHJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHJSON.h; sourceTree = "<group>"; };
+		378EE7F1155A365300EA80C2 /* CloudBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudBuilder.h; sourceTree = "<group>"; };
+		378EE7F2155A365300EA80C2 /* CMatchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMatchManager.h; sourceTree = "<group>"; };
+		378EE7F3155A365300EA80C2 /* CNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNotificationManager.h; sourceTree = "<group>"; };
+		378EE7F4155A365300EA80C2 /* CotCHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CotCHelpers.h; sourceTree = "<group>"; };
+		378EE7F5155A365300EA80C2 /* CTribeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTribeManager.h; sourceTree = "<group>"; };
+		378EE7F6155A365300EA80C2 /* CUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUserManager.h; sourceTree = "<group>"; };
+		378EE7F7155A365300EA80C2 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		378EE800155A38A200EA80C2 /* libCloudBuilderMacOSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCloudBuilderMacOSX.a; path = ../build/Debug/libCloudBuilderMacOSX.a; sourceTree = "<group>"; };
+		378EE81C155A441400EA80C2 /* libMacosXCurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMacosXCurl.a; path = ../../../delivery/curl/MacOSX/Debug/libMacosXCurl.a; sourceTree = "<group>"; };
+		378EE81E155A442700EA80C2 /* libcyassl-macosx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcyassl-macosx.a"; path = "../../../delivery/cyassl/MacOSX/Debug/libcyassl-macosx.a"; sourceTree = "<group>"; };
+		37A39DC115679F9F009204DD /* testsocketio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testsocketio.cpp; sourceTree = "<group>"; };
+		37A39DD115680470009204DD /* testcloudsocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testcloudsocket.cpp; sourceTree = "<group>"; };
+		37A39DD4156804BA009204DD /* CCloudSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCloudSocket.h; path = ../../../sources/CCloudSocket.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		378EE7DC155A363000EA80C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				378EE801155A38A200EA80C2 /* libCloudBuilderMacOSX.a in Frameworks */,
+				378EE81D155A441400EA80C2 /* libMacosXCurl.a in Frameworks */,
+				378EE81F155A442700EA80C2 /* libcyassl-macosx.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		378EE7D4155A363000EA80C2 = {
+			isa = PBXGroup;
+			children = (
+				378EE81E155A442700EA80C2 /* libcyassl-macosx.a */,
+				378EE81C155A441400EA80C2 /* libMacosXCurl.a */,
+				378EE800155A38A200EA80C2 /* libCloudBuilderMacOSX.a */,
+				378EE7EC155A365300EA80C2 /* Headers */,
+				378EE7E2155A363000EA80C2 /* testCloudBuilder */,
+				378EE7E0155A363000EA80C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		378EE7E0155A363000EA80C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				378EE7DF155A363000EA80C2 /* testCloudBuilder */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		378EE7E2155A363000EA80C2 /* testCloudBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				37A39DD4156804BA009204DD /* CCloudSocket.h */,
+				378EE7E3155A363000EA80C2 /* main.cpp */,
+				37A39DC115679F9F009204DD /* testsocketio.cpp */,
+				37A39DD115680470009204DD /* testcloudsocket.cpp */,
+			);
+			path = testCloudBuilder;
+			sourceTree = "<group>";
+		};
+		378EE7EC155A365300EA80C2 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				378EE7ED155A365300EA80C2 /* CChallengeManager.h */,
+				378EE7EE155A365300EA80C2 /* CClan.h */,
+				378EE7EF155A365300EA80C2 /* CGameManager.h */,
+				378EE7F0155A365300EA80C2 /* CHJSON.h */,
+				378EE7F1155A365300EA80C2 /* CloudBuilder.h */,
+				378EE7F2155A365300EA80C2 /* CMatchManager.h */,
+				378EE7F3155A365300EA80C2 /* CNotificationManager.h */,
+				378EE7F4155A365300EA80C2 /* CotCHelpers.h */,
+				378EE7F5155A365300EA80C2 /* CTribeManager.h */,
+				378EE7F6155A365300EA80C2 /* CUserManager.h */,
+				378EE7F7155A365300EA80C2 /* README */,
+			);
+			name = Headers;
+			path = ../../Headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		378EE7DE155A363000EA80C2 /* testCloudBuilder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 378EE7E9155A363000EA80C2 /* Build configuration list for PBXNativeTarget "testCloudBuilder" */;
+			buildPhases = (
+				378EE7DB155A363000EA80C2 /* Sources */,
+				378EE7DC155A363000EA80C2 /* Frameworks */,
+				378EE7DD155A363000EA80C2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testCloudBuilder;
+			productName = testCloudBuilder;
+			productReference = 378EE7DF155A363000EA80C2 /* testCloudBuilder */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		378EE7D6155A363000EA80C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 378EE7D9155A363000EA80C2 /* Build configuration list for PBXProject "testCloudBuilder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 378EE7D4155A363000EA80C2;
+			productRefGroup = 378EE7E0155A363000EA80C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				378EE7DE155A363000EA80C2 /* testCloudBuilder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		378EE7DB155A363000EA80C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				378EE7E4155A363000EA80C2 /* main.cpp in Sources */,
+				37A39DC215679F9F009204DD /* testsocketio.cpp in Sources */,
+				37A39DD215680470009204DD /* testcloudsocket.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		378EE7E7155A363000EA80C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-D__IOS__";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		378EE7E8155A363000EA80C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = "-D__IOS__";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		378EE7EA155A363000EA80C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../delivery/CloudBuilder/MacOSX\"",
+					"\"$(SRCROOT)/../../../delivery/curl/MacOSX/Debug\"",
+					"\"$(SRCROOT)/../../../delivery/cyassl/MacOSX/Debug\"",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		378EE7EB155A363000EA80C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../delivery/CloudBuilder/MacOSX\"",
+					"\"$(SRCROOT)/../../../delivery/curl/MacOSX/Debug\"",
+					"\"$(SRCROOT)/../../../delivery/cyassl/MacOSX/Debug\"",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		378EE7D9155A363000EA80C2 /* Build configuration list for PBXProject "testCloudBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				378EE7E7155A363000EA80C2 /* Debug */,
+				378EE7E8155A363000EA80C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		378EE7E9155A363000EA80C2 /* Build configuration list for PBXNativeTarget "testCloudBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				378EE7EA155A363000EA80C2 /* Debug */,
+				378EE7EB155A363000EA80C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 378EE7D6155A363000EA80C2 /* Project object */;
+}

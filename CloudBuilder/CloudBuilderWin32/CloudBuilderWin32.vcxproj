@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_VS2010_x64|Win32">
+      <Configuration>Debug_VS2010_x64</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_VS2010_x64|x64">
+      <Configuration>Debug_VS2010_x64</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_VS2010|x64">
+      <Configuration>Debug_VS2010</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_VS2012|Win32">
+      <Configuration>Debug_VS2012</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_VS2010|Win32">
+      <Configuration>Debug_VS2010</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_VS2012|x64">
+      <Configuration>Debug_VS2012</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_VS2010|x64">
+      <Configuration>Release_VS2010</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_VS2012|Win32">
+      <Configuration>Release_VS2012</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_VS2010|Win32">
+      <Configuration>Release_VS2010</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_VS2012|x64">
+      <Configuration>Release_VS2012</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{57B12BC4-A940-4D0B-A531-E77C671BD580}</ProjectGuid>
+    <RootNamespace>CloudBuilderWin32</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>CloudBuilder</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release_VS2012|Win32'">
+    <PlatformToolset>v110</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2012|x64'" Label="Configuration">
+    <PlatformToolset>v110</PlatformToolset>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|Win32'">$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|Win32'">$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|Win32'">$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|Win32'">$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|Win32'">$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|Win32'">$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|Win32'">$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|Win32'">$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|x64'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|x64'" />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2012|Win32'">
+    <OutDir>$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|x64'">
+    <OutDir>$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|x64'">
+    <OutDir>$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|x64'">
+    <OutDir>$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2012|x64'">
+    <OutDir>$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|x64'">
+    <OutDir>$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <IntDir>$(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../pthreads-w32-2.9.1/pthreads.2;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libpthread.lib;libcurld.lib;Ws2_32.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../delivery/pthread/Windows/$(Configuration)/$(PlatformTarget);../../delivery/curl/Windows/$(Configuration)/$(PlatformTarget);../../delivery/openssl/Win32/$(PlatformTarget)/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\CloudBuilder\Headers
+mkdir ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.lib ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.lib
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.dll ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.dll
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\vc*.pdb ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../pthreads-w32-2.9.1/pthreads.2;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libpthread.lib;libcurld.lib;Ws2_32.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../delivery/pthread/Windows/$(Configuration)/$(PlatformTarget);../../delivery/curl/Windows/$(Configuration)/$(PlatformTarget);../../delivery/openssl/Win32/$(PlatformTarget)/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\CloudBuilder\Headers
+mkdir ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.lib ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.lib
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.dll ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.dll
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\vc*.pdb ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../pthreads-w32-2.9.1/pthreads.2;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libpthread.lib;libcurld.lib;Ws2_32.lib;cyassl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../delivery/pthread/Windows/$(Configuration)/$(PlatformTarget);../../delivery/curl/Windows/$(Configuration)/$(PlatformTarget);../../delivery/openssl/Win32/$(PlatformTarget)/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\CloudBuilder\Headers
+mkdir ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.lib ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.lib
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.dll ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.dll
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\vc*.pdb ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010_x64|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../pthreads-w32-2.9.1/pthreads.2;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libpthread.lib;libcurld.lib;Ws2_32.lib;cyassl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../delivery/pthread/Windows/$(Configuration)/$(PlatformTarget);../../delivery/curl/Windows/$(Configuration)/$(PlatformTarget);../../delivery/openssl/Win32/$(PlatformTarget)/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\CloudBuilder\Headers
+mkdir ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.lib ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.lib
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.dll ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.dll
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\vc*.pdb ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../pthreads-w32-2.9.1/pthreads.2;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;DEBUG;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libpthread.lib;libcurld.lib;Ws2_32.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../delivery/pthread/Windows/$(Configuration)/$(PlatformTarget);../../delivery/curl/Windows/$(Configuration)/$(PlatformTarget);../../delivery/openssl/Win32/$(PlatformTarget)/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\CloudBuilder\Headers
+mkdir ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.lib ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.lib
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.dll ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.dll
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\vc*.pdb ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../pthreads-w32-2.9.1/pthreads.2;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;DEBUG;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libpthread.lib;libcurld.lib;Ws2_32.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../delivery/pthread/Windows/$(Configuration)/$(PlatformTarget);../../delivery/curl/Windows/$(Configuration)/$(PlatformTarget);../../delivery/openssl/Win32/$(PlatformTarget)/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\CloudBuilder\Headers
+mkdir ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.lib ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.lib
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.dll ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.dll
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\vc*.pdb ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../../pthreads-w32-2.9.1/pthreads.2;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;NDEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libpthread.lib;libcurl.lib;Ws2_32.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../delivery/pthread/Windows/$(Configuration)/$(PlatformTarget);../../delivery/curl/Windows/$(Configuration)/$(PlatformTarget);../../delivery/openssl/Win32/$(PlatformTarget)/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\CloudBuilder\Headers
+mkdir ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.lib ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.lib
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.dll ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.dll
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\vc*.pdb ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../../pthreads-w32-2.9.1/pthreads.2;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;NDEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libpthread.lib;libcurl.lib;Ws2_32.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../delivery/pthread/Windows/$(Configuration)/$(PlatformTarget);../../delivery/curl/Windows/$(Configuration)/$(PlatformTarget);../../delivery/openssl/Win32/$(PlatformTarget)/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\CloudBuilder\Headers
+mkdir ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.lib ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.lib
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.dll ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.dll
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\vc*.pdb ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2012|Win32'">
+    <Link>
+      <AdditionalLibraryDirectories>../../delivery/pthread/Windows/$(Configuration)/$(PlatformTarget);../../delivery/curl/Windows/$(Configuration)/$(PlatformTarget);../../delivery/openssl/Win32/$(PlatformTarget)/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libpthread.lib;libcurl.lib;Ws2_32.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\CloudBuilder\Headers
+mkdir ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.lib ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.lib
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.dll ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.dll
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\vc*.pdb ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
+    </PostBuildEvent>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../pthreads-w32-2.9.1/pthreads.2;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;NDEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2012|x64'">
+    <Link>
+      <AdditionalLibraryDirectories>../../delivery/pthread/Windows/$(Configuration)/$(PlatformTarget);../../delivery/curl/Windows/$(Configuration)/$(PlatformTarget);../../delivery/openssl/Win32/$(PlatformTarget)/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libpthread.lib;libcurl.lib;Ws2_32.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\CloudBuilder\Headers
+mkdir ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.lib ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.lib
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\CloudBuilder.dll ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)\CloudBuilder.dll
+copy $(MSBuildProjectDirectory)\$(PlatformTarget)\$(Configuration)\vc*.pdb ..\..\delivery\CloudBuilder\Windows\$(Configuration)\$(PlatformShortName)
+copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
+    </PostBuildEvent>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../pthreads-w32-2.9.1/pthreads.2;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;NDEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\sources\CCallback.cpp" />
+    <ClCompile Include="..\sources\CClannishRESTproxy.cpp" />
+    <ClCompile Include="..\sources\CHjSON.cpp" />
+    <ClCompile Include="..\sources\CotCHelpers.cpp" />
+    <ClCompile Include="..\sources\cotc_thread.cpp" />
+    <ClCompile Include="..\sources\dummyClass.cpp" />
+    <ClCompile Include="..\sources\dummy\DummyGameCenterHandler.cpp" />
+    <ClCompile Include="..\sources\ErrorStrings.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CClan.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CFilesystem.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CGameManager.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CIndexManager.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CMatchManager.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CStoreManager.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CTribeManager.cpp" />
+    <ClCompile Include="..\sources\HighLevel\CUserManager.cpp" />
+    <ClCompile Include="..\sources\optional\CStdioBasedFileImpl.cpp" />
+    <ClCompile Include="..\sources\tools\curltool.cpp" />
+    <ClCompile Include="..\sources\cJSON\cJSON.c" />
+    <ClCompile Include="..\sources\sdb\base64.cpp" />
+    <ClCompile Include="..\sources\sdb\util.cpp" />
+    <ClCompile Include="..\sources\tools\helpers.cpp" />
+    <ClCompile Include="..\sources\tools\ssl_bio.cpp" />
+    <ClCompile Include="..\sources\Win32\CWindowsFilesystemHandlerImpl.cpp" />
+    <ClCompile Include="..\sources\Win32\RegisterDevice.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Headers\CClan.h" />
+    <ClInclude Include="..\Headers\CDelegate.h" />
+    <ClInclude Include="..\Headers\CFastDelegate.h" />
+    <ClInclude Include="..\Headers\CFilesystem.h" />
+    <ClInclude Include="..\Headers\CGameManager.h" />
+    <ClInclude Include="..\Headers\CIndexManager.h" />
+    <ClInclude Include="..\Headers\CMatchManager.h" />
+    <ClInclude Include="..\Headers\CotCHelpers.h" />
+    <ClInclude Include="..\Headers\CStoreManager.h" />
+    <ClInclude Include="..\Headers\CTribeManager.h" />
+    <ClInclude Include="..\Headers\CUserManager.h" />
+    <ClInclude Include="..\Headers\CHttpFailureEventArgs.h" />
+    <ClInclude Include="..\sources\CCallback.h" />
+    <ClInclude Include="..\sources\CClannishRESTProxy.h" />
+    <ClInclude Include="..\sources\CStoreGlue.h" />
+    <ClInclude Include="..\sources\CloudBuilder_private.h" />
+    <ClInclude Include="..\sources\cotc_thread.h" />
+    <ClInclude Include="..\sources\optional\CStdioBasedFileImpl.h" />
+    <ClInclude Include="..\sources\tools\curltool.h" />
+    <ClInclude Include="..\sources\cJSON\cJSON.h" />
+    <ClInclude Include="..\sources\sdb\base64.h" />
+    <ClInclude Include="..\sources\sdb\util.h" />
+    <ClInclude Include="..\Headers\CHJSON.h" />
+    <ClInclude Include="..\Headers\CloudBuilder.h" />
+    <ClInclude Include="..\sources\tools\helpers.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

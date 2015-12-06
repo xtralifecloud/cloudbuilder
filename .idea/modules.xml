@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CLI/Android/Android.iml" filepath="$PROJECT_DIR$/CLI/Android/Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CLI/CLI.iml" filepath="$PROJECT_DIR$/CLI/CLI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CloudBuilder/CloudBuilder.iml" filepath="$PROJECT_DIR$/CloudBuilder/CloudBuilder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilderAndroid.iml" filepath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilderAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/CloudBuilderAndroid-CloudBuilder.iml" filepath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/CloudBuilderAndroid-CloudBuilder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/delivery/Google/Google.iml" filepath="$PROJECT_DIR$/delivery/Google/Google.iml" />
+      <module fileurl="file://$PROJECT_DIR$/delivery/Google/Android/Google-Android.iml" filepath="$PROJECT_DIR$/delivery/Google/Android/Google-Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/delivery/delivery.iml" filepath="$PROJECT_DIR$/delivery/delivery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/delivery/Google/Android/gcm/gcm.iml" filepath="$PROJECT_DIR$/delivery/Google/Android/gcm/gcm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/delivery/CloudBuilder/Android/gcm/gcm.iml" filepath="$PROJECT_DIR$/delivery/CloudBuilder/Android/gcm/gcm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/delivery/Google/Android/google-play-services_lib/google-play-services_lib.iml" filepath="$PROJECT_DIR$/delivery/Google/Android/google-play-services_lib/google-play-services_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/delivery/CloudBuilder/Android/google-play-services_lib/google-play-services_lib.iml" filepath="$PROJECT_DIR$/delivery/CloudBuilder/Android/google-play-services_lib/google-play-services_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sources.iml" filepath="$PROJECT_DIR$/sources.iml" />
+    </modules>
+  </component>
+</project>

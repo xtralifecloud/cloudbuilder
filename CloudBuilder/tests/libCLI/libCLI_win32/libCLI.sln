@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libCLI", "libCLI\libCLI.vcxproj", "{6C9CE5E3-EBF1-40EA-A138-20E3E7503F80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C9CE5E3-EBF1-40EA-A138-20E3E7503F80}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6C9CE5E3-EBF1-40EA-A138-20E3E7503F80}.Debug|Win32.Build.0 = Debug|Win32
+		{6C9CE5E3-EBF1-40EA-A138-20E3E7503F80}.Release|Win32.ActiveCfg = Release|Win32
+		{6C9CE5E3-EBF1-40EA-A138-20E3E7503F80}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

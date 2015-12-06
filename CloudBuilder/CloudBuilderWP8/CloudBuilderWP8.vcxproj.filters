@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="CloudBuilder">
+      <UniqueIdentifier>{c3ffbb45-1760-43b7-9146-0150f112b9de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4949d144-88d6-4977-9cf1-4cdae47fe7a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HighLevel">
+      <UniqueIdentifier>{1765a0c4-6e8e-4c49-b066-0d32e7fcc3ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{485c35e8-2239-4d28-88de-e3013dd5652d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\aws">
+      <UniqueIdentifier>{f40a8ec3-a3e3-4f01-b0d4-60769ca76425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cJSON">
+      <UniqueIdentifier>{cfcce1d6-70cc-4517-81fc-eea970f72133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hmac">
+      <UniqueIdentifier>{37e538a9-eaa8-4804-a30e-7687747445ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\idea">
+      <UniqueIdentifier>{23fdc137-a195-49ee-9488-f19773ecf6d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sqs">
+      <UniqueIdentifier>{b526eed6-5fe1-46e6-b5b1-867ce15907d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tools">
+      <UniqueIdentifier>{c8ca9feb-f688-476e-84f0-4422d69db78e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sdb">
+      <UniqueIdentifier>{9de27808-3004-4d2c-893a-77d59ea17c5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tinyxml">
+      <UniqueIdentifier>{e19c1b52-a89b-4c76-a510-1b6c2d73bad7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WP8">
+      <UniqueIdentifier>{07f31449-56a7-471a-a49a-9e1442a417cc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="..\sources\CCallback.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\CClannishRESTproxy.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\CClannishS3Proxy.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\CHjSON.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\CLogger.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\CNotifySocket.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\cotc_thread.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\CotCHelpers.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\CSharedDB.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\CSharedDBProxy.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\CSharedQueue.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\CSharedQueueProxy.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\ErrorStrings.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CChallengeManager.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CClan.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CGameManager.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CGooglePlay.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CMatchManager.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CNotificationManager.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CTribeManager.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\HighLevel\CUserManager.cpp">
+      <Filter>HighLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\CCloudSocket.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\CNotificationProxy.cpp">
+      <Filter>CloudBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\aws\aws4c.c">
+      <Filter>Source Files\aws</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\aws\s3.cpp">
+      <Filter>Source Files\aws</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\cJSON\cJSON.c">
+      <Filter>Source Files\cJSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\hmac\sha1.c">
+      <Filter>Source Files\hmac</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\hmac\sha2.c">
+      <Filter>Source Files\hmac</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\idea\idea.cpp">
+      <Filter>Source Files\idea</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\sdb\base64.cpp">
+      <Filter>Source Files\sdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\sdb\private.cpp">
+      <Filter>Source Files\sdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\sdb\response.cpp">
+      <Filter>Source Files\sdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\sdb\sdb.cpp">
+      <Filter>Source Files\sdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\sdb\util.cpp">
+      <Filter>Source Files\sdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\sqs\sqs_response.cpp">
+      <Filter>Source Files\sqs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\tinyxml\tinystr.cpp">
+      <Filter>Source Files\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\tinyxml\tinyxml.cpp">
+      <Filter>Source Files\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\tinyxml\tinyxmlerror.cpp">
+      <Filter>Source Files\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\tinyxml\tinyxmlparser.cpp">
+      <Filter>Source Files\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\tools\curltool.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\Win32\RegisterDevice.cpp">
+      <Filter>Source Files\WP8</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\dummyClass.cpp">
+      <Filter>Source Files\WP8</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="..\Headers\CChallengeManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CClan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CGameManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CGooglePlay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CHJSON.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CloudBuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CMatchManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CMatchRoom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CNotificationManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CotCHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CTribeManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\CUserManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+setup cloudbuilder sandbox
+# {"_error" : 0 }
+
+resumesession &gamer_id &gamer_secret
+# {"_error" : 0 }
+
+godfathercode
+# {"_httpcode" : 200 , "@godfathercode" : { "exist" : true} }
+
+setgodfather &godfatherCode
+# {"_httpcode" : 438, "name": "cantBeSelfGodchild"}

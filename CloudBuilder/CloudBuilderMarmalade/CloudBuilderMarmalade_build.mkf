@@ -1,0 +1,403 @@
+# mkf file for building extension CloudBuilderMarmalade.
+# NOTE: This file was originally written by the extension builder, but will not
+# be overwritten (unless --force is specified) and is intended to be modified.
+display_name "Extensions/CloudBuilderMarmalade"
+
+includepath source/h
+includepath source/generic
+includepath h
+
+defines
+{
+    #Define the verbose channel to be off by default (but controllable by icf)
+    IW_TRACE_CHANNEL_CLOUDBUILDERMARMALADE_VERBOSE=2
+
+    #This macro indicates that this extension is being built
+    S3E_EXT_CLOUDBUILDERMARMALADE
+
+    #Because of a problem with frameworks paths headers
+    __MARMALADE_BUILD__
+}
+
+#This command re-generates the relevant source files from the s4e when
+#the mkb is run
+extension
+{
+    ("$MARMALADE_ROOT/s3e/edk/builder")
+    "edk_build CloudBuilderMarmalade.s4e"
+}
+
+#include the extension builder subproject
+subproject "$MARMALADE_ROOT/s3e/edk"
+
+if {{defined I3D_OS_IPHONE}}
+{
+    includepath ../Headers
+    includepath ../sources
+    includepath ../sources/aws
+    includepath ../sources/cJSON
+    includepath ../sources/hmac
+    includepath ../sources/idea
+    includepath ../sources/sdb
+    includepath ../sources/sqs
+    includepath ../sources/tinyxml
+    includepath ../sources/tools
+    includepath ../../curl-7.23.1/
+    includepath ../../curl-7.23.1/include
+    includepath ../../curl-7.23.1/cyassl
+    includepath ../../cyassl-2.0.6/
+    includepath ../../cyassl-2.0.6/src
+
+    defines
+    {
+        #Specific iOS code for performOnThread family of functions
+        __IOS__
+
+        #we want curl to use the config file we defined
+        HAVE_CONFIG_H
+
+        #curl is being built
+        BUILDING_LIBCURL
+
+        #and it's a static library
+        CURL_STATICLIB
+
+        #only HTTP is supported
+        HTTP_ONLY
+
+        #no POP3 support
+        CURL_DISABLE_POP3
+
+        #no RTSP support
+        CURL_DISABLE_RTSP
+        
+        #no Gopher support
+        CURL_DISABLE_GOPHER
+        
+        #no Dict support
+        CURL_DISABLE_DICT
+
+        #no File support
+        CURL_DISABLE_FILE
+
+        #no FTP support
+        CURL_DISABLE_FTP
+
+        #no IMAP support
+        CURL_DISABLE_IMAP
+
+        #no LDAP support
+        CURL_DISABLE_LDAP
+
+        #no SMTP support
+        CURL_DISABLE_SMTP
+
+        #no Telnet support
+        CURL_DISABLE_TELNET
+
+        #no TFTP support
+        CURL_DISABLE_TFTP
+
+        #using cyassl as SSL layer
+        USE_CYASSL
+    }
+    
+    includepath
+    {
+        #CloudBuilder iOS headers path
+        ../sources/iOS
+        
+        #Facebook, GooglePlus and GooglePlayServices frameworks headers paths
+        ../CloudBuilderiOS/FacebookSDK.framework/Versions/A/Headers/
+        ../CloudBuilderiOS/FacebookSDK.framework/Versions/A/DeprecatedHeaders/
+
+        ../CloudBuilderiOS/GooglePlus/GoogleOpenSource.framework/Versions/A/Headers/
+        ../CloudBuilderiOS/GooglePlus/GooglePlus.framework/Versions/A/Headers/
+
+        ../CloudBuilderiOS/PlayGameServices/PlayGameServices.framework/Versions/A/Headers/
+    }
+
+    files
+    {
+    
+        ["CloudBuilder source files/cJSON"]
+        (../sources/cJSON)
+        cJSON.c
+        
+        ["CloudBuilder source files/hmac"]
+        (../sources/hmac)
+        sha1.c
+        sha2.c
+        
+        ["CloudBuilder source files/s3"]
+        (../sources/aws)
+        aws4c.c
+        s3.cpp
+        
+        ["CloudBuilder source files/idea"]
+        (../sources/idea)
+        idea.cpp
+        
+        ["CloudBuilder source files/sdb"]
+        (../sources/sdb)
+        base64.cpp
+        private.cpp
+        response.cpp
+        sdb.cpp
+        util.cpp
+        
+        ["CloudBuilder source files/sqs"]
+        (../sources/sqs)
+        sqs_response.cpp
+        
+        ["CloudBuilder source files/tinyxml"]
+        (../sources/tinyxml)
+        tinystr.cpp
+        tinyxml.cpp
+        tinyxmlerror.cpp
+        tinyxmlparser.cpp
+        
+        ["CloudBuilder source files/tools"]
+        (../sources/tools)
+        curltool.cpp
+        
+        ["CloudBuilder source files/HighLevel"]
+        (../sources/HighLevel)
+        CClan.cpp
+        CGameManager.cpp
+        CNotificationManager.cpp
+        CChallengeManager.cpp
+        CMatchManager.cpp
+        CTribeManager.cpp
+        CUserManager.cpp
+        CGooglePlay.cpp
+        
+        ["CloudBuilder source files"]
+        (../sources)
+        CCallback.cpp
+        CClannishRESTproxy.cpp
+        CClannishS3Proxy.cpp
+        CCloudSocket.cpp
+        CHjSON.cpp
+        CLogger.cpp
+        CNotificationProxy.cpp
+        CNotifySocket.cpp
+        cotc_thread.cpp
+        CotCHelpers.cpp
+        CSharedDB.cpp
+        CSharedDBProxy.cpp
+        CSharedQueue.cpp
+        CSharedQueueProxy.cpp
+        ErrorStrings.cpp
+
+        ["curl source files"]
+        (../../curl-7.23.1/lib)
+        base64.c
+        connect.c
+        cookie.c
+        curl_addrinfo.c
+        curl_memrchr.c
+        curl_rand.c
+        cyassl.c
+        easy.c
+        escape.c
+        fileinfo.c
+        formdata.c
+        getenv.c
+        getinfo.c
+        hash.c
+        hostasyn.c
+        hostip.c
+        hostip4.c
+        http_chunks.c
+        http_digest.c
+        http_proxy.c
+        http.c
+        if2ip.c
+        inet_ntop.c
+        inet_pton.c
+        llist.c
+        md5.c
+        mprintf.c
+        multi.c
+        netrc.c
+        nonblock.c
+        parsedate.c
+        progress.c
+        rawstr.c
+        select.c
+        sendf.c
+        share.c
+        slist.c
+        socks.c
+        speedcheck.c
+        splay.c
+        sslgen.c
+        ssluse.c
+        strequal.c
+        strerror.c
+        strtok.c
+        timeval.c
+        transfer.c
+        url.c
+        warnless.c
+        wildcard.c
+        
+        ["cyassl source files/ctaocrypt"]
+        (../../cyassl-2.0.6/ctaocrypt/src)
+        memory.c
+        tfm.c
+        ripemd.c
+        sha512.c
+        pwdbased.c
+        logging.c
+        md4.c
+        rabbit.c
+        hc128.c
+        aes.c
+        arc4.c
+        asn.c
+        coding.c
+        des3.c
+        dh.c
+        dsa.c
+        hmac.c
+        integer.c
+        md5.c
+        random.c
+        rsa.c
+        sha.c
+        sha256.c
+        
+        ["cyassl source files/src"]
+        (../../cyassl-2.0.6/src)
+        io.c
+        internal.c
+        keys.c
+        ssl.c
+        tls.c
+
+        ["source"]
+        (../sources/Marmalade)
+        MarmaladeWrapper.h
+        MarmaladeWrapper.cpp
+
+        #Add any iphone-specific files here
+        ["CloudBuilder source files/iOS"]
+        (../sources/iOS)
+        FacebookHandler.mm
+        performOnMain.mm
+        GooglePlusHandler.mm
+        GooglePlayHandler.mm
+        GameCenterSupport.mm
+
+        ["source"]
+        (use_first_found, source/iphone, source/generic)
+        CloudBuilderMarmalade_platform.mm
+    }
+}
+
+if {{defined I3D_OS_WINDOWS}}
+{
+    files
+    {
+        ["source"]
+        (use_first_found, source/windows, source/generic)
+        CloudBuilderMarmalade_platform.cpp
+
+        #Add any windows-specific files here
+    }
+}
+
+if {{defined S3E_ANDROID}}
+{
+    defines
+    {
+        #Specific iOS code for performOnThread family of functions
+        __ANDROID__
+    }
+
+    includepath
+    {
+        #CloudBuilder Android headers path
+        ../sources/Android
+    }
+
+    files
+    {
+        ["source"]
+        (use_first_found, source/android, source/generic)
+        CloudBuilderMarmalade_platform.cpp
+    }
+}
+
+if {{defined I3D_OS_OSX}}
+{
+    files
+    {
+        ["source"]
+        (use_first_found, source/osx, source/generic)
+        CloudBuilderMarmalade_platform.mm
+        #Add any osx-specific files here
+    }
+}
+
+if {{defined I3D_OS_LINUX and not defined S3E_ANDROID}}
+{
+    files
+    {
+        ["source"]
+        (use_first_found, source/linux, source/generic)
+        CloudBuilderMarmalade_platform.cpp
+        #Add any linux-specific files here
+    }
+}
+
+if {{defined I3D_OS_WP8}}
+{
+    files
+    {
+        ["h"]
+        (source/wp8)
+        CloudBuilderMarmalade_shim.h
+        ["source"]
+        (use_first_found, source/wp8, source/generic)
+        CloudBuilderMarmalade_platform.cpp
+        CloudBuilderMarmalade_shim.cpp
+        #Add any wp8-specific files here
+    }
+}
+
+files
+{
+
+    # Add any platform-independent files here
+    # Note that if the file exists in the platform-specific directory
+    # it will be taken from there instead of 'generic'
+    CloudBuilderMarmalade_register.cpp
+    CloudBuilderMarmalade.cpp
+
+    
+    ["source"]
+    (source/generic)
+    MarmaladeCallbacks.cpp
+    MarmaladeFreeCallbacks.cpp
+
+    ["h"]
+    (source/h)
+    CloudBuilderMarmalade_internal.h
+    CloudBuilderMarmalade_autodefs.h
+
+    ["docs"]
+    (interface)
+    CloudBuilderMarmalade.defines.txt
+
+    []
+    (.)
+    CloudBuilderMarmalade.s4e
+
+    ["Defines"]
+    (source)
+    Defines.txt
+
+}
