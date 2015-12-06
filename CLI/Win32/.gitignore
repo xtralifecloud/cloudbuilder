@@ -1,3 +1,5 @@
 Debug_VS*
 Release_VS*
+*.opensdf
+*.sdf
 
