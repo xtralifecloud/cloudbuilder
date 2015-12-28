@@ -4,3 +4,5 @@ delivery
 **/*.sdf
 **/*.opensdf
 build
+CloudBuilderTestAppAndroid
+CloudBuilderTestAppWin32
