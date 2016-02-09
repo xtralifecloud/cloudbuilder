@@ -83,7 +83,7 @@ namespace CloudBuilder
 			@param aConfiguration is a JSON object holding the necessary connection details.
 			The mandatory keys are:
 			- "network" : facebookId, googleplusId, gamecenter, email (facebook and goggleplus are deprecated)
-			- "id" : string containing the ID of the user. (respectivly facebookID, googleplusID, gameceneterID, email)
+			- "id" : string containing the ID of the user. (respectively facebook ID, googleplus ID, gamecenter ID, email)
 			- "secret" : string containing the secret associated with the user ID. (respectivly accesstoken, token, n/s, password)
 		 	
 		 	optionally pass an 'options' key which may contain:
@@ -128,15 +128,16 @@ namespace CloudBuilder
 			@param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 	@param aConfiguration is a JSON object holding the necessary connection details
 			The mandatory keys are:
-			- "network" : facebookId, googleplusId, gamecenter
-			- "id" : string containing the ID of the user. (respectivly facebookID, googleplusID, gameceneterID)
+			- "network" : facebookId, googleplusId, gamecenterId, gamecenter (no IDs to be supplied, logs in locally).
+			- "id" : string containing the ID of the user. (respectivly facebook user ID, googleplus ID, gamecenter ID)
 			- "secret" : string containing the secret associated with the user ID. (respectivly accesstoken, token, n/s)
+			- "options" : used with network="gamecenter" to provide additional options for login (see LoginNetwork).
 			@result if noErr, the json passed to the handler may contain:
 			"done" : 1
 		*/
 		void Link(CResultHandler *aHandler, const CotCHelpers::CHJSON* aConfiguration);
 		DEPRECATED void Link(const char *aNetwork, CResultHandler *aHandler);
-
+§
 		/**
 			Method used to Unlink an account with Facebook, Googleplus, GameCenter.
 			@param aNetwork is a string containing the network : "facebook", "googleplus", "gamecenter"
