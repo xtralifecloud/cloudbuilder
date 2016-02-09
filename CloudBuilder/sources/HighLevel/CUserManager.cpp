@@ -348,7 +348,52 @@ namespace CloudBuilder {
 	void CUserManager::Link(const char *aNetwork, CResultHandler *aHandler) {
 		InvokeHandler(aHandler, enNotImplemented , "obsolete method");
 	}
-	
+
+	void CUserManager::Link(CResultHandler *aHandler, const CotCHelpers::CHJSON* aConfiguration) {
+		if (!CClan::Instance()->isUserLogged()) { return InvokeHandler(aHandler, enNotLogged); }
+
+		CHJSON args;
+		const char *network = aConfiguration->GetString("network");
+
+		if (IsEqual(network, "facebookId")) {
+			args.Put("network", "facebook");
+		}
+		else if (IsEqual(network, "googleplusId")) {
+			args.Put("network", "googleplus");
+		}
+		else if (IsEqual(network, "gamecenterId")) {
+			args.Put("network", "gamecenter");
+		}
+		else if (IsEqual(network, "gamecenter")) {
+			struct LoggedInWithGC: CInternalResultHandler {
+				_BLOCK3(LoggedInWithGC, CInternalResultHandler,
+					CUserManager*, self,
+					CHJSON*, options,
+					CInternalResultHandler*, resultHandler);
+				void Done(const CCloudResult *result) {
+					CHJSON args;
+					args.Put("network", "gamecenter");
+					args.Put("id", result->GetJSON()->GetString("playerid"));
+					args.Put("secret", "n/a");
+					CClannishRESTProxy::Instance()->LinkWith(&args, resultHandler);
+					delete options;
+				}
+			};
+			CHJSON *options = aConfiguration->Has("options") ? aConfiguration->Get("options")->Duplicate() : new CHJSON();
+			GameCenter::login(new LoggedInWithGC(this, options, MakeBridgeDelegate(aHandler)));
+			// Continue in the callback, unlike other methods
+			return;
+		}
+		else {
+			return InvokeHandler(aHandler, enBadParameters, "Unrecognized network (facebookId, googleplusId, gamecenterId supported)");
+		}
+
+		args.Put("id", aConfiguration->GetString("id"));
+		args.Put("secret", aConfiguration->GetString("secret"));
+		CClannishRESTProxy::Instance()->LinkWith(&args, MakeBridgeDelegate(aHandler));
+	}
+
+
 	void CUserManager::Unlink(const char *aNetwork, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
 		CHJSON json;
