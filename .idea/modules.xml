@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CLI/Android/Android.iml" filepath="$PROJECT_DIR$/CLI/Android/Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/CLI/CLI.iml" filepath="$PROJECT_DIR$/CLI/CLI.iml" />
-      <module fileurl="file://$PROJECT_DIR$/CloudBuilder/CloudBuilder.iml" filepath="$PROJECT_DIR$/CloudBuilder/CloudBuilder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CLI/Android/CLI-Android.iml" filepath="$PROJECT_DIR$/CLI/Android/CLI-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilderAndroid.iml" filepath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilderAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/CloudBuilderAndroid-CloudBuilder.iml" filepath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/CloudBuilderAndroid-CloudBuilder.iml" />
       <module fileurl="file://$PROJECT_DIR$/delivery/Google/Google.iml" filepath="$PROJECT_DIR$/delivery/Google/Google.iml" />
       <module fileurl="file://$PROJECT_DIR$/delivery/Google/Android/Google-Android.iml" filepath="$PROJECT_DIR$/delivery/Google/Android/Google-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloudbuilder.iml" filepath="$PROJECT_DIR$/cloudbuilder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CloudBuilder/cloudbuilder-CloudBuilder.iml" filepath="$PROJECT_DIR$/CloudBuilder/cloudbuilder-CloudBuilder.iml" />
       <module fileurl="file://$PROJECT_DIR$/delivery/delivery.iml" filepath="$PROJECT_DIR$/delivery/delivery.iml" />
       <module fileurl="file://$PROJECT_DIR$/delivery/Google/Android/gcm/gcm.iml" filepath="$PROJECT_DIR$/delivery/Google/Android/gcm/gcm.iml" />
       <module fileurl="file://$PROJECT_DIR$/delivery/Google/Android/google-play-services_lib/google-play-services_lib.iml" filepath="$PROJECT_DIR$/delivery/Google/Android/google-play-services_lib/google-play-services_lib.iml" />
