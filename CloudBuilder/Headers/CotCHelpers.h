@@ -93,7 +93,7 @@ namespace CotCHelpers {
 	struct FACTORY_CLS CRefClass {
 		unsigned __ref_count;		// -1 => freed (an unmanaged object will be left at 0)
 		CRefClass() : __ref_count(0) {}
-		virtual ~CRefClass();
+		virtual ~CRefClass() noexcept(false);
 
 		// Simple reference inc/decrementers
 		void Retain() { __ref_count++; }

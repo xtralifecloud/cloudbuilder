@@ -82,9 +82,9 @@ extern LOG_LEVEL g_debugLevel;
 #define CONSOLE_EXTRA(...) 		{ if (g_debugLevel>=LOG_LEVEL_EXTRA) CONSOLE( __VA_ARGS__) }
 
 #if defined(__WINDOWS_32__)
+#if _MSC_VER < 1900
 #	define snprintf	_snprintf
-#elif defined(__WP8__)
-#	define snprintf	_snprintf
+#endif
 #endif
 
 #if defined(__IOS__)
