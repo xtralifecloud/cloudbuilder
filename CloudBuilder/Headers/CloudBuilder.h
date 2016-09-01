@@ -13,10 +13,10 @@
 
 #if defined(CLOUDBUILDERWIN32_EXPORTS)
 #define FACTORY_CLS  __declspec(dllexport)
-#define FACTORY_FCT	__declspec(dllexport)
+#define FACTORY_FCT
 #else
 #define FACTORY_CLS  __declspec(dllimport)
-#define FACTORY_FCT	__declspec(dllimport)
+#define FACTORY_FCT
 #endif  // CLOUDBUILDERWIN32_EXPORTS
 
 #else	// WIN32

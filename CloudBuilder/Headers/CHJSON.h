@@ -173,7 +173,7 @@ namespace CotCHelpers {
 		 */
 		void Put(const char *aKey, const CHJSON& json) { Put(aKey, json.Duplicate()); }
 
-		FACTORY_CLS struct Iterator: std::iterator<std::forward_iterator_tag, const CHJSON*> {
+		struct Iterator: std::iterator<std::forward_iterator_tag, const CHJSON*> {
 			Iterator(const CHJSON *json, int index);
 			FACTORY_FCT bool operator == (const Iterator &other);
 			FACTORY_FCT bool operator != (const Iterator &other);
