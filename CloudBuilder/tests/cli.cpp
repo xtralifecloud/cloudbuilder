@@ -45,7 +45,7 @@ const char *loremipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing eli
 #define OUTPUT(...) printf (__VA_ARGS__)
 #endif
 
-#include <sys/timeb.h>
+#include <sys/time.h>
 #include <map>
 #include <string>
 
@@ -1177,8 +1177,8 @@ eErrorCode CLI::execute(const char *li)
 	int argc = 0;
 	char* argv[10];
 	int error = this->tokenize(line, &argc, argv);
-	struct timeb tp; ftime(&tp);
-	mLastExecuteStartTime = tp.time*1000.+tp.millitm;
+    struct timeval tv; gettimeofday(&tv, NULL);
+	mLastExecuteStartTime = tv.tv_sec*1000.+(double)tv.tv_usec/1000.;
 
 	if (error==0)
 	{
@@ -1199,8 +1199,8 @@ eErrorCode CLI::execute(const char *li)
 }
 
 long CLI::millisecondsElapsedSinceLastExecute() {
-	struct timeb tp; ftime(&tp);
-	return (long) (tp.time*1000.+tp.millitm - mLastExecuteStartTime);
+    struct timeval tv; gettimeofday(&tv, NULL);
+	return (long) (tv.tv_sec*1000.+(double)tv.tv_usec/1000. - mLastExecuteStartTime);
 }
 
 void CLI::endCmd(eErrorCode ec, const CCloudResult *res) {
