@@ -18,11 +18,11 @@
 		177BEDDA19EFCC0900019FB3 /* GameCenterHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 177BEDD819EFCC0900019FB3 /* GameCenterHandler.h */; };
 		177BEDDB19EFCC0900019FB3 /* GameCenterHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 177BEDD919EFCC0900019FB3 /* GameCenterHandler.mm */; };
 		1798C89419CEE4040062644A /* ssl_bio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1798C89319CEE4040062644A /* ssl_bio.cpp */; };
-		179DCB1A1C0EFE2C00DB37EB /* CLogLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = 179DCB191C0EFE2C00DB37EB /* CLogLevel.h */; };
+		179DCB1A1C0EFE2C00DB37EB /* CLogLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = 179DCB191C0EFE2C00DB37EB /* CLogLevel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17C3E6C81A120DAC001E48DF /* ObjCHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 17C3E6C71A120DAC001E48DF /* ObjCHelpers.h */; };
 		2A05F7161A31D37C00B80C77 /* CMatchManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A05F7151A31D37C00B80C77 /* CMatchManager.cpp */; };
-		2A331CE41BBD0DAE003576EA /* CIndexManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A331CE21BBD0DAE003576EA /* CIndexManager.h */; };
-		2A331CE51BBD0DAE003576EA /* CHttpFailureEventArgs.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A331CE31BBD0DAE003576EA /* CHttpFailureEventArgs.h */; };
+		2A331CE41BBD0DAE003576EA /* CIndexManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A331CE21BBD0DAE003576EA /* CIndexManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A331CE51BBD0DAE003576EA /* CHttpFailureEventArgs.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A331CE31BBD0DAE003576EA /* CHttpFailureEventArgs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2A331CE71BBD0DC5003576EA /* CIndexManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A331CE61BBD0DC5003576EA /* CIndexManager.cpp */; };
 		2AD5AF9519BDB12600E3B039 /* CFilesystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AD5AF9219BDB12600E3B039 /* CFilesystem.cpp */; };
 		2AD5AF9C19BDB13C00E3B039 /* CDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AD5AF9819BDB13C00E3B039 /* CDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
