@@ -22,7 +22,7 @@ dependencies {
 
 android {
     compileSdkVersion 20
-    buildToolsVersion "20.0.0"
+    buildToolsVersion "23.0.3"
 
     sourceSets {
         main {
@@ -34,7 +34,6 @@ android {
             res.srcDirs = ['res']
             assets.srcDirs = ['assets']
             jniLibs.srcDir 'src/main/libs'
-            jni.srcDirs = [] //disable automatic ndk-build call
         }
 
         // Move the tests to tests/java, tests/res, etc...
@@ -59,13 +58,16 @@ android {
         }
     }
 
-    tasks.withType(JavaCompile) {
-        compileTask -> compileTask.dependsOn ndkBuild
+    // For native libraries to be embedded in the final APK, the way to do it
+    // with gradle is to copy the files in a defined directory, src/main/jniLibs.
+    //  Doing it otherwise or as before, will leave all the *.so outside of the APK.
+    task copyJniLibs(type: Copy, dependsOn:ndkBuild) {
+        from 'libs'
+        into 'src/main/jniLibs'
     }
 
-    tasks.withType(com.android.build.gradle.tasks.PackageApplication) { pkgTask ->
-        pkgTask.jniFolders = new HashSet<File>()
-        pkgTask.jniFolders.add(new File(projectDir, 'libs'))
+    tasks.withType(JavaCompile) {
+        compileTask -> compileTask.dependsOn copyJniLibs
     }
 
 	// Helper (run :CLI:Android:recompileAll to quickly assemble the libCloudBuilder + Android app)
