@@ -137,7 +137,7 @@ namespace CloudBuilder
 		*/
 		void Link(CResultHandler *aHandler, const CotCHelpers::CHJSON* aConfiguration);
 		DEPRECATED void Link(const char *aNetwork, CResultHandler *aHandler);
-§
+
 		/**
 			Method used to Unlink an account with Facebook, Googleplus, GameCenter.
 			@param aNetwork is a string containing the network : "facebook", "googleplus", "gamecenter"
