@@ -5,7 +5,7 @@ Native C++ SDK for Clan of the Cloud
 
 Download the desired version (in .7z form, requiring 7-zip to decompress) from the [releases page](https://github.com/clanofthecloud/cloudbuilder/releases) below.
 
-Then, start with [the documentation](http://clanofthecloud.github.io/cloudbuilder/) in order to start integrating the SDK in your own application.
+Then, start with [the documentation](http://xtralifecloud.github.io/cloudbuilder/) in order to start integrating the SDK in your own application.
 
 This SDK works with Clan of the Cloud. For more information and configuring your application, visit http://www.clanofthecloud.com/. Note that we also provide a [Unity SDK](https://github.com/clanofthecloud/unity-sdk), which is much easier to get started with.
 
