@@ -73,6 +73,7 @@ LOCAL_SRC_FILES		:= 	$(CLOUDBUILDER_DIR)/sources/CCallback.cpp				\
 						$(CLOUDBUILDER_DIR)/sources/tools/curltool.cpp			\
 						$(CLOUDBUILDER_DIR)/sources/tools/ssl_bio.cpp
 
+LOCAL_DISABLE_FATAL_LINKER_WARNINGS := true
 LOCAL_LDLIBS			:= -lm -llog
 LOCAL_STATIC_LIBRARIES	:= curl ssl crypto 
 
