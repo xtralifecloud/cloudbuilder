@@ -98,7 +98,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>../../delivery/curl/Headers;../../delivery/pthread/Headers;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;HAVE_STRUCT_TIMESPEC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -132,7 +132,7 @@ copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>../../delivery/curl/Headers;../../delivery/pthread/Headers;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;_DEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;HAVE_STRUCT_TIMESPEC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>
@@ -165,7 +165,7 @@ copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>../../delivery/curl/Headers;../../delivery/pthread/Headers;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;NDEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;NDEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;HAVE_STRUCT_TIMESPEC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>
@@ -199,7 +199,7 @@ copy ..\Headers\*.h ..\..\delivery\CloudBuilder\Headers</Command>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>../../delivery/curl/Headers;../../delivery/pthread/Headers;..;../Headers;../sources;../sources/sdb;../sources/cJSON;../sources/sqs;../sources/tinyxml;../sources/tools;../sources/hmac;../sources/aws;../sources/idea;../../curl-7.23.1/include;../../delivery/openssl/Win32/$(PlatformTarget)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;NDEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;PTW32_STATIC_LIB;WIN32;NDEBUG;_WINDOWS;_USRDLL;CLOUDBUILDERWIN32_EXPORTS;_CRT_SECURE_NO_WARNINGS;__WINDOWS_32__;CURL_STATICLIB;HAVE_STRUCT_TIMESPEC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>
