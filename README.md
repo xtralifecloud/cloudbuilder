@@ -3,7 +3,7 @@ Native C++ SDK for Clan of the Cloud
 
 ## Downloading and installing
 
-Download the desired version (in .7z form, requiring 7-zip to decompress) from the [releases page](https://github.com/clanofthecloud/cloudbuilder/releases) below.
+Download the desired version (either in .7z form, requiring 7-zip to decompress, or in .zip form) from the [releases page](https://github.com/clanofthecloud/cloudbuilder/releases) below.
 
 Then, start with [the documentation](http://xtralifecloud.github.io/cloudbuilder/) in order to start integrating the SDK in your own application.
 
