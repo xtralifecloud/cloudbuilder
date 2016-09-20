@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3074a843-f46f-4523-8838-1773a878a2bb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_7_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_7_5_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_22_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_22_0_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLI/Android/build.gradle" afterPath="$PROJECT_DIR$/CLI/Android/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLI/CLI.iml" afterPath="$PROJECT_DIR$/CLI/CLI.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/CloudBuilderAndroid-CloudBuilder.iml" afterPath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/CloudBuilderAndroid-CloudBuilder.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/build.gradle" afterPath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/jni/Android.mk" afterPath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/jni/Android.mk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilderAndroid.iml" afterPath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilderAndroid.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cloudbuilder.iml" afterPath="$PROJECT_DIR$/cloudbuilder.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CloudBuilder/sources/Android/Java/com/clanofthecloud/cloudbuilder/CloudBuilder.java" afterPath="$PROJECT_DIR$/CloudBuilder/sources/Android/Java/com/clanofthecloud/cloudbuilder/CloudBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CloudBuilder/sources/CloudBuilder_private.h" afterPath="$PROJECT_DIR$/CloudBuilder/sources/CloudBuilder_private.h" />
     </list>
     <ignored path="cloudbuilder.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,6 +49,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CloudBuilder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CloudBuilder/sources/Android/Java/com/clanofthecloud/cloudbuilder/CloudBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.1148648">
+              <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLI/Android/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Android.mk" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Android.mk" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/jni/Android.mk">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8108108">
+            <state vertical-scroll-proportion="0.0">
               <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
@@ -5571,6 +5573,7 @@
         <option value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/build.gradle" />
         <option value="$PROJECT_DIR$/CLI/Android/build.gradle" />
         <option value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/jni/Android.mk" />
+        <option value="$PROJECT_DIR$/CloudBuilder/sources/Android/Java/com/clanofthecloud/cloudbuilder/CloudBuilder.java" />
       </list>
     </option>
   </component>
@@ -5605,8 +5608,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -5625,8 +5626,38 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloudbuilder" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CloudBuilderAndroid-CloudBuilder" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloudbuilder" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CloudBuilderAndroid-CloudBuilder" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloudbuilder" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -5861,6 +5892,30 @@
     <entry file="file://$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLI/Android/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/android-ndk-r12b/build/core/prebuilt-library.mk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
           <folding />
         </state>
@@ -5990,14 +6045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Android/android-ndk-r12b/build/core/prebuilt-library.mk">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -6008,8 +6055,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/jni/Android.mk">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8108108">
+        <state vertical-scroll-proportion="0.0">
           <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CloudBuilder/sources/Android/Java/com/clanofthecloud/cloudbuilder/CloudBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1148648">
+          <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
           <folding />
         </state>
       </provider>
