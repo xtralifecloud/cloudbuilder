@@ -15,8 +15,8 @@ Compiling is rather complicated and if you simply want to use the library, we en
 
 In order to compile, you need the delivery directory. You can obtain it by checking out the `cloudbuilder-tools` repository and putting it side-by-side with the cloudbuilder repository on your local machine. Compiling all the sub-projects will put their results ready for use in a directory cloudbuilder-tools/../cloudbuilder/delivery.
 
-In order to get started quickly, you can download a precompiled version on the Google Drive. This file may be updated often, it is currently dated from Mon, Sep 19 of 2016.
-https://drive.google.com/file/d/0B-e4O9N2eTBhbThLY2ExQndfY1U/view?usp=sharing
+In order to get started quickly, you can download a precompiled version on the Google Drive. These files may be updated often, last versions are currently dated from Mon, Sep 19 of 2016.
+You can download directly from here the [7z version](https://drive.google.com/file/d/0B-e4O9N2eTBhNWROem9ibkdScVk/view?usp=sharing) or the [zip version](https://drive.google.com/file/d/0B-e4O9N2eTBhTlROQ2tBU1lfWFE/view?usp=sharing)
 
 The CLI project is used for testing and debugging, more instructions will be coming soon. Stay tuned!
 
