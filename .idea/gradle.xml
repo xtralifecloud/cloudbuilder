@@ -21,21 +21,7 @@
             <option value="$PROJECT_DIR$/delivery/Google/Android/google-play-services_lib" />
           </set>
         </option>
-        <option name="myModules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/CLI" />
-            <option value="$PROJECT_DIR$/CLI/Android" />
-            <option value="$PROJECT_DIR$/CloudBuilder" />
-            <option value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
-            <option value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
-            <option value="$PROJECT_DIR$/delivery" />
-            <option value="$PROJECT_DIR$/delivery/Google" />
-            <option value="$PROJECT_DIR$/delivery/Google/Android" />
-            <option value="$PROJECT_DIR$/delivery/Google/Android/gcm" />
-            <option value="$PROJECT_DIR$/delivery/Google/Android/google-play-services_lib" />
-          </set>
-        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>
