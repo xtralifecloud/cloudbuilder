@@ -5,16 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3074a843-f46f-4523-8838-1773a878a2bb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_base_7_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_base_7_5_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_7_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_7_5_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_22_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_22_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_base_9_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_basement_9_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_tasks_9_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CLI/Android/CLI-Android.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_base_7_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_9_8_0.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_7_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_iid_9_8_0.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_22_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_24_0_0.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_22_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_24_0_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLI/Android/build.gradle" afterPath="$PROJECT_DIR$/CLI/Android/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLI/iOS/CLI.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/CLI/iOS/CLI.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/CloudBuilderAndroid-CloudBuilder.iml" afterPath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/CloudBuilderAndroid-CloudBuilder.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CloudBuilder/tests/cli.cpp" afterPath="$PROJECT_DIR$/CloudBuilder/tests/cli.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CloudBuilderTestAppAndroid/build.gradle" afterPath="$PROJECT_DIR$/CloudBuilderTestAppAndroid/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/build.gradle" afterPath="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CloudBuilder/sources/CHjSON.cpp" afterPath="$PROJECT_DIR$/CloudBuilder/sources/CHjSON.cpp" />
     </list>
     <ignored path="cloudbuilder.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,8 +56,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+            <state relative-caret-position="150">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -69,21 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="proguard-project.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/proguard-project.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLI/Android/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -389,6 +383,11 @@
                 <option name="name" value="processReleaseUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:support-v4:24.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportSupportV42400Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Uninstalls the Release build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="uninstallRelease" />
@@ -484,6 +483,11 @@
                 <option name="description" value="Assembles all variants of all applications and secondary packages." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-iid:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesIid980Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -582,22 +586,12 @@
                 <option name="name" value="preDebugUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:support-v4:22.0.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComAndroidSupportSupportV42200Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileLint" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="generateDebugAndroidTestResValues" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-base:7.5.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase750Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -629,12 +623,22 @@
                 <option name="name" value="extractProguardFiles" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-tasks:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesTasks980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="transformClassesWithDexForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="assembleDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm980Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -686,6 +690,11 @@
                 <option name="name" value="preReleaseUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-base:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="generateDebugResValues" />
               </ExternalTaskPojo>
@@ -716,11 +725,6 @@
                 <option name="description" value="Installs the Debug build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="installDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:7.5.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm750Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -793,6 +797,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="mergeReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-basement:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBasement980Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -1093,6 +1102,11 @@
                 <option name="name" value="processReleaseUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:support-v4:24.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
+                <option name="name" value="prepareComAndroidSupportSupportV42400Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Uninstalls the Release build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
                 <option name="name" value="uninstallRelease" />
@@ -1178,6 +1192,11 @@
                 <option name="name" value="assemble" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-iid:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesIid980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
                 <option name="name" value="incrementalDebugUnitTestJavaCompilationSafeguard" />
               </ExternalTaskPojo>
@@ -1252,22 +1271,12 @@
                 <option name="name" value="preDebugUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:support-v4:22.0.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
-                <option name="name" value="prepareComAndroidSupportSupportV42200Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
                 <option name="name" value="compileLint" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
                 <option name="name" value="generateDebugAndroidTestResValues" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-base:7.5.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase750Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
@@ -1299,12 +1308,22 @@
                 <option name="name" value="extractProguardFiles" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-tasks:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesTasks980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
                 <option name="name" value="transformClassesWithDexForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
                 <option name="name" value="assembleDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm980Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
@@ -1352,6 +1371,11 @@
                 <option name="name" value="preReleaseUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-base:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
                 <option name="name" value="generateDebugResValues" />
               </ExternalTaskPojo>
@@ -1382,11 +1406,6 @@
                 <option name="description" value="Installs the Debug build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
                 <option name="name" value="installDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:7.5.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm750Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
@@ -1459,6 +1478,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
                 <option name="name" value="mergeReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-basement:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBasement980Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI" />
@@ -1747,6 +1771,11 @@
                 <option name="name" value="processReleaseUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:support-v4:24.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
+                <option name="name" value="prepareComAndroidSupportSupportV42400Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Uninstalls the Release build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
                 <option name="name" value="uninstallRelease" />
@@ -1832,6 +1861,11 @@
                 <option name="name" value="assemble" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-iid:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesIid980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
                 <option name="name" value="incrementalDebugUnitTestJavaCompilationSafeguard" />
               </ExternalTaskPojo>
@@ -1906,22 +1940,12 @@
                 <option name="name" value="preDebugUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:support-v4:22.0.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
-                <option name="name" value="prepareComAndroidSupportSupportV42200Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
                 <option name="name" value="compileLint" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
                 <option name="name" value="generateDebugAndroidTestResValues" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-base:7.5.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase750Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
@@ -1953,12 +1977,22 @@
                 <option name="name" value="extractProguardFiles" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-tasks:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesTasks980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
                 <option name="name" value="transformClassesWithDexForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
                 <option name="name" value="assembleDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm980Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
@@ -2006,6 +2040,11 @@
                 <option name="name" value="preReleaseUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-base:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
                 <option name="name" value="generateDebugResValues" />
               </ExternalTaskPojo>
@@ -2036,11 +2075,6 @@
                 <option name="description" value="Installs the Debug build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
                 <option name="name" value="installDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:7.5.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm750Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
@@ -2113,6 +2147,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
                 <option name="name" value="mergeReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-basement:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBasement980Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CLI/Android" />
@@ -2432,6 +2471,11 @@
                 <option name="name" value="processReleaseUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:support-v4:24.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
+                <option name="name" value="prepareComAndroidSupportSupportV42400Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
                 <option name="name" value="transformClassesAndResourcesWithSyncLibJarsForRelease" />
               </ExternalTaskPojo>
@@ -2520,6 +2564,11 @@
                 <option name="name" value="assemble" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-iid:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesIid980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
                 <option name="name" value="publishdebugApk" />
               </ExternalTaskPojo>
@@ -2599,22 +2648,12 @@
                 <option name="name" value="preDebugUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:support-v4:22.0.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
-                <option name="name" value="prepareComAndroidSupportSupportV42200Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
                 <option name="name" value="compileLint" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
                 <option name="name" value="generateDebugAndroidTestResValues" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-base:7.5.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase750Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
@@ -2646,6 +2685,11 @@
                 <option name="name" value="extractProguardFiles" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-tasks:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesTasks980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
                 <option name="name" value="transformClassesWithDexForDebugAndroidTest" />
               </ExternalTaskPojo>
@@ -2656,6 +2700,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
                 <option name="name" value="copyReleaseLint" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm980Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
@@ -2699,6 +2748,11 @@
                 <option name="name" value="preReleaseUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-base:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
                 <option name="name" value="generateDebugResValues" />
               </ExternalTaskPojo>
@@ -2716,11 +2770,6 @@
                 <option name="description" value="Installs and runs instrumentation tests for all flavors on connected devices." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
                 <option name="name" value="connectedAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:7.5.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm750Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
@@ -2789,6 +2838,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
                 <option name="name" value="mergeReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-basement:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBasement980Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder" />
@@ -3097,6 +3151,11 @@
                 <option name="name" value="processReleaseUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:support-v4:24.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
+                <option name="name" value="prepareComAndroidSupportSupportV42400Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
                 <option name="name" value="transformClassesAndResourcesWithSyncLibJarsForRelease" />
               </ExternalTaskPojo>
@@ -3185,6 +3244,11 @@
                 <option name="name" value="assemble" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-iid:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesIid980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
                 <option name="name" value="publishdebugApk" />
               </ExternalTaskPojo>
@@ -3264,22 +3328,12 @@
                 <option name="name" value="preDebugUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:support-v4:22.0.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
-                <option name="name" value="prepareComAndroidSupportSupportV42200Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
                 <option name="name" value="compileLint" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
                 <option name="name" value="generateDebugAndroidTestResValues" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-base:7.5.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase750Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
@@ -3311,6 +3365,11 @@
                 <option name="name" value="extractProguardFiles" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-tasks:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesTasks980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
                 <option name="name" value="transformClassesWithDexForDebugAndroidTest" />
               </ExternalTaskPojo>
@@ -3321,6 +3380,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
                 <option name="name" value="copyReleaseLint" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm980Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
@@ -3364,6 +3428,11 @@
                 <option name="name" value="preReleaseUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-base:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
                 <option name="name" value="generateDebugResValues" />
               </ExternalTaskPojo>
@@ -3381,11 +3450,6 @@
                 <option name="description" value="Installs and runs instrumentation tests for all flavors on connected devices." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
                 <option name="name" value="connectedAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:7.5.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm750Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
@@ -3454,6 +3518,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
                 <option name="name" value="mergeReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-basement:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBasement980Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid" />
@@ -3762,6 +3831,11 @@
                 <option name="name" value="processReleaseUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:support-v4:24.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
+                <option name="name" value="prepareComAndroidSupportSupportV42400Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
                 <option name="name" value="transformClassesAndResourcesWithSyncLibJarsForRelease" />
               </ExternalTaskPojo>
@@ -3850,6 +3924,11 @@
                 <option name="name" value="assemble" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-iid:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesIid980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
                 <option name="name" value="publishdebugApk" />
               </ExternalTaskPojo>
@@ -3929,22 +4008,12 @@
                 <option name="name" value="preDebugUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:support-v4:22.0.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
-                <option name="name" value="prepareComAndroidSupportSupportV42200Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
                 <option name="name" value="compileLint" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
                 <option name="name" value="generateDebugAndroidTestResValues" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-base:7.5.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase750Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
@@ -3976,6 +4045,11 @@
                 <option name="name" value="extractProguardFiles" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-tasks:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesTasks980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
                 <option name="name" value="transformClassesWithDexForDebugAndroidTest" />
               </ExternalTaskPojo>
@@ -3986,6 +4060,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
                 <option name="name" value="copyReleaseLint" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm980Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
@@ -4029,6 +4108,11 @@
                 <option name="name" value="preReleaseUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-base:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase980Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
                 <option name="name" value="generateDebugResValues" />
               </ExternalTaskPojo>
@@ -4046,11 +4130,6 @@
                 <option name="description" value="Installs and runs instrumentation tests for all flavors on connected devices." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
                 <option name="name" value="connectedAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:7.5.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm750Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
@@ -4119,6 +4198,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
                 <option name="name" value="mergeReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-basement:9.8.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBasement980Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder" />
@@ -4475,7 +4559,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="5897952961000" />
+        <entry key="$PROJECT_DIR$" value="5914518576000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -5506,18 +5590,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/build.gradle" />
-        <option value="$PROJECT_DIR$/CLI/Android/build.gradle" />
         <option value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/jni/Android.mk" />
         <option value="$PROJECT_DIR$/CloudBuilder/sources/Android/Java/com/clanofthecloud/cloudbuilder/CloudBuilder.java" />
         <option value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/build/generated/source/aidl/debug/com/android/vending/billing/IInAppBillingService.java" />
+        <option value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/build.gradle" />
+        <option value="$PROJECT_DIR$/CLI/Android/build.gradle" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="813" />
+    <option name="height" value="817" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -5544,12 +5628,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloudbuilder" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="cloudbuilder" />
@@ -5564,7 +5658,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="android.project.structure.last.selected" value="gcm" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/jni/Android.mk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../unity-sdk/PlatformSpecific/Android/gradle/wrapper/gradle-wrapper.properties" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="device.picker.selection" value="46c49e8" />
@@ -5836,17 +5930,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="813" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="817" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266762" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32624114" sideWeight="0.4914163" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32568148" sideWeight="0.5143061" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32524964" sideWeight="0.50858366" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32424676" sideWeight="0.48569384" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -5854,7 +5948,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952926" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39885223" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39800286" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24248926" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -5890,13 +5984,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/build/generated/source/aidl/debug/com/android/vending/billing/IInAppBillingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CloudBuilder/sources/Android/Aidl/com/android/vending/billing/IInAppBillingService.aidl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -6163,27 +6250,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CloudBuilder/sources/Android/Java/com/clanofthecloud/cloudbuilder/CloudBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -6237,7 +6303,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../unity-sdk/PlatformSpecific/Android/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -6251,23 +6352,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CLI/Android/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="360">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CloudBuilder/CloudBuilderAndroid/CloudBuilder/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
