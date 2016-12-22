@@ -207,7 +207,7 @@ public:
 	}
 
 	void loginanonymous(int argc, const char **argv) {
-		CUserManager::Instance()->LoginAnonymous(MakeResultHandler(this, &MyClan::LoginDone));
+		CUserManager::Instance()->LoginAnonymous(NULL, MakeResultHandler(this, &MyClan::LoginDone));
 	}
 
 	void login(int argc, const char **argv) {
