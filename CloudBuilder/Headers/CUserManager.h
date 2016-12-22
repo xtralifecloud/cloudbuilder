@@ -69,13 +69,16 @@ namespace CloudBuilder
 		/**
 			Method used to login using no identifer.
 			This method will fail (enOperationAlreayInProgress) if any other login related operation is already launched.
+            @param aOptions is a JSON object holding optional data, see CloudBuilder::CUserManager::LoginNetwork for more
+            about possible options. Can be NULL if no options are to be passed.
 			@param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if noErr, the json passed to the handler may contain:
 			"gamer_id" : "xxxxx",
 			"gamer_secret" : "xxxxxx"
 			"profile" : {}
 		*/
-		void LoginAnonymous(CResultHandler *aHandler);
+        void LoginAnonymous(const CotCHelpers::CHJSON* aOptions, CResultHandler *aHandler);
+        DEPRECATED void LoginAnonymous(CResultHandler *aHandler);
 		
 		/**
 			Method used to log in with a with an account of a social network.
@@ -85,11 +88,11 @@ namespace CloudBuilder
 			- "network" : facebookId, googleplusId, gamecenter, email (facebook and goggleplus are deprecated)
 			- "id" : string containing the ID of the user. (respectively facebook ID, googleplus ID, gamecenter ID, email)
 			- "secret" : string containing the secret associated with the user ID. (respectivly accesstoken, token, n/s, password)
-		 	
 		 	optionally pass an 'options' key which may contain:
 		 	- 'preventRegistration' : doesn't create a new account if not already existing. In this it can raise an
 		 		error named 'PreventRegistration'.
-		 
+            - 'thenBatch' : value should contain { "thenBatch" : { "domain" : "yourDomain" , "name" : "batchToCall" , 
+                                                    "params" : { your JSON parameters } } }
 			@param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if noErr, the json passed to the handler may contain:
 			"gamer_id" : "xxxxx",
@@ -125,17 +128,18 @@ namespace CloudBuilder
 		
 		/**
 			Method used to Link an account with Facebook, Googleplus, GameCenter.
-			@param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 	@param aConfiguration is a JSON object holding the necessary connection details
 			The mandatory keys are:
 			- "network" : facebookId, googleplusId, gamecenterId, gamecenter (no IDs to be supplied, logs in locally).
 			- "id" : string containing the ID of the user. (respectivly facebook user ID, googleplus ID, gamecenter ID)
 			- "secret" : string containing the secret associated with the user ID. (respectivly accesstoken, token, n/s)
 			- "options" : used with network="gamecenter" to provide additional options for login (see LoginNetwork).
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if noErr, the json passed to the handler may contain:
 			"done" : 1
 		*/
-		void Link(CResultHandler *aHandler, const CotCHelpers::CHJSON* aConfiguration);
+        void Link(const CotCHelpers::CHJSON* aConfiguration, CResultHandler *aHandler);
+        DEPRECATED void Link(CResultHandler *aHandler, const CotCHelpers::CHJSON* aConfiguration);
 		DEPRECATED void Link(const char *aNetwork, CResultHandler *aHandler);
 
 		/**
@@ -145,7 +149,7 @@ namespace CloudBuilder
 			@result if noErr, the json passed to the handler may contain:
 			"done" : 1
 		*/
-		void Unlink(const char *aNetwork, CResultHandler *aHandler);
+        void Unlink(const char *aNetwork, CResultHandler *aHandler);
 
 		/**
 			Can convert the current account to a Facebook, Googleplus, GameCenter or e-mail account. To be
@@ -159,7 +163,8 @@ namespace CloudBuilder
 			@result if noErr, the json passed to the handler may contain:
 			"done" : 1
 		 */
-		void Convert(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration);
+        void Convert(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
+        DEPRECATED void Convert(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration);
 
 		/** @}
 		 * @defgroup user_profile Profile related tasks
@@ -243,76 +248,81 @@ namespace CloudBuilder
 			Method to save a list of properties that will be used to find opponents. You can
 			optionnally use it to save other informations which do not need to be used for your
 			match making needs though.
-            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@param aPropertiesList is a JSON containing only basic types (bool, string,
 			number. To save a date, use the UTC date in JSON string format (2013-05-17T10:43:59.599Z).
 			i.e. { "level" : 10,  "board" : "square" }
 			@param aDomain is the domain in which the properties have to be saved. "private" means they
             are valid only for this game.
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
             @result if noErr, the json passed to the handler may contain:
 			"properties" : {
 				"level" : 10,
 				"board" : "square",
 			}
 		*/
-		void SetProperties(CResultHandler *aHandler, const CotCHelpers::CHJSON* aPropertiesList, const char *aDomain="private");
+        void SetProperties(const CotCHelpers::CHJSON* aPropertiesList, const char *aDomain, CResultHandler *aHandler);
+        DEPRECATED void SetProperties(CResultHandler *aHandler, const CotCHelpers::CHJSON* aPropertiesList, const char *aDomain="private");
 		
 		/**
 			Method to get the list of previously saved properties used to find opponents for a match.
-            @param aHandler result handler whenever the call finishes (it might also be synchronous)
             @param aDomain is the domain in which the properties have to be loaded. "private" means they
             are valid only for this game.
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if noErr, the json passed to the handler may contain:
 			"properties" : {
 				"level" : 10,
 				"board" : "square",
 			}
 		*/
-		void GetProperties(CResultHandler *aHandler, const char *aDomain="private");
+        void GetProperties(const char *aDomain, CResultHandler *aHandler);
+        DEPRECATED void GetProperties(CResultHandler *aHandler, const char *aDomain="private");
 		
 		
 		/**
 			Method to save  one property that will be used to find opponents. You can
 			optionnally use it to save other informations which do not need to be used for your
 			match making needs though.
-            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@param aProperty is a JSON containing a key and a value only basic types (bool, string,
 			number. To save a date, use the UTC date in JSON string format (2013-05-17T10:43:59.599Z).
 			i.e. { "key" : "level",  "value" : 10 }
             @param aDomain is the domain in which this property has to be saved. "private" means it is
             valid only for this game.
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if noErr, the json passed to the handler may contain:
 			"properties" : {
 		 		"level" : 10,
 			}
 		 */
-		void SetProperty(CResultHandler *aHandler, const CotCHelpers::CHJSON* aProperty, const char *aDomain="private");
+        void SetProperty(const CotCHelpers::CHJSON* aProperty, const char *aDomain, CResultHandler *aHandler);
+        DEPRECATED void SetProperty(CResultHandler *aHandler, const CotCHelpers::CHJSON* aProperty, const char *aDomain="private");
 		
 		/**
 			Method to get the list of previously saved properties used to find opponents for a match.
-            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@param aField the key to retreive
             @param aDomain is the domain in which this property has to be loaded. "private" means it is
             valid only for this game.
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if noErr, the json passed to the handler may contain:
 			"properties" : {
 		 		"level" : 10,
 			}
 		 */
-		void GetProperty(CResultHandler *aHandler, const char *aField, const char *aDomain="private");
+        void GetProperty(const char *aField, const char *aDomain, CResultHandler *aHandler);
+        DEPRECATED void GetProperty(CResultHandler *aHandler, const char *aField, const char *aDomain="private");
 
 		/**
 			Method to delete a single property of the global JSON object stored for this user and domain.
-            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@param aField the key to delete
             @param aDomain is the domain in which this property has to be deleted. "private" means it is
             valid only for this game.
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
             @result if noErr and no binary key was passed in the configuration, the json passed to the handler may contain:
 			{
                 "done": 1
 			}
 		 */
-		void DeleteProperty(CResultHandler *aHandler, const char *aField, const char *aDomain="private");
+        void DeleteProperty(const char *aField, const char *aDomain, CResultHandler *aHandler);
+        DEPRECATED void DeleteProperty(CResultHandler *aHandler, const char *aField, const char *aDomain="private");
 
 		/** @}
 		 * @defgroup user_transaction Transaction (key/value storage, also called "units") related tasks
@@ -521,20 +531,21 @@ namespace CloudBuilder
 
 		/**
 			Method to call in order to generate a temporary code that can be used to obtain a new godchild.
-			@param aHandler result handler whenever the call finishes (it might also be synchronous)
             @param aDomain is the domain in which the godfather link should be established. "private" means
             it's local to this game only.
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if enNoErr is sent back to your handler, the "result" of the embedded JSON will have a
 			value which may contain:
 			{ "godfathercode" : "xxx" }
 		*/
-		void GetGodfatherCode(CResultHandler *aHandler, const char *aDomain="private");
+        void GetGodfatherCode(const char *aDomain, CResultHandler *aHandler);
+        DEPRECATED void GetGodfatherCode(CResultHandler *aHandler, const char *aDomain="private");
 		
 		/**
 			Method used to retrieve the godfather of the currently logged in user.
-			@param aHandler result handler whenever the call finishes (it might also be synchronous)
             @param aDomain is the domain in which the godfather link should be established. "private" means
             it's local to this game only.
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if enNoErr is sent back to your handler, the "result" of the embedded JSON will have a
 			value which may contain:
 			{ "godfather" : {
@@ -544,7 +555,8 @@ namespace CloudBuilder
 				}
 			}
 		*/
-		void GetGodfather(CResultHandler *aHandler, const char *aDomain="private");
+        void GetGodfather(const char *aDomain, CResultHandler *aHandler);
+        DEPRECATED void GetGodfather(CResultHandler *aHandler, const char *aDomain="private");
 		
 		/**
 			Method to call to attribute a godfather to the currently logged in user.
@@ -573,9 +585,9 @@ namespace CloudBuilder
 		
 		/**
 			Method used to retrieve all the godchildren for the currently logged in user.
-			@param aHandler result handler whenever the call finishes (it might also be synchronous)
             @param aDomain is the domain in which the godfather link should be established. "private" means
             it's local to this game only.
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if enNoErr is sent back to your handler, the "result" of the embedded JSON will have a
 			value which may contain:
 			{ "godchildren" :
@@ -584,7 +596,8 @@ namespace CloudBuilder
 				]
 			}
 		*/
-		void GetGodchildren(CResultHandler *aHandler, const char *aDomain="private");
+        void GetGodchildren(const char *aDomain, CResultHandler *aHandler);
+        DEPRECATED void GetGodchildren(CResultHandler *aHandler, const char *aDomain="private");
 
 		/** Method used to retrieve global user information, including profile, friends, devices, ...
 			It's the same JSON as the one received upon the Login/ResumeSession process.
@@ -691,7 +704,8 @@ namespace CloudBuilder
 		 * @param aHandler the handler called with the result when the call completes
 		 * @result if noErr, the json passed to the handler will contain the result of the executed batch
 		 */
-		void Batch(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration, const CotCHelpers::CHJSON *aParameters);
+        void Batch(const CotCHelpers::CHJSON *aConfiguration, const CotCHelpers::CHJSON *aParameters, CResultHandler *aHandler);
+        DEPRECATED void Batch(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration, const CotCHelpers::CHJSON *aParameters);
 
 		/** @} */
 

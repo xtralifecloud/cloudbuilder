@@ -136,7 +136,7 @@ namespace CloudBuilder {
 		}
 	}
 
-	void CUserManager::LoginAnonymous(CResultHandler *aHandler) {
+	void CUserManager::LoginAnonymous(const CotCHelpers::CHJSON* aConfiguration, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
 		if (CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enAlreadyLogged); return; }
 		if (loginDoneHandler.IsSet()) { InvokeHandler(aHandler, enOperationAlreadyInProgress); return; }
@@ -144,6 +144,8 @@ namespace CloudBuilder {
 		loginDoneHandler.Set(aHandler);
 		CHJSON j;
 		j.Put("device", collectDeviceInformation());
+        if (aConfiguration && aConfiguration->Has("options"))
+            j.Put("options", aConfiguration->Get("options")->Duplicate());
 		CClannishRESTProxy::Instance()->LoginAnonymous(&j, MakeBridgeDelegate(this, &CUserManager::LoginAnonymousDone));
 	}
 	
@@ -192,7 +194,14 @@ namespace CloudBuilder {
 			InvokeHandler(aHandler, enBadParameters, "googleplus network obsolete");
 		} else if (strcmp(network, "facebook")==0) {
 			InvokeHandler(aHandler, enBadParameters, "facebook network obsolete");
-		} else if (strcmp(network, "facebookId")==0 && identifier && secret) {
+            
+        } else if(strncmp(network, "external:", 9)==0) {
+            loginDoneHandler.Set(aHandler);
+            CHJSON *j = aConfiguration->Duplicate();
+            j->Put("device", collectDeviceInformation());
+            CClannishRESTProxy::Instance()->LogWithExternalNetwork(j, MakeBridgeDelegate(this, &CUserManager::LoginDone));
+            delete j;
+        } else if (strcmp(network, "facebookId")==0 && identifier && secret) {
 			loginDoneHandler.Set(aHandler);
 			CHJSON *j = aConfiguration->Duplicate();
 			j->Put("device", collectDeviceInformation());
@@ -349,51 +358,54 @@ namespace CloudBuilder {
 		InvokeHandler(aHandler, enNotImplemented , "obsolete method");
 	}
 
-	void CUserManager::Link(CResultHandler *aHandler, const CotCHelpers::CHJSON* aConfiguration) {
-		if (!CClan::Instance()->isUserLogged()) { return InvokeHandler(aHandler, enNotLogged); }
+    void CUserManager::Link(const CotCHelpers::CHJSON* aConfiguration, CResultHandler *aHandler) {
+        if (!CClan::Instance()->isUserLogged()) { return InvokeHandler(aHandler, enNotLogged); }
+        
+        CHJSON args;
+        const char *network = aConfiguration->GetString("network");
+        
+        if (IsEqual(network, "facebookId")) {
+            args.Put("network", "facebook");
+        }
+        else if (IsEqual(network, "googleplusId")) {
+            args.Put("network", "googleplus");
+        }
+        else if (IsEqual(network, "gamecenterId")) {
+            args.Put("network", "gamecenter");
+        }
+        else if (IsEqual(network, "gamecenter")) {
+            struct LoggedInWithGC: CInternalResultHandler {
+                _BLOCK3(LoggedInWithGC, CInternalResultHandler,
+                        CUserManager*, self,
+                        CHJSON*, options,
+                        CInternalResultHandler*, resultHandler);
+                void Done(const CCloudResult *result) {
+                    CHJSON args;
+                    args.Put("network", "gamecenter");
+                    args.Put("id", result->GetJSON()->GetString("playerid"));
+                    args.Put("secret", "n/a");
+                    CClannishRESTProxy::Instance()->LinkWith(&args, resultHandler);
+                    delete options;
+                }
+            };
+            CHJSON *options = aConfiguration->Has("options") ? aConfiguration->Get("options")->Duplicate() : new CHJSON();
+            GameCenter::login(new LoggedInWithGC(this, options, MakeBridgeDelegate(aHandler)));
+            // Continue in the callback, unlike other methods
+            return;
+        }
+        else {
+            return InvokeHandler(aHandler, enBadParameters, "Unrecognized network (facebookId, googleplusId, gamecenterId supported)");
+        }
+        
+        args.Put("id", aConfiguration->GetString("id"));
+        args.Put("secret", aConfiguration->GetString("secret"));
+        CClannishRESTProxy::Instance()->LinkWith(&args, MakeBridgeDelegate(aHandler));
+    }
 
-		CHJSON args;
-		const char *network = aConfiguration->GetString("network");
-
-		if (IsEqual(network, "facebookId")) {
-			args.Put("network", "facebook");
-		}
-		else if (IsEqual(network, "googleplusId")) {
-			args.Put("network", "googleplus");
-		}
-		else if (IsEqual(network, "gamecenterId")) {
-			args.Put("network", "gamecenter");
-		}
-		else if (IsEqual(network, "gamecenter")) {
-			struct LoggedInWithGC: CInternalResultHandler {
-				_BLOCK3(LoggedInWithGC, CInternalResultHandler,
-					CUserManager*, self,
-					CHJSON*, options,
-					CInternalResultHandler*, resultHandler);
-				void Done(const CCloudResult *result) {
-					CHJSON args;
-					args.Put("network", "gamecenter");
-					args.Put("id", result->GetJSON()->GetString("playerid"));
-					args.Put("secret", "n/a");
-					CClannishRESTProxy::Instance()->LinkWith(&args, resultHandler);
-					delete options;
-				}
-			};
-			CHJSON *options = aConfiguration->Has("options") ? aConfiguration->Get("options")->Duplicate() : new CHJSON();
-			GameCenter::login(new LoggedInWithGC(this, options, MakeBridgeDelegate(aHandler)));
-			// Continue in the callback, unlike other methods
-			return;
-		}
-		else {
-			return InvokeHandler(aHandler, enBadParameters, "Unrecognized network (facebookId, googleplusId, gamecenterId supported)");
-		}
-
-		args.Put("id", aConfiguration->GetString("id"));
-		args.Put("secret", aConfiguration->GetString("secret"));
-		CClannishRESTProxy::Instance()->LinkWith(&args, MakeBridgeDelegate(aHandler));
-	}
-
-
+    void CUserManager::Link(CResultHandler *aHandler, const CotCHelpers::CHJSON* aConfiguration) {
+        this->Link(aConfiguration, aHandler);
+    }
+    
 	void CUserManager::Unlink(const char *aNetwork, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
 		CHJSON json;
@@ -426,7 +438,7 @@ namespace CloudBuilder {
 		}
 	}
 
-	void CUserManager::Convert(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration) {
+	void CUserManager::Convert(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isUserLogged()) { return InvokeHandler(aHandler, enNotLogged); }
 		if (!IsAnonymousAccount()) { return InvokeHandler(aHandler, enLogicError, "Conversion only applies to anonymous accounts"); }
 		const char *network = aConfiguration->GetString("network");
@@ -464,7 +476,11 @@ namespace CloudBuilder {
 		else
 			InvokeHandler(aHandler, enBadParameters, "Unrecognized network");
 	}
-	
+
+    void CUserManager::Convert(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration) {
+        this->Convert(aConfiguration, aHandler);
+    }
+    
 	void CUserManager::ConvertToGC(CloudBuilder::CCloudResult *result) {
 		if (result->GetErrorCode()) { return convertDone(result); }
 
@@ -500,17 +516,25 @@ namespace CloudBuilder {
 		CClannishRESTProxy::Instance()->Outline(MakeBridgeDelegate(aHandler));
 	}
 
-	void CUserManager::GetGodfatherCode(CResultHandler *aHandler, const char *aDomain) {
+	void CUserManager::GetGodfatherCode(const char *aDomain, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
 		CClannishRESTProxy::Instance()->GetGodfatherCode(aDomain, MakeBridgeDelegate(aHandler));
 	}
 	
-	void CUserManager::GetGodfather(CResultHandler *aHandler, const char *aDomain) {
+    void CUserManager::GetGodfatherCode(CResultHandler *aHandler, const char *aDomain) {
+        this->GetGodfatherCode(aDomain, aHandler);
+    }
+    
+    void CUserManager::GetGodfather(const char *aDomain, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
 		CClannishRESTProxy::Instance()->GetGodfather(aDomain, MakeBridgeDelegate(aHandler));
 	}
 
-	void CUserManager::SetGodfather(const char *aCode, const CHJSON *aOptions, CResultHandler *aHandler) {
+    void CUserManager::GetGodfather(CResultHandler *aHandler, const char *aDomain) {
+        this->GetGodfather(aDomain, aHandler);
+    }
+    
+    void CUserManager::SetGodfather(const char *aCode, const CHJSON *aOptions, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
 		CHJSON *j;
 		if (aOptions)
@@ -522,11 +546,14 @@ namespace CloudBuilder {
 		delete j;
 	}
 	
-	void CUserManager::GetGodchildren(CResultHandler *aHandler, const char *aDomain) {
+	void CUserManager::GetGodchildren(const char *aDomain, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
 		CClannishRESTProxy::Instance()->GetGodchildren(aDomain, MakeBridgeDelegate(aHandler));
 	}
-
+    void CUserManager::GetGodchildren(CResultHandler *aHandler, const char *aDomain) {
+        this->GetGodchildren(aDomain, aHandler);
+    }
+    
 	void CUserManager::SetProfile(const CotCHelpers::CHJSON *aJson, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
@@ -543,7 +570,7 @@ namespace CloudBuilder {
 	}
 	
 
-	void CUserManager::SetProperties(CResultHandler *aHandler, const CotCHelpers::CHJSON* aPropertiesList, const char *aDomain) {
+	void CUserManager::SetProperties(const CotCHelpers::CHJSON* aPropertiesList, const char *aDomain, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
 		
@@ -565,15 +592,22 @@ namespace CloudBuilder {
 		CClannishRESTProxy::Instance()->UserSetProperties(aDomain, aPropertiesList, MakeBridgeDelegate(aHandler));
 	}
 	
-	void CUserManager::GetProperties(CResultHandler *aHandler, const char *aDomain) {
+    void CUserManager::SetProperties(CResultHandler *aHandler, const CotCHelpers::CHJSON* aPropertiesList, const char *aDomain) {
+        this->SetProperties(aPropertiesList, aDomain, aHandler);
+    }
+    
+    void CUserManager::GetProperties(const char *aDomain, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
 
 		CClannishRESTProxy::Instance()->UserGetProperties(aDomain, MakeBridgeDelegate(aHandler));
    }
 
-	
-	void CUserManager::SetProperty(CResultHandler *aHandler, const CotCHelpers::CHJSON* aProperty, const char *aDomain) {
+    void CUserManager::GetProperties(CResultHandler *aHandler, const char *aDomain) {
+        return GetProperties(aDomain, aHandler);
+    }
+    
+	void CUserManager::SetProperty(const CotCHelpers::CHJSON* aProperty, const char *aDomain, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
 		
@@ -596,20 +630,32 @@ namespace CloudBuilder {
 		CClannishRESTProxy::Instance()->UserSetProperty(aDomain, aProperty, MakeBridgeDelegate(aHandler));
 	}
 
-	void CUserManager::GetProperty(CResultHandler *aHandler, const char *aField, const char *aDomain) {
+    void CUserManager::SetProperty(CResultHandler *aHandler, const CotCHelpers::CHJSON* aProperty, const char *aDomain) {
+        this->SetProperty(aProperty, aDomain, aHandler);
+    }
+    
+    void CUserManager::GetProperty(const char *aField, const char *aDomain, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
 		CClannishRESTProxy::Instance()->UserGetProperty(aDomain, aField, MakeBridgeDelegate(aHandler));
 		
 	}
 
-	void CUserManager::DeleteProperty(CResultHandler *aHandler, const char *aField, const char *aDomain) {
+    void CUserManager::GetProperty(CResultHandler *aHandler, const char *aField, const char *aDomain) {
+        this->GetProperty(aField, aDomain, aHandler);
+    }
+    
+    void CUserManager::DeleteProperty(const char *aField, const char *aDomain, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
 		CClannishRESTProxy::Instance()->UserDelProperty(aDomain, aField, MakeBridgeDelegate(aHandler));
 		
 	}
 
+    void CUserManager::DeleteProperty(CResultHandler *aHandler, const char *aField, const char *aDomain) {
+        this->DeleteProperty(aField, aDomain, aHandler);
+    }
+    
 	void CUserManager::Balance(const char *aDomain, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
@@ -834,9 +880,12 @@ namespace CloudBuilder {
 		InvokeHandler(aHandler, enNoErr);
 	}
 
-	void CUserManager::Batch(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration, const CotCHelpers::CHJSON *aParameters) {
+	void CUserManager::Batch(const CotCHelpers::CHJSON *aConfiguration, const CotCHelpers::CHJSON *aParameters, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
 		CClannishRESTProxy::Instance()->BatchUser(aConfiguration, aParameters, MakeBridgeDelegate(aHandler));
 	}
 
+    void CUserManager::Batch(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration, const CotCHelpers::CHJSON *aParameters) {
+        this->Batch(aConfiguration, aParameters, aHandler);
+    }
 }
