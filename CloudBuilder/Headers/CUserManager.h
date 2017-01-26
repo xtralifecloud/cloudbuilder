@@ -78,7 +78,6 @@ namespace CloudBuilder
 			"profile" : {}
 		*/
         void LoginAnonymous(const CotCHelpers::CHJSON* aOptions, CResultHandler *aHandler);
-        DEPRECATED void LoginAnonymous(CResultHandler *aHandler);
 		
 		/**
 			Method used to log in with a with an account of a social network.
@@ -108,6 +107,9 @@ namespace CloudBuilder
 			The mandatory keys are:
 			- "id" : string containing the ID of the user.
 			- "secret" : string containing the secret associated with the user ID.
+             optionally pass an 'options' key which may contain:
+             - 'thenBatch' : value should contain { "thenBatch" : { "domain" : "yourDomain" , "name" : "batchToCall" ,
+             "params" : { your JSON parameters } } }
 			@param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if noErr, the json passed to the handler may contain:
 			"gamer_id" : "xxxxx",
@@ -116,6 +118,23 @@ namespace CloudBuilder
 		*/
 		void ResumeSession(const CotCHelpers::CHJSON* aConfiguration, CResultHandler *aHandler);
 			
+        /**
+            Method used to log in using a generated short code.
+            This method will fail (enOperationAlreayInProgress) if any other login related operation is already launched.
+             @param aConfiguration is a JSON object holding the necessary connection details.
+             The mandatory keys are:
+             - "shortcode" : string containing the generated short code.
+             optionally pass an 'options' key which may contain:
+             - 'thenBatch' : value should contain { "thenBatch" : { "domain" : "yourDomain" , "name" : "batchToCall" ,
+             "params" : { your JSON parameters } } }
+             @param aHandler result handler whenever the call finishes (it might also be synchronous)
+             @result if noErr, the json passed to the handler may contain:
+             "gamer_id" : "xxxxx",
+             "gamer_secret" : "xxxxxx"
+             "profile" : {}
+         */
+        void LoginWithShortCode(const CotCHelpers::CHJSON* aConfiguration, CResultHandler *aHandler);
+        
 		/**
 			Method used to log out a previously logged in profile. After calling this, you need to
 			log again using any of LoginAnonymous, LoginNetwork or Login before being able
@@ -139,8 +158,6 @@ namespace CloudBuilder
 			"done" : 1
 		*/
         void Link(const CotCHelpers::CHJSON* aConfiguration, CResultHandler *aHandler);
-        DEPRECATED void Link(CResultHandler *aHandler, const CotCHelpers::CHJSON* aConfiguration);
-		DEPRECATED void Link(const char *aNetwork, CResultHandler *aHandler);
 
 		/**
 			Method used to Unlink an account with Facebook, Googleplus, GameCenter.
@@ -164,7 +181,6 @@ namespace CloudBuilder
 			"done" : 1
 		 */
         void Convert(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
-        DEPRECATED void Convert(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration);
 
 		/** @}
 		 * @defgroup user_profile Profile related tasks
@@ -261,7 +277,6 @@ namespace CloudBuilder
 			}
 		*/
         void SetProperties(const CotCHelpers::CHJSON* aPropertiesList, const char *aDomain, CResultHandler *aHandler);
-        DEPRECATED void SetProperties(CResultHandler *aHandler, const CotCHelpers::CHJSON* aPropertiesList, const char *aDomain="private");
 		
 		/**
 			Method to get the list of previously saved properties used to find opponents for a match.
@@ -275,8 +290,6 @@ namespace CloudBuilder
 			}
 		*/
         void GetProperties(const char *aDomain, CResultHandler *aHandler);
-        DEPRECATED void GetProperties(CResultHandler *aHandler, const char *aDomain="private");
-		
 		
 		/**
 			Method to save  one property that will be used to find opponents. You can
@@ -294,7 +307,6 @@ namespace CloudBuilder
 			}
 		 */
         void SetProperty(const CotCHelpers::CHJSON* aProperty, const char *aDomain, CResultHandler *aHandler);
-        DEPRECATED void SetProperty(CResultHandler *aHandler, const CotCHelpers::CHJSON* aProperty, const char *aDomain="private");
 		
 		/**
 			Method to get the list of previously saved properties used to find opponents for a match.
@@ -308,7 +320,6 @@ namespace CloudBuilder
 			}
 		 */
         void GetProperty(const char *aField, const char *aDomain, CResultHandler *aHandler);
-        DEPRECATED void GetProperty(CResultHandler *aHandler, const char *aField, const char *aDomain="private");
 
 		/**
 			Method to delete a single property of the global JSON object stored for this user and domain.
@@ -322,7 +333,6 @@ namespace CloudBuilder
 			}
 		 */
         void DeleteProperty(const char *aField, const char *aDomain, CResultHandler *aHandler);
-        DEPRECATED void DeleteProperty(CResultHandler *aHandler, const char *aField, const char *aDomain="private");
 
 		/** @}
 		 * @defgroup user_transaction Transaction (key/value storage, also called "units") related tasks
@@ -369,34 +379,35 @@ namespace CloudBuilder
 		*/
 		void TxHistory(const char *aDomain, const CotCHelpers::CHJSON *aJSONOptions, CResultHandler *aHandler);
 
-		/**
-			Method to read a single key of the global JSON object stored for this user and this domain.
-			@param aConfiguration is a JSON configuration, that may contain
-			- domain: the domain on which the action is to be taken (if not passed, the private domain is used)
-			- key: name of the key to retrieve from the global JSON object (if not passed, all keys are returned)
-			@param aHandler result handler whenever the call finishes (it might also be synchronous)
-			@result if noErr and no binary key was passed in the configuration, the json passed to the handler may contain:
-			{
-				"<key1>" : "value1", "<key2>" : "value2", ...
-			}
-		*/
-		void KeyValueRead(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
-
-		/**
-			Method to insert a key or modify the global JSON object stored for this user and this domain.
-			Please note that if you have used BinaryWrite with a key you reuse in KeyValueWrite, you will
-			lose your initial binary data.
-			@param aConfiguration JSON allowing for extensible configuration, that may contain:
-			- domain: the domain on which the action is to be taken (if not passed, the private domain is used)
-			- key: name of the key to write to (if not passed, the JSON itself is replaced)
-			- data: a JSON containing the object to write
-			@param aHandler result handler whenever the call finishes (it might also be synchronous)
-			@result if noErr, the json passed to the handler may contain:
-			{
-				"<key1>" : "value1", "<key2>" : "value2", ...
-			}
-		 */
-		void KeyValueWrite(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
+        /**
+            Method to read a single key of the global JSON object stored for this user and this domain.
+            @param aConfiguration is a JSON configuration, that may contain
+            - domain: the domain on which the action is to be taken (if not passed, the private domain is used)
+            - key: name of the key to retrieve from the global JSON object (if not passed, all keys are returned)
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
+            @result if noErr and no binary key was passed in the configuration, the json passed to the handler may
+            contain:
+            {
+                "<key1>" : "value1", "<key2>" : "value2", ...
+            }
+        */
+        void GetValue(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
+        
+        /**
+            Method to insert a key or modify the global JSON object stored for this user and this domain.
+            Please note that if you have used BinaryWrite with a key you reuse in KeyValueWrite, you will
+            lose your initial binary data.
+            @param aConfiguration JSON allowing for extensible configuration, that may contain:
+            - domain: the domain on which the action is to be taken (if not passed, the private domain is used)
+            - key: name of the key to write to (if not passed, the JSON itself is replaced)
+            - data: a JSON containing the object to write
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
+            @result if noErr, the json passed to the handler may contain:
+            {
+                "<key1>" : "value1", "<key2>" : "value2", ...
+            }
+         */
+        void SetValue(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
 
 		/**
 			Method to delete a single key of the global JSON object stored for this user and domain.
@@ -410,7 +421,7 @@ namespace CloudBuilder
 		 		"done": 1
 			}
 		 */
-		void KeyValueDelete(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
+        void DeleteValue(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
 
 		/**
 			 Method to read a single key containing binary data stored for this user and this domain.
@@ -424,7 +435,7 @@ namespace CloudBuilder
 			 }
 			 CCloudResult.HasBinary() must be true and you can acces to the data through :
 		 */
-		void BinaryRead(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
+        void GetBinary(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
 		
 		/**
 			 Method to insert or modify a single key represented by binary data
@@ -441,8 +452,8 @@ namespace CloudBuilder
 			 "url" : "<signed URL>",
 			 }
 		 */
-		void BinaryWrite(const CotCHelpers::CHJSON *aConfiguration, const void *aPointer, size_t aSize, CResultHandler *aHandler);
-
+		void SetBinary(const CotCHelpers::CHJSON *aConfiguration, const void *aPointer, size_t aSize, CResultHandler *aHandler);
+        
 		/**
 		 Method to remove data pointed by a single key.
 		 @param aConfiguration JSON allowing for extensible configuration, that may contain:
@@ -454,7 +465,7 @@ namespace CloudBuilder
 		 "done" : 1,
 		 }
 		 */
-		void BinaryDelete(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
+        void DeleteBinary(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
 
 		/** @}
 		 * @defgroup user_event Event related tasks
@@ -525,11 +536,6 @@ namespace CloudBuilder
 		const char *GetMail();
 
 		/**
-		 	Obsolete method.
-		*/
-		DEPRECATED void Publish(const char *aNetwork, const CotCHelpers::CHJSON* aMessage, CResultHandler *aHandler);
-
-		/**
 			Method to call in order to generate a temporary code that can be used to obtain a new godchild.
             @param aDomain is the domain in which the godfather link should be established. "private" means
             it's local to this game only.
@@ -539,7 +545,6 @@ namespace CloudBuilder
 			{ "godfathercode" : "xxx" }
 		*/
         void GetGodfatherCode(const char *aDomain, CResultHandler *aHandler);
-        DEPRECATED void GetGodfatherCode(CResultHandler *aHandler, const char *aDomain="private");
 		
 		/**
 			Method used to retrieve the godfather of the currently logged in user.
@@ -556,7 +561,6 @@ namespace CloudBuilder
 			}
 		*/
         void GetGodfather(const char *aDomain, CResultHandler *aHandler);
-        DEPRECATED void GetGodfather(CResultHandler *aHandler, const char *aDomain="private");
 		
 		/**
 			Method to call to attribute a godfather to the currently logged in user.
@@ -597,7 +601,6 @@ namespace CloudBuilder
 			}
 		*/
         void GetGodchildren(const char *aDomain, CResultHandler *aHandler);
-        DEPRECATED void GetGodchildren(CResultHandler *aHandler, const char *aDomain="private");
 
 		/** Method used to retrieve global user information, including profile, friends, devices, ...
 			It's the same JSON as the one received upon the Login/ResumeSession process.
@@ -705,9 +708,29 @@ namespace CloudBuilder
 		 * @result if noErr, the json passed to the handler will contain the result of the executed batch
 		 */
         void Batch(const CotCHelpers::CHJSON *aConfiguration, const CotCHelpers::CHJSON *aParameters, CResultHandler *aHandler);
-        DEPRECATED void Batch(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration, const CotCHelpers::CHJSON *aParameters);
 
 		/** @} */
+
+        DEPRECATED void LoginAnonymous(CResultHandler *aHandler);
+        DEPRECATED void Link(CResultHandler *aHandler, const CotCHelpers::CHJSON* aConfiguration);
+        DEPRECATED void Link(const char *aNetwork, CResultHandler *aHandler);
+        DEPRECATED void Convert(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration);
+        DEPRECATED void SetProperties(CResultHandler *aHandler, const CotCHelpers::CHJSON* aPropertiesList, const char *aDomain="private");
+        DEPRECATED void GetProperties(CResultHandler *aHandler, const char *aDomain="private");
+        DEPRECATED void SetProperty(CResultHandler *aHandler, const CotCHelpers::CHJSON* aProperty, const char *aDomain="private");
+        DEPRECATED void GetProperty(CResultHandler *aHandler, const char *aField, const char *aDomain="private");
+        DEPRECATED void DeleteProperty(CResultHandler *aHandler, const char *aField, const char *aDomain="private");
+        DEPRECATED void Publish(const char *aNetwork, const CotCHelpers::CHJSON* aMessage, CResultHandler *aHandler);
+        DEPRECATED void GetGodfatherCode(CResultHandler *aHandler, const char *aDomain="private");
+        DEPRECATED void GetGodfather(CResultHandler *aHandler, const char *aDomain="private");
+        DEPRECATED void GetGodchildren(CResultHandler *aHandler, const char *aDomain="private");
+        DEPRECATED void KeyValueRead(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
+        DEPRECATED void KeyValueWrite(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
+        DEPRECATED void KeyValueDelete(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
+        DEPRECATED void BinaryRead(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
+        DEPRECATED void BinaryWrite(const CotCHelpers::CHJSON *aConfiguration, const void *aPointer, size_t aSize, CResultHandler *aHandler);
+        DEPRECATED void BinaryDelete(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
+        DEPRECATED void Batch(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration, const CotCHelpers::CHJSON *aParameters);
 
 private:
 		struct PersistedLoginParams {
@@ -751,7 +774,8 @@ private:
 
 		void binaryWriteDone(const CCloudResult *result, const void *, size_t, CResultHandler *);
 		void binaryUploadDone(const CCloudResult *result, char*, CResultHandler *aHandler);
-		void binaryReadDone(const CCloudResult *result, CResultHandler *aHandler);
+        void binaryReadDone(const CCloudResult *result, CResultHandler *aHandler);
+        void getBinaryDone(const CCloudResult *result, CResultHandler *aHandler);
 
 		void didLogin(const CCloudResult *result);
 

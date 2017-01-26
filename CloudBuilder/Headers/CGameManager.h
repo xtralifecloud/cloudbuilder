@@ -36,7 +36,6 @@ namespace CloudBuilder
 		static CGameManager *Instance();
 		
 		/** Method used to post a High Score for this application.
-            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@param  aHighScore is the score you want to post.
 			@param  aMode is a C string holding the game mode for which this score should be
 			considered.
@@ -46,34 +45,37 @@ namespace CloudBuilder
 			to be inferior to the previous one.
             @param  aDomain is the domain in which the score has to be pushed. "private" means it's
             local to this game only.
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if noErr, the json passed to the handler may contain: @code
 			"done" : 1,
 			"rank" : 123 @endcode
 			`done` means that the score has been recorded as the highest, while `rank` is the effective rank
 			of the player (returned even if the player has not actually been classed, that is if `done` is 0).
 		*/
-		void Score(CResultHandler *aHandler, long long aHighScore, const char *aMode, const char *aScoreType, const char *aInfoScore, bool aForce, const char *aDomain="private");
+        void Score(long long aHighScore, const char *aMode, const char *aScoreType, const char *aInfoScore, bool aForce, const char *aDomain, CResultHandler *aHandler);
+        DEPRECATED void Score(CResultHandler *aHandler, long long aHighScore, const char *aMode, const char *aScoreType, const char *aInfoScore, bool aForce, const char *aDomain="private");
 
 		/** Method used to retrieve the rank of a High Score for this application.
-            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@param  aHighScore is the score whose rank you want to retrieve.
 			@param  aMode is a C string holding the game mode for which you want to retrieve
 			rank for this score.
             @param  aDomain is the domain in which the rank has to be retrieved. "private" means it's
             local to this game only.
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if noErr, the json passed to the handler may contain:
 			 "rank" : 1
 		*/
-		void GetRank(CResultHandler *aHandler, long long aHighScore, const char *aMode, const char *aDomain="private");
+        void GetRank(long long aHighScore, const char *aMode, const char *aDomain, CResultHandler *aHandler);
+        DEPRECATED void GetRank(CResultHandler *aHandler, long long aHighScore, const char *aMode, const char *aDomain="private");
 
 		/** Method used to retrieve the best High Scores for this application.
-            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@param  aCount is the number of best scores you want to retrieve, default is 10
 			@param  aPage is the number of the page to retrieve. the default is 1
 			@param  aMode is a C string holding the game mode for which you want to retrieve
 			the best High Scores.
             @param  aDomain is the domain in which the best scores have to be retrieved. "private"
             means it's local to this game only.
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if noErr, the json passed to the handler may contain:
 			{ <aMode>: {
 				"maxpage" : 10,
@@ -82,15 +84,16 @@ namespace CloudBuilder
 				"scores" : []
 			}
 		*/
-		void BestHighScore(CResultHandler *aHandler, int aCount, int aPage, const char *aMode, const char *aDomain="private");
+        void BestHighScore(int aCount, int aPage, const char *aMode, const char *aDomain, CResultHandler *aHandler);
+        DEPRECATED void BestHighScore(CResultHandler *aHandler, int aCount, int aPage, const char *aMode, const char *aDomain="private");
 		
 		/** Method used to retrieve scores centered on the user score for this application.
-            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@param  aCount is the number of best scores you want to retrieve, default is 10
 			@param  aMode is a C string holding the game mode for which you want to retrieve
 			the best High Scores.
             @param  aDomain is the domain in which the best scores have to be retrieved. "private"
             means it's local to this game only.
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if noErr, the json passed to the handler may contain:
 			{ <aMode>: {
 				"maxpage" : 10,
@@ -99,12 +102,13 @@ namespace CloudBuilder
 				"scores" : []
 			}
 		*/
-		void CenteredScore(CResultHandler *aHandler, int aCount, const char *aMode, const char *aDomain="private");
+        void CenteredScore(int aCount, const char *aMode, const char *aDomain, CResultHandler *aHandler);
+        DEPRECATED void CenteredScore(CResultHandler *aHandler, int aCount, const char *aMode, const char *aDomain="private");
 		
 		/** Method used to retrieve the best Scores of the logged user.
-			@param aHandler result handler whenever the call finishes (it might also be synchronous)
             @param  aDomain is the domain in which the best scores have to be retrieved. "private"
             means it's local to this game only.
+            @param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if noErr, the json passed to the handler may contain list of :
 			<modes>:	{
 			"timestamp":	"2014-09-12T15:30:56.938Z",
@@ -114,7 +118,8 @@ namespace CloudBuilder
 			"rank":	3
 			}
 		 */
-		void UserBestScores(CResultHandler *aHandler, const char *aDomain="private");
+        void UserBestScores(const char *aDomain, CResultHandler *aHandler);
+        DEPRECATED void UserBestScores(CResultHandler *aHandler, const char *aDomain="private");
 
 		/**
 			Method to read a single key of the global JSON object stored for this game and domain.

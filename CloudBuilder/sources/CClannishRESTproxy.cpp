@@ -843,40 +843,74 @@ namespace CloudBuilder {
 		return http_perform(req);
 	}
 	
-	void CClannishRESTProxy::vfsRead(const char *domain, const char *key, CInternalResultHandler *onFinished) {
-		if (!isLoggedIn()) { return InvokeHandler(onFinished, enNotLogged); }
-		
-		CUrlBuilder url("/v1/gamer/vfs");
-		url.Subpath((domain && domain[0]) ? domain : "private");
-		if (key && *key) {
-			url.Subpath(key);
-		}
-
-		CHttpRequest *req = MakeHttpRequest(url);
-		req->SetCallback(MakeBridgeCallback(onFinished));
-		return http_perform(req);
-	}
-	
-	void CClannishRESTProxy::vfsWrite(const char *domain, const char *key, const CHJSON *aJSON, bool isBinary, CInternalResultHandler *onFinished) {
-		if (!isLoggedIn()) { return InvokeHandler(onFinished, enNotLogged); }
-		
-		CUrlBuilder url("/v1/gamer/vfs");
-		url.Subpath((domain && domain[0]) ? domain : "private");
-
-		if (key && *key) {
-			url.Subpath(key);
-		}
-		if (isBinary) {
-			url.QueryParam("binary");
-		}
-
-		CHttpRequest *req = MakeHttpRequest(url);
-		req->SetBody(aJSON->Duplicate());
-		req->SetMethod("PUT");
-		req->SetCallback(MakeBridgeCallback(onFinished));
-		return http_perform(req);
-	}
-
+    void CClannishRESTProxy::vfsReadv3(const char *domain, const char *key, CInternalResultHandler *onFinished) {
+        if (!isLoggedIn()) { return InvokeHandler(onFinished, enNotLogged); }
+        
+        CUrlBuilder url("/v3.0/gamer/vfs");
+        url.Subpath((domain && domain[0]) ? domain : "private");
+        if (key && *key) {
+            url.Subpath(key);
+        }
+        
+        CHttpRequest *req = MakeHttpRequest(url);
+        req->SetCallback(MakeBridgeCallback(onFinished));
+        return http_perform(req);
+    }
+    
+    void CClannishRESTProxy::vfsWritev3(const char *domain, const char *key, const CHJSON *aJSON, bool isBinary, CInternalResultHandler *onFinished) {
+        if (!isLoggedIn()) { return InvokeHandler(onFinished, enNotLogged); }
+        
+        CUrlBuilder url("/v3.0/gamer/vfs");
+        url.Subpath((domain && domain[0]) ? domain : "private");
+        
+        if (key && *key) {
+            url.Subpath(key);
+        }
+        if (isBinary) {
+            url.QueryParam("binary");
+        }
+        
+        CHttpRequest *req = MakeHttpRequest(url);
+        req->SetBody(aJSON->Duplicate());
+        req->SetMethod("PUT");
+        req->SetCallback(MakeBridgeCallback(onFinished));
+        return http_perform(req);
+    }
+    
+    void CClannishRESTProxy::vfsRead(const char *domain, const char *key, CInternalResultHandler *onFinished) {
+        if (!isLoggedIn()) { return InvokeHandler(onFinished, enNotLogged); }
+        
+        CUrlBuilder url("/v1/gamer/vfs");
+        url.Subpath((domain && domain[0]) ? domain : "private");
+        if (key && *key) {
+            url.Subpath(key);
+        }
+        
+        CHttpRequest *req = MakeHttpRequest(url);
+        req->SetCallback(MakeBridgeCallback(onFinished));
+        return http_perform(req);
+    }
+    
+    void CClannishRESTProxy::vfsWrite(const char *domain, const char *key, const CHJSON *aJSON, bool isBinary, CInternalResultHandler *onFinished) {
+        if (!isLoggedIn()) { return InvokeHandler(onFinished, enNotLogged); }
+        
+        CUrlBuilder url("/v1/gamer/vfs");
+        url.Subpath((domain && domain[0]) ? domain : "private");
+        
+        if (key && *key) {
+            url.Subpath(key);
+        }
+        if (isBinary) {
+            url.QueryParam("binary");
+        }
+        
+        CHttpRequest *req = MakeHttpRequest(url);
+        req->SetBody(aJSON->Duplicate());
+        req->SetMethod("PUT");
+        req->SetCallback(MakeBridgeCallback(onFinished));
+        return http_perform(req);
+    }
+    
 	void CClannishRESTProxy::vfsDelete(const char *domain, const char *key, bool isBinary, CInternalResultHandler *onFinished) {
 		if (!isLoggedIn()) { return InvokeHandler(onFinished, enNotLogged); }
 		CUrlBuilder url("/v1/gamer/vfs");

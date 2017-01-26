@@ -94,7 +94,6 @@ namespace CloudBuilder {
 	}
 
 	void CUserManager::didLogin(const CCloudResult *result) {
-		loginDoneHandler.Invoke(result);
 		if (result->GetErrorCode() == enNoErr) {
 			persistedLoginParams.mGamerId = result->GetJSON()->GetString("gamer_id");
 			persistedLoginParams.mGamerSecret = result->GetJSON()->GetString("gamer_secret");
@@ -107,6 +106,7 @@ namespace CloudBuilder {
 			// We do that to start AppStore processes once logged in, and to restore potential purchases
 			CStoreGlue::Instance();
 		}
+        loginDoneHandler.Invoke(result);
 	}
 	
 	bool CUserManager::IsAnonymousAccount() {
@@ -176,6 +176,28 @@ namespace CloudBuilder {
 		CClannishRESTProxy::Instance()->Login(&json, MakeBridgeDelegate(this, &CUserManager::LoginDone));
 	}
 	
+    void CUserManager::LoginWithShortCode(const CotCHelpers::CHJSON* aConfiguration, CResultHandler *aHandler) {
+        if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
+        if (CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enAlreadyLogged); return; }
+        if (loginDoneHandler.IsSet()) { InvokeHandler(aHandler, enOperationAlreadyInProgress); return; }
+        
+        const char *shortcode = aConfiguration->GetString("shortcode");
+        // Empty parameters?
+        if (!shortcode) {
+            InvokeHandler(aHandler, enBadParameters, "Missing parameter shortcode in configuration");
+            return;
+        }
+        loginDoneHandler.Set(aHandler);		// we won't call it from here
+        
+        CHJSON json;
+        json.Put("network", "restore");
+        json.Put("id", "");
+        json.Put("secret", shortcode);
+        json.Put("device", collectDeviceInformation());
+        if (aConfiguration->Has("options")) json.Put("options", aConfiguration->Get("options")->Duplicate());
+        CClannishRESTProxy::Instance()->Login(&json, MakeBridgeDelegate(this, &CUserManager::LoginDone));
+    }
+    
 	void CUserManager::LoginDone(CCloudResult *result) {
 		if (!result->GetErrorCode()) {
 			LinkWithOther("");
@@ -371,9 +393,6 @@ namespace CloudBuilder {
             args.Put("network", "googleplus");
         }
         else if (IsEqual(network, "gamecenterId")) {
-            args.Put("network", "gamecenter");
-        }
-        else if (IsEqual(network, "gamecenter")) {
             struct LoggedInWithGC: CInternalResultHandler {
                 _BLOCK3(LoggedInWithGC, CInternalResultHandler,
                         CUserManager*, self,
@@ -671,29 +690,51 @@ namespace CloudBuilder {
 	}
 
 
-	void CUserManager::KeyValueRead(const CHJSON *aConfiguration, CResultHandler *aHandler) {
-		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
-		const char *domain = aConfiguration->GetString("domain");
-		const char *key = aConfiguration->GetString("key");
-
-		CClannishRESTProxy::Instance()->vfsRead(domain, key, MakeBridgeDelegate(aHandler));
-	}
-
-	void CUserManager::KeyValueWrite(const CHJSON *aConfiguration, CResultHandler *aHandler) {
-		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
-		const char *domain = aConfiguration->GetString("domain");
-		const char *key = aConfiguration->GetString("key");
-		const CHJSON *value = aConfiguration->Get("data");
-		if (!value) { InvokeHandler(aHandler, enBadParameters, "Missing data"); return; }
-
-		CClannishRESTProxy::Instance()->vfsWrite(domain, key, value, false, MakeBridgeDelegate(aHandler));
-	}
-
+    void CUserManager::KeyValueRead(const CHJSON *aConfiguration, CResultHandler *aHandler) {
+        if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
+        const char *domain = aConfiguration->GetString("domain");
+        const char *key = aConfiguration->GetString("key");
+        
+        CClannishRESTProxy::Instance()->vfsRead(domain, key, MakeBridgeDelegate(aHandler));
+    }
+    
+    void CUserManager::KeyValueWrite(const CHJSON *aConfiguration, CResultHandler *aHandler) {
+        if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
+        const char *domain = aConfiguration->GetString("domain");
+        const char *key = aConfiguration->GetString("key");
+        const CHJSON *value = aConfiguration->Get("data");
+        if (!value) { InvokeHandler(aHandler, enBadParameters, "Missing data"); return; }
+        
+        CClannishRESTProxy::Instance()->vfsWrite(domain, key, value, false, MakeBridgeDelegate(aHandler));
+    }
+    
+    void CUserManager::GetValue(const CHJSON *aConfiguration, CResultHandler *aHandler) {
+        if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
+        const char *domain = aConfiguration->GetString("domain");
+        const char *key = aConfiguration->GetString("key");
+        
+        CClannishRESTProxy::Instance()->vfsReadv3(domain, key, MakeBridgeDelegate(aHandler));
+    }
+    
+    void CUserManager::SetValue(const CHJSON *aConfiguration, CResultHandler *aHandler) {
+        if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
+        const char *domain = aConfiguration->GetString("domain");
+        const char *key = aConfiguration->GetString("key");
+        const CHJSON *value = aConfiguration->Get("data");
+        if (!value) { InvokeHandler(aHandler, enBadParameters, "Missing data"); return; }
+        
+        CClannishRESTProxy::Instance()->vfsWritev3(domain, key, value, false, MakeBridgeDelegate(aHandler));
+    }
+    
+    void CUserManager::DeleteValue(const CHJSON *aConfiguration, CResultHandler *aHandler) {
+        if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
+        const char *domain = aConfiguration->GetString("domain");
+        const char *key = aConfiguration->GetString("key");
+        CClannishRESTProxy::Instance()->vfsDelete(domain, key, false, MakeBridgeDelegate(aHandler));
+    }
+    
 	void CUserManager::KeyValueDelete(const CHJSON *aConfiguration, CResultHandler *aHandler) {
-		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
-		const char *domain = aConfiguration->GetString("domain");
-		const char *key = aConfiguration->GetString("key");
-		CClannishRESTProxy::Instance()->vfsDelete(domain, key, false, MakeBridgeDelegate(aHandler));
+        this->DeleteValue(aConfiguration, aHandler);
 	}
 
 	void CUserManager::BinaryRead(const CHJSON *aConfiguration, CResultHandler *aHandler) {
@@ -750,13 +791,43 @@ namespace CloudBuilder {
 		InvokeHandler(aHandler,result);
 	}
 
-	void CUserManager::BinaryDelete(const CHJSON *aConfiguration, CResultHandler *aHandler) {
-		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
-		const char *domain = aConfiguration->GetString("domain");
-		const char *key = aConfiguration->GetString("key");
-		CClannishRESTProxy::Instance()->vfsDelete(domain, key, true, MakeBridgeDelegate(aHandler));
-	}
-	
+    void CUserManager::SetBinary(const CHJSON *aConfiguration, const void* aPointer, size_t aSize, CResultHandler *aHandler)
+    {
+        if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
+        const char *domain = aConfiguration->GetString("domain");
+        const char *key = aConfiguration->GetString("key");
+        CClannishRESTProxy::Instance()->vfsWritev3(domain, key, NULL, true, MakeInternalResultHandler(this, &CUserManager::binaryWriteDone, aPointer, aSize, aHandler));
+    }
+    
+    void CUserManager::GetBinary(const CHJSON *aConfiguration, CResultHandler *aHandler) {
+        if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
+        const char *domain = aConfiguration->GetString("domain");
+        const char *key = aConfiguration->GetString("key");
+        CClannishRESTProxy::Instance()->vfsReadv3(domain, key, MakeInternalResultHandler(this, &CUserManager::getBinaryDone, aHandler));
+    }
+    
+    void CUserManager::getBinaryDone(const CCloudResult *result, CResultHandler *aHandler) {
+        if (result->GetErrorCode() != enNoErr) { InvokeHandler(aHandler, result); return; }
+        printf("readbin :%s", result->GetJSON()->printFormatted().c_str());
+        const CHJSON* jsonBlob = result->GetJSON()->Get("result");
+        CONSOLE_VERBOSE("Blob JSON :%s", jsonBlob->printFormatted().c_str());
+        const CHJSON* jsonUrl = jsonBlob->Get(0);
+        const char *url = jsonUrl->valueString();
+        if (url == NULL || *url ==0 ) return InvokeHandler(aHandler, enServerError);
+        CClannishRESTProxy::Instance()->DownloadData(url, MakeBridgeDelegate(aHandler));
+    }
+    
+    void CUserManager::BinaryDelete(const CHJSON *aConfiguration, CResultHandler *aHandler) {
+        this->DeleteBinary(aConfiguration, aHandler);
+    }
+    
+    void CUserManager::DeleteBinary(const CHJSON *aConfiguration, CResultHandler *aHandler) {
+        if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }
+        const char *domain = aConfiguration->GetString("domain");
+        const char *key = aConfiguration->GetString("key");
+        CClannishRESTProxy::Instance()->vfsDelete(domain, key, true, MakeBridgeDelegate(aHandler));
+    }
+    
 	void CUserManager::ListAchievements(const CHJSON *configuration, CResultHandler *handler) {
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(handler, enNotLogged); return; }
 

@@ -93,8 +93,10 @@ namespace CloudBuilder {
 		void Balance(const char *domain, const CHJSON *aJSON, CInternalResultHandler *onFinished);
 		void TxHistory(const char *domain, const CHJSON *aJSON, CInternalResultHandler *onFinished);
 
-		void vfsRead(const char *domain, const char *key, CInternalResultHandler *onFinished);
-		void vfsWrite(const char *domain, const char *key, const CHJSON *aJSON, bool isBinary, CInternalResultHandler *onFinished);
+        void vfsRead(const char *domain, const char *key, CInternalResultHandler *onFinished);
+        void vfsWrite(const char *domain, const char *key, const CHJSON *aJSON, bool isBinary, CInternalResultHandler *onFinished);
+        void vfsReadv3(const char *domain, const char *key, CInternalResultHandler *onFinished);
+        void vfsWritev3(const char *domain, const char *key, const CHJSON *aJSON, bool isBinary, CInternalResultHandler *onFinished);
 		void vfsDelete(const char *domain, const char *key, bool isBinary, CInternalResultHandler *onFinished);
 		void UploadData(const char *url, const void *ptr, size_t size, CInternalResultHandler *onFinished);
 		void DownloadData(const char *url, CInternalResultHandler *onFinished);

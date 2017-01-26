@@ -34,24 +34,30 @@ namespace CloudBuilder {
 		managerSingleton.Release();
 	}
 	
-	void CGameManager::Score(CResultHandler *handler, long long aHighScore, const char *aMode, const char *aScoreType, const char *infoScore, bool bMayVary, const char *aDomain) {
-		if (!CClan::Instance()->isSetup()) { InvokeHandler(handler, enSetupNotCalled); }
-		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(handler, enNotLogged); }
+	void CGameManager::Score(long long aHighScore, const char *aMode, const char *aScoreType, const char *aInfoScore, bool aForce, const char *aDomain, CResultHandler *aHandler)
+    {
+		if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); }
+		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); }
 		
 		CHJSON json;
 		json.Put("score", (double)aHighScore);
 		json.Put("mode", aMode);
 		json.Put("order", aScoreType);
 		json.Put("domain", aDomain);
-		if (infoScore)
-			json.Put("info", infoScore);
-		if (bMayVary)
-			json.Put("mayvary", bMayVary);
+		if (aInfoScore)
+			json.Put("info", aInfoScore);
+		if (aForce)
+			json.Put("mayvary", aForce);
 		
-		CClannishRESTProxy::Instance()->Score(&json, MakeBridgeDelegate(handler));
+		CClannishRESTProxy::Instance()->Score(&json, MakeBridgeDelegate(aHandler));
 	}
 	
-	void CGameManager::GetRank(CResultHandler *handler, long long aScore, const char *aMode, const char *aDomain)
+    void CGameManager::Score(CResultHandler *aHandler, long long aHighScore, const char *aMode, const char *aScoreType, const char *aInfoScore, bool aForce, const char *aDomain)
+    {
+        this->Score(aHighScore, aMode, aScoreType, aInfoScore, aForce, aDomain, aHandler);
+    }
+    
+    void CGameManager::GetRank(long long aScore, const char *aMode, const char *aDomain, CResultHandler *handler)
 	{
 		if (!CClan::Instance()->isSetup()) { InvokeHandler(handler, enSetupNotCalled); }
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(handler, enNotLogged); }
@@ -64,36 +70,59 @@ namespace CloudBuilder {
 
 	}
 	
-	void CGameManager::CenteredScore(CResultHandler *handler, int aCount, const char *aMode, const char *aDomain) {
-		if (!CClan::Instance()->isSetup()) { InvokeHandler(handler, enSetupNotCalled); }
-		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(handler, enNotLogged); }
+    void CGameManager::GetRank(CResultHandler *aHandler, long long aScore, const char *aMode, const char *aDomain)
+    {
+        this->GetRank(aScore, aMode, aDomain, aHandler);
+    }
+    
+    void CGameManager::CenteredScore(CResultHandler *aHandler, int aCount, const char *aMode, const char *aDomain)
+    {
+		if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); }
+		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); }
 		
 		CHJSON json;
 		json.Put("count", aCount);
 		json.Put("mode", aMode);
 		json.Put("domain", aDomain);
 		
-		CClannishRESTProxy::Instance()->CenteredScore(&json, MakeBridgeDelegate(handler));
+		CClannishRESTProxy::Instance()->CenteredScore(&json, MakeBridgeDelegate(aHandler));
 	}
 	
-	void CGameManager::BestHighScore(CResultHandler *handler, int aCount,int aPage, const char *aMode, const char *aDomain) {
-		if (!CClan::Instance()->isSetup()) { InvokeHandler(handler, enSetupNotCalled); }
-		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(handler, enNotLogged); }
+    void CGameManager::CenteredScore(int aCount, const char *aMode, const char *aDomain, CResultHandler *aHandler)
+    {
+        this->CenteredScore(aCount, aMode, aDomain, aHandler);
+    }
+    
+    void CGameManager::BestHighScore(int aCount,int aPage, const char *aMode, const char *aDomain, CResultHandler *aHandler)
+    {
+		if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); }
+		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); }
 		
 		CHJSON json;
 		json.Put("count", aCount);
 		json.Put("mode", aMode);
 		json.Put("page", aPage);
 		json.Put("domain", aDomain);
-		CClannishRESTProxy::Instance()->BestHighScore(&json, MakeBridgeDelegate(handler));
+		CClannishRESTProxy::Instance()->BestHighScore(&json, MakeBridgeDelegate(aHandler));
 		
 	}
 
-	void CGameManager::UserBestScores(CResultHandler *aHandler, const char *aDomain) {
+    void CGameManager::BestHighScore(CResultHandler *aHandler, int aCount,int aPage, const char *aMode, const char *aDomain)
+    {
+        this->BestHighScore(aCount, aPage, aMode, aDomain, aHandler);
+    }
+
+    void CGameManager::UserBestScores(const char *aDomain, CResultHandler *aHandler)
+    {
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); }
 		CClannishRESTProxy::Instance()->UserBestScore(aDomain, MakeBridgeDelegate(aHandler));
 	}
 
+    void CGameManager::UserBestScores(CResultHandler *aHandler, const char *aDomain)
+    {
+        this->UserBestScores(aDomain, aHandler);
+    }
+    
 	void CGameManager::KeyValueRead(const CHJSON *aConfiguration, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
 		const char *domain = aConfiguration->GetString("domain");

@@ -51,20 +51,15 @@ namespace CloudBuilder
 		bool isUserLogged();
 
 		/** This method is the first to call just after the constructor. This will prepare
-			everything so you can make requests later. It is identical to the previous one
-			except that instead of several parameters, all the necessary data are contained
-			in a JSON object.
+			everything so you can make requests later.
 			@param	aConfiguration is a JSON object holding the necessary connection details.
 			The mandatory keys are:
 			 - "key": string containing the community key.
 			 - "secret": string containing the community secret.
 			 - "env": string containing the environment. Currently, "sandbox" (testing environment)
 			   and "prod" (production environment) are supported.
-			 - "appVersion": string containing the application version.
 
 			The optional keys are:
-			- "gamecenter": boolean to control if the application can create profiles
-			  linked to GameCenter ID.
 			- "appFolder": used with the default CFileSystemHandler to set the folder in which
 			  the data will be saved. On Windows, it would be %USERPROFILE%\AppData\Roaming\<appFolder>\.
 			- "autoresume" : boolean to control if after a Setup the system has to proceed an automatic resumesession when possible.
@@ -77,8 +72,6 @@ namespace CloudBuilder
 			  high value (at least 60). Defaults to 590.
 			- "httpVerbose": set to true to output detailed information about the requests performed to CotC servers. Can be used
 			  for debugging, though it will pollute the logs very much.
-		 	- "forceFacebookSdk": on iOS, uses the facebook SDK instead of the native iOS. This means that the facebook app will be
-			  used for log in / publish instead of the system.
 			@param handler result handler whenever the call finishes (it might also be synchronous)
 			@result if noErr, the json passed to the handler may contain:
 			{ "_error" : 0}
