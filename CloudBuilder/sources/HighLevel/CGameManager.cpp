@@ -123,14 +123,22 @@ namespace CloudBuilder {
         this->UserBestScores(aDomain, aHandler);
     }
     
-	void CGameManager::KeyValueRead(const CHJSON *aConfiguration, CResultHandler *aHandler) {
-		if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
-		const char *domain = aConfiguration->GetString("domain");
-		const char *key = aConfiguration->GetString("key");
-
-		CClannishRESTProxy::Instance()->vfsReadGame(domain, key, MakeBridgeDelegate(aHandler));
-	}
-	
+    void CGameManager::GetValue(const CHJSON *aConfiguration, CResultHandler *aHandler) {
+        if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
+        const char *domain = aConfiguration->GetString("domain");
+        const char *key = aConfiguration->GetString("key");
+        
+        CClannishRESTProxy::Instance()->vfsReadGamev3(domain, key, MakeBridgeDelegate(aHandler));
+    }
+    
+    void CGameManager::KeyValueRead(const CHJSON *aConfiguration, CResultHandler *aHandler) {
+        if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
+        const char *domain = aConfiguration->GetString("domain");
+        const char *key = aConfiguration->GetString("key");
+        
+        CClannishRESTProxy::Instance()->vfsReadGame(domain, key, MakeBridgeDelegate(aHandler));
+    }
+    
 	/****
 	void CGameManager::KeyValueWrite(const CHJSON *aConfiguration, CResultHandler *aHandler) {
 		if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
@@ -150,13 +158,20 @@ namespace CloudBuilder {
 	}
 	***/
 	
-	void CGameManager::BinaryRead(const CHJSON *aConfiguration, CResultHandler *aHandler) {
-		if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
-		const char *domain = aConfiguration->GetString("domain");
-		const char *key = aConfiguration->GetString("key");
-		CClannishRESTProxy::Instance()->vfsReadGame(domain, key, MakeInternalResultHandler(this, &CGameManager::binaryReadDone, aHandler));
-	}
-	
+    void CGameManager::GetBinary(const CHJSON *aConfiguration, CResultHandler *aHandler) {
+        if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
+        const char *domain = aConfiguration->GetString("domain");
+        const char *key = aConfiguration->GetString("key");
+        CClannishRESTProxy::Instance()->vfsReadGamev3(domain, key, MakeInternalResultHandler(this, &CGameManager::binaryReadDone, aHandler));
+    }
+    
+    void CGameManager::BinaryRead(const CHJSON *aConfiguration, CResultHandler *aHandler) {
+        if (!CClan::Instance()->isSetup()) { InvokeHandler(aHandler, enSetupNotCalled); return; }
+        const char *domain = aConfiguration->GetString("domain");
+        const char *key = aConfiguration->GetString("key");
+        CClannishRESTProxy::Instance()->vfsReadGame(domain, key, MakeInternalResultHandler(this, &CGameManager::binaryReadDone, aHandler));
+    }
+    
 	void CGameManager::binaryReadDone(const CCloudResult *result, CResultHandler *aHandler) {
 		if (result->GetErrorCode() == enNoErr) {
 			const char *url = result->GetJSON()->GetString("value");
@@ -166,7 +181,16 @@ namespace CloudBuilder {
 			InvokeHandler(aHandler, result);
 	}
 
-	/****
+    void CGameManager::getBinaryDone(const CCloudResult *result, CResultHandler *aHandler) {
+        if (result->GetErrorCode() != enNoErr) { InvokeHandler(aHandler, result); return; }
+        const CHJSON* jsonBlob = result->GetJSON()->Get("result");
+        const CHJSON* jsonUrl = jsonBlob->Get(0);
+        const char *url = jsonUrl->valueString();
+        if (url == NULL || *url ==0 ) return InvokeHandler(aHandler, enServerError);
+        CClannishRESTProxy::Instance()->DownloadData(url, MakeBridgeDelegate(aHandler));
+    }
+
+    /****
 	void CGameManager::BinaryWrite(const CHJSON *aConfiguration, const void* aPointer, size_t aSize, CResultHandler *aHandler)
 	{
 		if (!CClan::Instance()->isUserLogged()) { InvokeHandler(aHandler, enNotLogged); return; }

@@ -53,7 +53,6 @@ namespace CloudBuilder
 			of the player (returned even if the player has not actually been classed, that is if `done` is 0).
 		*/
         void Score(long long aHighScore, const char *aMode, const char *aScoreType, const char *aInfoScore, bool aForce, const char *aDomain, CResultHandler *aHandler);
-        DEPRECATED void Score(CResultHandler *aHandler, long long aHighScore, const char *aMode, const char *aScoreType, const char *aInfoScore, bool aForce, const char *aDomain="private");
 
 		/** Method used to retrieve the rank of a High Score for this application.
 			@param  aHighScore is the score whose rank you want to retrieve.
@@ -66,7 +65,6 @@ namespace CloudBuilder
 			 "rank" : 1
 		*/
         void GetRank(long long aHighScore, const char *aMode, const char *aDomain, CResultHandler *aHandler);
-        DEPRECATED void GetRank(CResultHandler *aHandler, long long aHighScore, const char *aMode, const char *aDomain="private");
 
 		/** Method used to retrieve the best High Scores for this application.
 			@param  aCount is the number of best scores you want to retrieve, default is 10
@@ -85,7 +83,6 @@ namespace CloudBuilder
 			}
 		*/
         void BestHighScore(int aCount, int aPage, const char *aMode, const char *aDomain, CResultHandler *aHandler);
-        DEPRECATED void BestHighScore(CResultHandler *aHandler, int aCount, int aPage, const char *aMode, const char *aDomain="private");
 		
 		/** Method used to retrieve scores centered on the user score for this application.
 			@param  aCount is the number of best scores you want to retrieve, default is 10
@@ -103,7 +100,6 @@ namespace CloudBuilder
 			}
 		*/
         void CenteredScore(int aCount, const char *aMode, const char *aDomain, CResultHandler *aHandler);
-        DEPRECATED void CenteredScore(CResultHandler *aHandler, int aCount, const char *aMode, const char *aDomain="private");
 		
 		/** Method used to retrieve the best Scores of the logged user.
             @param  aDomain is the domain in which the best scores have to be retrieved. "private"
@@ -119,53 +115,20 @@ namespace CloudBuilder
 			}
 		 */
         void UserBestScores(const char *aDomain, CResultHandler *aHandler);
-        DEPRECATED void UserBestScores(CResultHandler *aHandler, const char *aDomain="private");
 
 		/**
-			Method to read a single key of the global JSON object stored for this game and domain.
+			Method to get a single key of the global JSON object stored for this game and domain.
 			@param aConfiguration is a JSON configuration, that may contain
 			- domain: the domain on which the action is to be taken (if not passed, the private domain is used)
 			- key: name of the key to retrieve from the global JSON object (if not passed, all keys are returned)
 			@param aHandler result handler whenever the call finishes (it might also be synchronous)
 			@result if noErr and no binary key was passed in the configuration, the json passed to the handler may contain:
 			{
-				"<key1>" : "value1", "<key2>" : "value2", …
+				"<key1>" : "value1", "<key2>" : "value2", ...
 			}
-			Note: if the key was entered as a string in the backoffice (rather than stored as an object), then the key
-			"value" encloses the string data, not parsed as a JSON. You can do so by using CHJSON::parse.
 		 */
-		void KeyValueRead(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
+        void GetValue(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
 		
-		/**
-            Method to write a single key of the global JSON object stored for this user and domain.
-            @param aConfiguration is a JSON configuration, that may contain
-            - domain: the domain on which the action is to be taken (if not passed, the private domain is used)
-            - key: name of the key to delete from the global JSON object. BEWARE: if you omit the key, ALL entries
-            will be deleted!
-            @param aHandler result handler whenever the call finishes (it might also be synchronous)
-            @result if noErr and no binary key was passed in the configuration, the json passed to the handler may contain:
-            {
-                "done": 1
-            }
-		 void KeyValueWrite(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
-		 For security raison this method has been removed, please use the Backoffice to do this
-		 */
-		
-		/**
-			Method to delete a single key of the global JSON object stored for this game and domain.
-			@param aConfiguration is a JSON configuration, that may contain
-			- domain: the domain on which the action is to be taken (if not passed, the private domain is used)
-            - key: name of the key to delete from the global JSON object. BEWARE: if you omit the key, ALL entries
-            will be deleted!
-			@param aHandler result handler whenever the call finishes (it might also be synchronous)
-			@result if noErr, the json passed to the handler may contain:
-			{
-				"done": 1
-			}
-		 void KeyValueDelete(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
-		 For security raison this method has been removed, please use the Backoffice to do this
-		 */
-
 		/**
 			 Method to read a single key containing binary data stored for this domain.
 			 @param aConfiguration JSON allowing for extensible configuration, that may contain:
@@ -178,39 +141,8 @@ namespace CloudBuilder
 			 }
 			 CCloudResult.HasBinary() must be true and you can acces to the data through :
 		 */
-		void BinaryRead(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
+        void GetBinary(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
 		
-		/**
-			
-			 Method to insert or modify a single key represented by binary data
-			 @param aConfiguration JSON allowing for extensible configuration, that may contain:
-			 - domain: the domain on which the action is to be taken (if not passed, the private domain is used)
-			 - key: name of the key to retrieve
-			 @param aPointer is the binary array you want to save.
-			 @param aSize is the size of the binary array, in bytes.
-			 @param aHandler result handler whenever the call finishes (it might also be synchronous)
-			 @result if noErr, the json passed to the handler may contain:
-			 {
-			 "url" : "<signed URL>",
-			 }
-		void BinaryWrite(const CotCHelpers::CHJSON *aConfiguration, const void *aPointer, size_t aSize, CResultHandler *aHandler);
-		For security raison this method has been removed, please use the Backoffice to do this
-		*/
-		 
-		/**
-		 Method to remove data pointed by a single key.
-		 @param aConfiguration JSON allowing for extensible configuration, that may contain:
-		 - domain: the domain on which the action is to be taken (if not passed, the private domain is used)
-		 - key: name of the key to delete
-		 @param aHandler result handler whenever the call finishes (it might also be synchronous)
-		 @result if noErr, the json passed to the handler may contain:
-		 {
-		 "done" : 1,
-		 }
-		void BinaryDelete(const CHJSON *aConfiguration, CResultHandler *aHandler);
-		For security raison this method has been removed, please use the Backoffice to do this
-		*/
-
 		/**
 		 * Run a batch on the server side.
 		 * Batch is edited on BackOffice server.
@@ -224,7 +156,15 @@ namespace CloudBuilder
 		 */
 		void Batch(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration, const CotCHelpers::CHJSON *aParameters);
 
-	private:
+        DEPRECATED void Score(CResultHandler *aHandler, long long aHighScore, const char *aMode, const char *aScoreType, const char *aInfoScore, bool aForce, const char *aDomain="private");
+        DEPRECATED void GetRank(CResultHandler *aHandler, long long aHighScore, const char *aMode, const char *aDomain="private");
+        DEPRECATED void BestHighScore(CResultHandler *aHandler, int aCount, int aPage, const char *aMode, const char *aDomain="private");
+        DEPRECATED void CenteredScore(CResultHandler *aHandler, int aCount, const char *aMode, const char *aDomain="private");
+        DEPRECATED void UserBestScores(CResultHandler *aHandler, const char *aDomain="private");
+        DEPRECATED void BinaryRead(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
+        DEPRECATED void KeyValueRead(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
+
+    private:
 		/**
 		 * Not publicly instantiable/subclassable. Use Instance().
 		 */
@@ -235,8 +175,8 @@ namespace CloudBuilder
 		 */
 		void Terminate();
 
-		void binaryWriteDone(const CCloudResult *result, const void *, size_t, CResultHandler *);
-		void binaryReadDone(const CCloudResult *result, CResultHandler *aHandler);
+        void binaryReadDone(const CCloudResult *result, CResultHandler *aHandler);
+        void getBinaryDone(const CCloudResult *result, CResultHandler *aHandler);
 
 		friend class CClan;
 		friend struct singleton_holder<CGameManager>;

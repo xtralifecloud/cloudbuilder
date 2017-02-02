@@ -1000,6 +1000,21 @@ namespace CloudBuilder {
 		return http_perform(req);
 	}
 
+    void CClannishRESTProxy::vfsReadGamev3(const char *domain, const char *key, CInternalResultHandler *onFinished) {
+        if (!isSetup()) { return InvokeHandler(onFinished, enSetupNotCalled); }
+        
+        CUrlBuilder url("/v3.0/vfs");
+        url.Subpath((domain && domain[0]) ? domain : "private");
+        
+        if (key && *key) {
+            url.Subpath(key);
+        }
+        
+        CHttpRequest *req = MakeHttpRequest(url);
+        req->SetCallback(MakeBridgeCallback(onFinished));
+        return http_perform(req);
+    }
+    
 	void CClannishRESTProxy::Balance (const char *domain, const CHJSON *aJSON, CInternalResultHandler *onFinished) {
 		if (!isLoggedIn()) { return InvokeHandler(onFinished, enNotLogged); }
 		

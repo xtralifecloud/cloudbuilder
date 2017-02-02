@@ -808,9 +808,7 @@ namespace CloudBuilder {
     
     void CUserManager::getBinaryDone(const CCloudResult *result, CResultHandler *aHandler) {
         if (result->GetErrorCode() != enNoErr) { InvokeHandler(aHandler, result); return; }
-        printf("readbin :%s", result->GetJSON()->printFormatted().c_str());
         const CHJSON* jsonBlob = result->GetJSON()->Get("result");
-        CONSOLE_VERBOSE("Blob JSON :%s", jsonBlob->printFormatted().c_str());
         const CHJSON* jsonUrl = jsonBlob->Get(0);
         const char *url = jsonUrl->valueString();
         if (url == NULL || *url ==0 ) return InvokeHandler(aHandler, enServerError);

@@ -104,6 +104,7 @@ namespace CloudBuilder {
 		void vfsReadGame(const char *domain, const char *key, CInternalResultHandler *onFinished);
 		void vfsWriteGame(const char *domain, const char *key, const CHJSON *aJSON, bool isBinary, CInternalResultHandler *onFinished);
 		void vfsDeleteGame(const char *domain, const char *key, bool isBinary, CInternalResultHandler *onFinished);
+        void vfsReadGamev3(const char *domain, const char *key, CInternalResultHandler *onFinished);
 
 		void Score(const CHJSON *aJSON, CInternalResultHandler *onFinished);
 		void FriendsBestHighScore(const CHJSON *aJSON, CInternalResultHandler *onFinished);
