@@ -15,7 +15,7 @@
 	#define NULL 0
 #endif
 
-#define SDKVERSION "3.1.1"
+#define SDKVERSION "3.2.0"
 
 #define LIBCOTC_VERSION     SDKVERSION
 #define LIBCOTC_UA          "cloudbuilder"
