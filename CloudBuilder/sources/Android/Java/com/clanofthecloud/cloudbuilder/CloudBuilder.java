@@ -44,7 +44,7 @@ public abstract class CloudBuilder {
 		sActivity = activity;
 		sController = new Controller(activity);
 
-		Log.v(TAG, "Launching CloudBuilder Java v3.1.1");
+		Log.v(TAG, "Launching CloudBuilder Java v3.2.0");
 
 		// Check whether the GCM is available (config in the manifest)
 		sGCMAvailable = false;
