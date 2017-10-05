@@ -19,8 +19,6 @@
 
 namespace CloudBuilder
 {
-	class ProxyClanDelegate;
-	class CNotificationManager;
 	class CUserManager;
 	using namespace CotCHelpers;
 	
