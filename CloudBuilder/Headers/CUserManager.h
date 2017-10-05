@@ -498,7 +498,7 @@ namespace CloudBuilder
 			@param aDomain is the domain (ie channel) to watch
 			@param aGamerID the user to notify
 			@param aEvent the data to transmit (free form json)
-			@param aNotification  an optionnal json which describe the OS notification to be displayed
+			@param aNotification  an optional json which describes the OS notification to be displayed
 			is the app is in background
 			It should be of the form { "en" : "I need help!", "fr" : "J'ai desoin d'aide"}
 			the size of the localized message should be less than 100 char and will be truncated.

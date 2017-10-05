@@ -337,48 +337,92 @@ void CMatch::onEventError(eErrorCode aErrorCode, const char *aDomain, const CClo
 }
 
 //////////////////////////// Raw match API ////////////////////////////
+void CMatchManager::CreateMatch(const CHJSON *configuration, CResultHandler *handler) {
+    return REST()->CreateMatch(configuration, MakeBridgeDelegate(handler));
+}
+
 void CMatchManager::CreateMatch(CResultHandler *handler, const CHJSON *configuration) {
-	return REST()->CreateMatch(configuration, MakeBridgeDelegate(handler));
+    this->CreateMatch(configuration, handler);
+}
+
+void CMatchManager::ListMatches(const CHJSON *configuration, CResultHandler *handler) {
+    return REST()->ListMatches(configuration, MakeBridgeDelegate(handler));
 }
 
 void CMatchManager::ListMatches(CResultHandler *handler, const CHJSON *configuration) {
-	return REST()->ListMatches(configuration, MakeBridgeDelegate(handler));
+    this->ListMatches(configuration, handler);
+}
+
+void CMatchManager::FetchMatch(const CHJSON *configuration, CResultHandler *handler) {
+    return REST()->FetchMatch(configuration, MakeBridgeDelegate(handler));
 }
 
 void CMatchManager::FetchMatch(CResultHandler *handler, const CHJSON *configuration) {
-	return REST()->FetchMatch(configuration, MakeBridgeDelegate(handler));
+    this->FetchMatch(configuration, handler);
+}
+
+void CMatchManager::JoinMatch(const CHJSON *configuration, CResultHandler *handler) {
+    return REST()->JoinMatch(configuration, MakeBridgeDelegate(handler));
 }
 
 void CMatchManager::JoinMatch(CResultHandler *handler, const CHJSON *configuration) {
-	return REST()->JoinMatch(configuration, MakeBridgeDelegate(handler));
+    this->JoinMatch(configuration, handler);
+}
+
+void CMatchManager::InvitePlayer(const CHJSON *configuration, CResultHandler *handler) {
+    return REST()->InvitePlayerToMatch(configuration, MakeBridgeDelegate(handler));
 }
 
 void CMatchManager::InvitePlayer(CResultHandler *handler, const CHJSON *configuration) {
-	return REST()->InvitePlayerToMatch(configuration, MakeBridgeDelegate(handler));
+    this->InvitePlayer(configuration, handler);
+}
+
+void CMatchManager::DismissInvitation(const CHJSON *configuration, CResultHandler *handler) {
+    return REST()->DismissInvitationToMatch(configuration, MakeBridgeDelegate(handler));
 }
 
 void CMatchManager::DismissInvitation(CResultHandler *handler, const CHJSON *configuration) {
-	return REST()->DismissInvitationToMatch(configuration, MakeBridgeDelegate(handler));
+    this->DismissInvitation(configuration, handler);
+}
+
+void CMatchManager::PostMove(const CHJSON *configuration, CResultHandler *handler) {
+    return REST()->PostMove(configuration, MakeBridgeDelegate(handler));
 }
 
 void CMatchManager::PostMove(CResultHandler *handler, const CHJSON *configuration) {
-	return REST()->PostMove(configuration, MakeBridgeDelegate(handler));
+    this->PostMove(configuration, handler);
+}
+
+void CMatchManager::DrawFromShoe(const CHJSON *configuration, CResultHandler *handler) {
+    return REST()->DrawFromShoeInMatch(configuration, MakeBridgeDelegate(handler));
 }
 
 void CMatchManager::DrawFromShoe(CResultHandler *handler, const CHJSON *configuration) {
-	return REST()->DrawFromShoeInMatch(configuration, MakeBridgeDelegate(handler));
+    this->DrawFromShoe(configuration, handler);
+}
+
+void CMatchManager::LeaveMatch(const CHJSON *configuration, CResultHandler *handler) {
+    return REST()->LeaveMatch(configuration, MakeBridgeDelegate(handler));
 }
 
 void CMatchManager::LeaveMatch(CResultHandler *handler, const CHJSON *configuration) {
-	return REST()->LeaveMatch(configuration, MakeBridgeDelegate(handler));
+    this->LeaveMatch(configuration, handler);
+}
+
+void CMatchManager::FinishMatch(const CHJSON *configuration, CResultHandler *handler) {
+    return REST()->FinishMatch(configuration, MakeBridgeDelegate(handler));
 }
 
 void CMatchManager::FinishMatch(CResultHandler *handler, const CHJSON *configuration) {
-	return REST()->FinishMatch(configuration, MakeBridgeDelegate(handler));
+    this->FinishMatch(configuration, handler);
+}
+
+void CMatchManager::DeleteMatch(const CHJSON *configuration, CResultHandler *handler) {
+    return REST()->DeleteMatch(configuration, MakeBridgeDelegate(handler));
 }
 
 void CMatchManager::DeleteMatch(CResultHandler *handler, const CHJSON *configuration) {
-	return REST()->DeleteMatch(configuration, MakeBridgeDelegate(handler));
+    this->DeleteMatch(configuration, handler);
 }
 
 //////////////////////////// Helpers ////////////////////////////

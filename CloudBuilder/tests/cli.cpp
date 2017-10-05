@@ -802,7 +802,7 @@ public:
 		config.Put("properties", JSON(2));
 		if (argc > 3) config.Put("domain", argv[3]);
 		if (argc > 4) config.Put("payload", JSON(4));
-		CIndexManager::Instance()->IndexObject(MakeResultHandler(this, &MyClan::GenericHandleDone), &config);
+		CIndexManager::Instance()->IndexObject(&config, MakeResultHandler(this, &MyClan::GenericHandleDone));
 	}
 
 	void indexget(int argc, const char **argv) {
@@ -810,7 +810,7 @@ public:
 		config.Put("index", argv[0]);
 		config.Put("objectid", argv[1]);
 		if (argc > 2) config.Put("domain", argv[2]);
-		CIndexManager::Instance()->FetchObject(MakeResultHandler(this, &MyClan::GenericHandleDone), &config);
+		CIndexManager::Instance()->FetchObject(&config, MakeResultHandler(this, &MyClan::GenericHandleDone));
 	}
 
 	void indexdel(int argc, const char **argv) {
@@ -818,7 +818,7 @@ public:
 		config.Put("index", argv[0]);
 		config.Put("objectid", argv[1]);
 		if (argc > 2) config.Put("domain", argv[2]);
-		CIndexManager::Instance()->DeleteObject(MakeResultHandler(this, &MyClan::GenericHandleDone), &config);
+		CIndexManager::Instance()->DeleteObject(&config, MakeResultHandler(this, &MyClan::GenericHandleDone));
 	}
 
 	void indexsearch(int argc, const char **argv) {
@@ -829,7 +829,7 @@ public:
 		if (argc > 3) config.Put("sort", JSON(3));
 		if (argc > 4) config.Put("limit", atoi(argv[4]));
 		if (argc > 5) config.Put("skip", atoi(argv[5]));
-		CIndexManager::Instance()->Search(MakeResultHandler(this, &MyClan::GenericHandleDone), &config);
+		CIndexManager::Instance()->Search(&config, MakeResultHandler(this, &MyClan::GenericHandleDone));
 	}
 
 	void onfailure(int argc, const char **argv) {

@@ -2,7 +2,7 @@
 //  CIndexManager.h
 //  CloudBuilder
 //
-//  Created by Florian Brönnimann on 11/06/15.
+//  Created by Florian Bronnimann on 11/06/15.
 //  Copyright (c) 2015 Clan of the Cloud. All rights reserved.
 //
 
@@ -17,7 +17,7 @@
 
 namespace CloudBuilder
 {
-	/** The CIndexManager class is used to index and search for objects (e.g. matches, players, …).
+	/** The CIndexManager class is used to index and search for objects (e.g. matches, players, ?).
 
 		The index is global to a domain (or your game if private, as usual), therefore all data is
 		shared by all players.
@@ -55,7 +55,7 @@ namespace CloudBuilder
 			done: 1
 		 }
 		 */
-		void DeleteObject(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration);
+		void DeleteObject(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
 		
 		/**
 		 * Fetches a previously indexed object.
@@ -84,7 +84,7 @@ namespace CloudBuilder
 			}
 		}
 		 */
-		void FetchObject(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration);
+		void FetchObject(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
 
 		/**
 		 * Indexes a new object.
@@ -111,13 +111,13 @@ namespace CloudBuilder
 			done: 1
 		 }
 		 */
-		void IndexObject(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration);
+		void IndexObject(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
 
 		/**
 		 * Searches the index.
 		 * 
 		 * You can search documents in the index with this API. It allows you to make complex queries.
-		 * See the Elastic documentation to learn the full syntax. It’s easy and quite powerful.
+		 * See the Elastic documentation to learn the full syntax. It?s easy and quite powerful.
 		 * http://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html
 		 *
 		 * @param aHandler result handler whenever the call finishes (it might also be synchronous)
@@ -155,7 +155,7 @@ namespace CloudBuilder
 			   ]
 			 }
 	    */
-		void Search(CResultHandler *aHandler, const CotCHelpers::CHJSON *aConfiguration);
+		void Search(const CotCHelpers::CHJSON *aConfiguration, CResultHandler *aHandler);
 
 	private:
 

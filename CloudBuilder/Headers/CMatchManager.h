@@ -193,7 +193,6 @@ namespace CloudBuilder {
 
 		/**
 		 * Creates a match, available for joining by others players.
-         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @param aConfiguration is a JSON object holding the parameters of the match to create.
 		 It may contain the following:
 		 - "domain" (string): the domain on which to create the match.
@@ -204,6 +203,7 @@ namespace CloudBuilder {
 		 - "shoe" (optional array of objects): freeform object containing a list of objects which will be shuffled upon match
 		   creation. This offers an easy way to make a random generator that is safe, unbiased (since made on the server) and
 		   can be verified by all players once the game is finished.
+         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @result if noErr, the json passed to the handler may contain: @code
 		 "match": {
 		     "domain" (string): the domain to which the match belongs.
@@ -221,11 +221,10 @@ namespace CloudBuilder {
 			 you want inside and use it as values for your next game. This field is only returned when finishing a match.
 		 } @endcode
 		 */
-		void CreateMatch(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        void CreateMatch(const CHJSON *aConfiguration, CResultHandler *aHandler);
 
 		/**
 		 * Lists the matches available to join.
-         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @param aConfiguration is a JSON object allowing to filter the matches to be returned.
 		 You may pass any of these:
 		 - "domain" (string): the domain on which to look for available matches.
@@ -238,61 +237,61 @@ namespace CloudBuilder {
 		 - "full" (anything): pass this attribute to also include games where the maximum number of player has been reached.
 		 - "limit" (number): the maximum number of results to return. For pagination, defaulting to 30.
 		 - "skip" (number): the first element to start from. Use skip=30&limit=30 to fetch the second page.
+         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @result if noErr, the json passed to the handler may contain:
 		 - "matches" (array of objects): match objects as described in #CreateMatch
 		 */
-		void ListMatches(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        void ListMatches(const CHJSON *aConfiguration, CResultHandler *aHandler);
 
 		/**
 		 * Fetches the latest info about a match.
-         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @param aConfiguration is a JSON object.
 		 The mandatory keys are:
 		 - "id" (string): the ID of the match.
+         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @result if noErr, the json passed to the handler may contain:
 		 - "match" (object): fetched match object as described in #CreateMatch
 		 */
-		void FetchMatch(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        void FetchMatch(const CHJSON *aConfiguration, CResultHandler *aHandler);
 
 		/**
 		 * Joins a match. Other players will be notified in the form of an event of type 'match.join'.
-         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @param aConfiguration is a JSON object.
 		 The mandatory keys are:
 		 - "id" (string): the ID of the match to join.
 		 Optionally, an `osn` node can be passed. Please see the definition of the CMatchManager class for more information about this.
+         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @result if noErr, the json passed to the handler may contain:
 		 - "match" (object): updated match object as described in #CreateMatch. Please take note of the `lastEventId` contained.
 		 */
-		void JoinMatch(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        void JoinMatch(const CHJSON *aConfiguration, CResultHandler *aHandler);
 
 		/**
 		 * Allows to invite a player to join a match. You need to be part of the match to send an invitation.
 		 * This can be used for private matches as described in the chapter @ref matches.
-         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @param aConfiguration is a JSON object.
 		 The manadatory keys are:
 		 - "id" (string): the ID of the match to invite the player to.
 		 - "gamer_id" (string): the ID of the player to invite.
 		 Optionally, an `osn` node can be passed. Please see the definition of the CMatchManager class for more information about this.
+         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @result if noErr, the json passed to the handler may contain:
 		 - "match" (object): updated match object as described in #CreateMatch with low information detail.
 		 */
-		void InvitePlayer(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        void InvitePlayer(const CHJSON *aConfiguration, CResultHandler *aHandler);
 
 		/**
 		 * Dismisses a pending invitation on a given match. Fails if the currently logged in player was not invited.
-         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @param aConfiguration is a JSON object. Must contain:
 		 - "id" (string): the ID of the match from which to remove the invitation.
+         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @result if noErr, the json passed to the handler may contain:
 		 - "match" (object): updated match object as described in #CreateMatch with low information detail.
 		 */
-		void DismissInvitation(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        void DismissInvitation(const CHJSON *aConfiguration, CResultHandler *aHandler);
 
 		/**
 		 * Posts a move in the match, notifying other players in the form of an event of type 'match.move'.
-         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @param aConfiguration is a JSON object.
 		 It may contain the following:
 		 - "id" (string): the ID of the match in which to post the move.
@@ -304,14 +303,14 @@ namespace CloudBuilder {
 		   Thus, you should consider passing a global state sometimes, it will ease the work for newcomers.
 		 - "lastEventId" (string): the ID of the last event received for this match.
 	     Optionally, an `osn` node can be passed. Please see the definition of the CMatchManager class for more information about this.
+         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @result if noErr, the json passed to the handler may contain:
 		 - "match" (object): updated match object as described in #CreateMatch. Please take note of the `lastEventId` contained.
 		 */
-		void PostMove(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        void PostMove(const CHJSON *aConfiguration, CResultHandler *aHandler);
 
 		/**
 		 * Draws one or more randomized items from the shoe (see #CreateMatch).
-         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @param aConfiguration is a JSON object.
 		 The following attributes are mandatory:
 		 - "id" (string): the ID of the match.
@@ -319,48 +318,61 @@ namespace CloudBuilder {
 		 And optionally:
 		 - "count" (integer): the number of items to draw (defaults to 1).
 		 - "osn" (object): please see the definition of the CMatchManager class for more information about this.
+         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @result if noErr, the json passed to the handler may contain:
 		 - "drawnItems" (array of objects): the objects drawn as passed in the shoe element at #CreateMatch.
 		 - "match" (object): updated match object as described in #CreateMatch. Please take note of the `lastEventId` for next requests.
 		 */
-		void DrawFromShoe(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        void DrawFromShoe(const CHJSON *aConfiguration, CResultHandler *aHandler);
 
 		/**
 		 * Leaves a match. Only works if you have joined it prior to calling this. Other players will be notified in the form of an event of type 'match.leave'.
-         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @param aConfiguration is a JSON object.
 		 The mandatory keys are:
 		 - "id" (string): the ID of the match to leave.
 		 Optionally, an `osn` node can be passed. Please see the definition of the CMatchManager class for more information about this.
+         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @result if noErr, the json passed to the handler may contain:
 		 - "match" (object): updated match object as described in #CreateMatch.
 		 */
-		void LeaveMatch(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        void LeaveMatch(const CHJSON *aConfiguration, CResultHandler *aHandler);
 
 		/**
 		 * Finishes a match. Only works if you are the one who created it in the first place. Other players will be notified in the form of an event of type 'match.finish'.
-         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @param aConfiguration is a JSON object.
 		 The mandatory keys are:
 		 - "id" (string): the ID of the match to leave.
 		 - "lastEventId" (string): the ID of the last event received for this match.
 		    You received it either as a response of an operation on a match (such as when joining, or a move done by you) or as an event later (in case pass the `_id` of the last event received).
 		Optionally, an `osn` node can be passed. Please see the definition of the CMatchManager class for more information about this.
+         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @result if noErr, the json passed to the handler may contain:
 		 - "match" (object): updated match object as described in #CreateMatch. This key is NOT present if the `delete` attribute was passed.
 		 */
-		void FinishMatch(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        void FinishMatch(const CHJSON *aConfiguration, CResultHandler *aHandler);
 
 		/**
 		 * Deletes a match. Only works if you are the one who created it and it is already finished.
-         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @param aConfiguration is a JSON object.
 		 The mandatory keys are:
 		 - "id" (string): the ID of the match to delete.
+         @param aHandler result handler whenever the call finishes (it might also be synchronous)
 		 @result if noErr, the json passed to the handler may contain:
 		 - "done" (number): 1 if done properly.
 		 */
-		void DeleteMatch(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        void DeleteMatch(const CHJSON *aConfiguration, CResultHandler *aHandler);
+
+        DEPRECATED void DeleteMatch(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        DEPRECATED void FinishMatch(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        DEPRECATED void LeaveMatch(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        DEPRECATED void DrawFromShoe(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        DEPRECATED void PostMove(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        DEPRECATED void DismissInvitation(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        DEPRECATED void InvitePlayer(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        DEPRECATED void JoinMatch(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        DEPRECATED void FetchMatch(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        DEPRECATED void ListMatches(CResultHandler *aHandler, const CHJSON *aConfiguration);
+        DEPRECATED void CreateMatch(CResultHandler *aHandler, const CHJSON *aConfiguration);
 
 	private:
 		friend struct singleton_holder<CMatchManager>;
