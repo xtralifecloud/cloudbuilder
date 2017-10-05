@@ -16,12 +16,13 @@ dependencies {
 // }
 //	compile project(':delivery:Google:Android:gcm')
 //	compile project(':delivery:Google:Android:google-play-services_lib')
-	compile 'com.google.android.gms:play-services-gcm:9.8.0'
+	compile 'com.google.android.gms:play-services-gcm:11.4.0'
+	compile 'com.android.support:support-v4:25.3.1'
 }
 
 android {
 	compileSdkVersion 25
-	buildToolsVersion "25.0.0"
+	buildToolsVersion "26.0.0"
 
 	sourceSets {
 		main {
