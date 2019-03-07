@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['tell',['Tell',['../class_cloud_builder_1_1_c_input_file.html#a1ab59ba0ce88b6ba0ec3703dbcd774d2',1,'CloudBuilder::CInputFile']]],
-  ['terminate',['Terminate',['../class_cloud_builder_1_1_c_clan.html#a3ba628daec35a6455e5924195cbccff2',1,'CloudBuilder::CClan::Terminate()'],['../class_cloud_builder_1_1_c_tribe_manager.html#a4f190f2ac4cf608646f4861523bd3b68',1,'CloudBuilder::CTribeManager::Terminate()']]],
-  ['transactionextended',['TransactionExtended',['../class_cloud_builder_1_1_c_user_manager.html#a1564aaa8b8bcd1525601d5b22de9eb2e',1,'CloudBuilder::CUserManager']]],
-  ['txhistory',['TxHistory',['../group__user__transaction.html#ga756d3dc5693d53510150351477d168d0',1,'CloudBuilder::CUserManager']]],
-  ['type',['type',['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#aaa62cc5438738828ef7062e2b3341adc',1,'CotCHelpers::CHJSON']]]
+  ['unlink',['Unlink',['../group__user__login.html#ga9bebaea2ecabeb9591ee41bca53e81d4',1,'CloudBuilder::CUserManager']]],
+  ['unlockvar',['UnlockVar',['../class_cot_c_helpers_1_1_c_protected_variable.html#aabf2896adc4ea87103d727088a8b1395',1,'CotCHelpers::CProtectedVariable']]],
+  ['unregistereventlistener',['UnregisterEventListener',['../struct_cloud_builder_1_1_c_match.html#a57d702bf7f9be04975481be8c00a3154',1,'CloudBuilder::CMatch::UnregisterEventListener()'],['../group__user__event.html#ga10c255d9f017491bbc4967e6a64d90ab',1,'CloudBuilder::CUserManager::UnregisterEventListener()']]],
+  ['url',['Url',['../struct_cloud_builder_1_1_c_http_failure_event_args.html#a46644b43f60139133eb8b38e9a3d6daa',1,'CloudBuilder::CHttpFailureEventArgs']]],
+  ['userbestscores',['UserBestScores',['../class_cloud_builder_1_1_c_game_manager.html#ab01cc05224a9e02fc89df98aeb4dfa65',1,'CloudBuilder::CGameManager']]],
+  ['userdata',['UserData',['../struct_cloud_builder_1_1_c_http_failure_event_args.html#abf886a35473588aa42e130642df3cfec',1,'CloudBuilder::CHttpFailureEventArgs']]],
+  ['userexist',['UserExist',['../group__user__profile.html#gae9fc3549dfe0b9a5ace4a47af7650298',1,'CloudBuilder::CUserManager']]]
 ];

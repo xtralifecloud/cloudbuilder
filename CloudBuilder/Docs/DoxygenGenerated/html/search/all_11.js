@@ -1,22 +1,10 @@
 var searchData=
 [
-  ['scopedlock',['ScopedLock',['../struct_cot_c_helpers_1_1_c_mutex_1_1_scoped_lock.html',1,'CotCHelpers::CMutex']]],
-  ['score',['Score',['../class_cloud_builder_1_1_c_game_manager.html#a2ddcedd9334a104c09825f8355af423a',1,'CloudBuilder::CGameManager']]],
-  ['search',['Search',['../class_cloud_builder_1_1_c_index_manager.html#a0f2052e8b607a5d29f4877872ecb6d03',1,'CloudBuilder::CIndexManager']]],
-  ['seek',['Seek',['../class_cloud_builder_1_1_c_input_file.html#af8b37cbc61bbe93c279d4269401780a3',1,'CloudBuilder::CInputFile']]],
-  ['setachievementdata',['SetAchievementData',['../class_cloud_builder_1_1_c_user_manager.html#a1b98c60de37f277d351af91e4adc2062',1,'CloudBuilder::CUserManager']]],
-  ['setfilesystemhandler',['SetFilesystemHandler',['../class_cloud_builder_1_1_c_filesystem_manager.html#a68c728e68daa38becc51f10178703a7b',1,'CloudBuilder::CFilesystemManager']]],
-  ['setgodfather',['SetGodfather',['../class_cloud_builder_1_1_c_user_manager.html#a0234f1f18afab8537872251e2fb8a93f',1,'CloudBuilder::CUserManager']]],
-  ['sethttpfailurecallback',['SetHttpFailureCallback',['../class_cloud_builder_1_1_c_clan.html#a3155d780f1dd58aef7b67d6404b75424',1,'CloudBuilder::CClan']]],
-  ['setloglevel',['SetLogLevel',['../class_cloud_builder_1_1_c_clan.html#a46f9d027acf28dd2491d4b62bf962c55',1,'CloudBuilder::CClan']]],
-  ['setprofile',['SetProfile',['../group__user__profile.html#gae3634331ad8497edc29def94adb39436',1,'CloudBuilder::CUserManager']]],
-  ['setproperties',['SetProperties',['../group__user__profile.html#gac115e3f61fc93af560c52f5d05913c0d',1,'CloudBuilder::CUserManager']]],
-  ['setproperty',['SetProperty',['../group__user__profile.html#ga0ea5bf8a02047258a9911407b174d4b6',1,'CloudBuilder::CUserManager']]],
-  ['setup',['Setup',['../class_cloud_builder_1_1_c_clan.html#abde23eb118012ed583c69fb2d83dfc32',1,'CloudBuilder::CClan']]],
-  ['setuserdata',['SetUserData',['../struct_cloud_builder_1_1_c_http_failure_event_args.html#aeb3ba0faec684e685f87f6e5cd0ee7f2',1,'CloudBuilder::CHttpFailureEventArgs']]],
-  ['signalall',['SignalAll',['../class_cot_c_helpers_1_1_c_protected_variable.html#aad9e38bb1fe2259510357f5b85931b38',1,'CotCHelpers::CProtectedVariable']]],
-  ['signalone',['SignalOne',['../class_cot_c_helpers_1_1_c_protected_variable.html#a4b53cac8af90770a1da1d562a989f1bd',1,'CotCHelpers::CProtectedVariable']]],
-  ['size',['size',['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#a56c7a0c9f04577bece662481222e411f',1,'CotCHelpers::CHJSON']]],
-  ['start',['Start',['../class_cot_c_helpers_1_1_c_thread.html#ab09246b3f7c92710cb596363d381f3d0',1,'CotCHelpers::CThread']]],
-  ['suspend',['Suspend',['../class_cloud_builder_1_1_c_clan.html#a9c07849ceba866cc8c6eb04522403af2',1,'CloudBuilder::CClan']]]
+  ['table_20of_20contents',['Table of contents',['../index.html',1,'']]],
+  ['tell',['Tell',['../class_cloud_builder_1_1_c_input_file.html#a1ab59ba0ce88b6ba0ec3703dbcd774d2',1,'CloudBuilder::CInputFile']]],
+  ['terminate',['Terminate',['../class_cloud_builder_1_1_c_clan.html#a3ba628daec35a6455e5924195cbccff2',1,'CloudBuilder::CClan::Terminate()'],['../class_cloud_builder_1_1_c_tribe_manager.html#a4f190f2ac4cf608646f4861523bd3b68',1,'CloudBuilder::CTribeManager::Terminate()']]],
+  ['transactionextended',['TransactionExtended',['../class_cloud_builder_1_1_c_user_manager.html#a1564aaa8b8bcd1525601d5b22de9eb2e',1,'CloudBuilder::CUserManager']]],
+  ['txhistory',['TxHistory',['../group__user__transaction.html#ga756d3dc5693d53510150351477d168d0',1,'CloudBuilder::CUserManager']]],
+  ['type',['type',['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#a4099aa6062e09da50b71a07687375371',1,'CotCHelpers::CHJSON']]],
+  ['transaction_20_28key_2fvalue_20storage_2c_20also_20called_20_22units_22_29_20related_20tasks',['Transaction (key/value storage, also called &quot;units&quot;) related tasks',['../group__user__transaction.html',1,'']]]
 ];

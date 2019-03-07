@@ -1,12 +1,13 @@
 var searchData=
 [
-  ['parse',['parse',['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#a5330daf35e0d882cdf5c85fba1ba8e3b',1,'CotCHelpers::CHJSON']]],
-  ['ping',['Ping',['../class_cloud_builder_1_1_c_clan.html#a86c90e1f29c779a20cac8bd1506635a0',1,'CloudBuilder::CClan']]],
-  ['postmove',['PostMove',['../struct_cloud_builder_1_1_c_match_manager.html#aa61336b793f972f0a5f375b4d9bb9794',1,'CloudBuilder::CMatchManager::PostMove()'],['../struct_cloud_builder_1_1_c_match.html#a951be28fc466518d297b9a044337246c',1,'CloudBuilder::CMatch::PostMove()']]],
-  ['print',['print',['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#a335ed3b07ddb968257cba54530ca2ba2',1,'CotCHelpers::CHJSON::print()'],['../class_cloud_builder_1_1_c_cloud_result.html#a20aee86f3ee3c9b1e50f7aaf432e7e4a',1,'CloudBuilder::CCloudResult::Print()']]],
-  ['printformatted',['printFormatted',['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#a9390bf1db1fd0cdfa68da7b63c2d5ba8',1,'CotCHelpers::CHJSON']]],
-  ['processidletasks',['ProcessIdleTasks',['../class_cloud_builder_1_1_c_clan.html#a258950e3c26f3a46d288d0d0c7ac0bab',1,'CloudBuilder::CClan']]],
-  ['publish',['Publish',['../class_cloud_builder_1_1_c_user_manager.html#af83d3c587651b8f71bac0aa78b460b3c',1,'CloudBuilder::CUserManager']]],
-  ['pushevent',['PushEvent',['../group__user__event.html#ga3d2ac498c42072c42d4035340a053511',1,'CloudBuilder::CUserManager']]],
-  ['put',['Put',['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#a4e82d022dfb462ff570458aa6fc5676d',1,'CotCHelpers::CHJSON::Put(const char *aKey, bool aValue)'],['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#aeace92b416d43776eeef11bd7910a3ef',1,'CotCHelpers::CHJSON::Put(const char *aKey, int aValue)'],['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#af2317f063e4be09fbf05c8bf5df960d4',1,'CotCHelpers::CHJSON::Put(const char *aKey, double aValue)'],['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#ab82082633eb739e8cf7445d94d1da978',1,'CotCHelpers::CHJSON::Put(const char *aKey, const char *aValue)'],['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#a107ea93966507a4ae74c6870f1d5be82',1,'CotCHelpers::CHJSON::Put(const char *aKey, CHJSON *json)'],['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#afd163298d090eaea89e3d5858ce87160',1,'CotCHelpers::CHJSON::Put(const char *aKey, const CHJSON *json)'],['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#ade9df0ed2c0b9ee4014a7f7a4b3d01d5',1,'CotCHelpers::CHJSON::Put(const char *aKey, const CHJSON &amp;json)']]]
+  ['read',['Read',['../class_cloud_builder_1_1_c_input_file.html#a4f3d9f0397447d8bc3d98b889a78a9b9',1,'CloudBuilder::CInputFile']]],
+  ['readall',['ReadAll',['../class_cloud_builder_1_1_c_input_file.html#ac29944f1771c68fcb7154bcfd9edc440',1,'CloudBuilder::CInputFile']]],
+  ['readjson',['ReadJson',['../class_cloud_builder_1_1_c_filesystem_manager.html#a2a672c8d0628927ac121da1ce1e32d86',1,'CloudBuilder::CFilesystemManager']]],
+  ['registereventlistener',['RegisterEventListener',['../struct_cloud_builder_1_1_c_match.html#a79e3971908fe0620a3bf998f945410cb',1,'CloudBuilder::CMatch::RegisterEventListener()'],['../group__user__event.html#ga2d8e2fb152134b91b104c085dd217f94',1,'CloudBuilder::CUserManager::RegisterEventListener()']]],
+  ['registerfornotification',['RegisterForNotification',['../class_cloud_builder_1_1_c_user_manager.html#a712bce84104ef294be710122d3b06abf',1,'CloudBuilder::CUserManager']]],
+  ['replace',['Replace',['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#abc96b4f8838bd63a21724190bc133692',1,'CotCHelpers::CHJSON']]],
+  ['resume',['Resume',['../class_cloud_builder_1_1_c_clan.html#a38170e14466fba5d6733c12979ab94e6',1,'CloudBuilder::CClan']]],
+  ['resumesession',['ResumeSession',['../group__user__login.html#gaef8fc39a2449eca0a6f7e80ec6e1a2a6',1,'CloudBuilder::CUserManager']]],
+  ['retryin',['RetryIn',['../struct_cloud_builder_1_1_c_http_failure_event_args.html#a4354fc650e20aeb167fbac60b4089a1b',1,'CloudBuilder::CHttpFailureEventArgs']]],
+  ['run',['Run',['../class_cot_c_helpers_1_1_c_thread.html#adb3a4a65b830c2017b76e4b58d49e0bc',1,'CotCHelpers::CThread']]]
 ];

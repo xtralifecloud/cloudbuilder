@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['valuedouble',['valueDouble',['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#a6b07dfae1ee3b9662041eb4e7c1614fc',1,'CotCHelpers::CHJSON']]],
-  ['valueint',['valueInt',['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#a14b28970f0e66e7999a416b312ea87eb',1,'CotCHelpers::CHJSON']]],
-  ['valuestring',['valueString',['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#a202d85950bc979c899c8a99cb0ec3228',1,'CotCHelpers::CHJSON']]]
+  ['working_20with_20achievements',['Working with achievements',['../achievements.html',1,'']]],
+  ['working_20with_20matches',['Working with matches',['../matches.html',1,'']]],
+  ['working_20with_20user_20related_20data',['Working with user related data',['../user_related_data.html',1,'']]],
+  ['wait',['Wait',['../class_cot_c_helpers_1_1_c_protected_variable.html#a90988c260601a71c4aaf4c34ebf02b1a',1,'CotCHelpers::CProtectedVariable']]],
+  ['write',['Write',['../class_cloud_builder_1_1_c_output_file.html#a80a18416eecb695f7f5bc110a173fdd5',1,'CloudBuilder::COutputFile']]]
 ];

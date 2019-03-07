@@ -3,7 +3,7 @@ var searchData=
   ['helper_20classes_20used_20to_20interact_20with_20our_20api_2e',['Helper classes used to interact with our API.',['../group__cotchelpers.html',1,'']]],
   ['helper_20classes_20for_20basic_20tasks_20in_20your_20code_2c_20that_20you_20may_20want_20to_20use_2e',['Helper classes for basic tasks in your code, that you may want to use.',['../group__cotchelpers__helpers.html',1,'']]],
   ['handleurl',['HandleURL',['../class_cloud_builder_1_1_c_clan.html#a67eec32445124d9efec0f4a26f03f501',1,'CloudBuilder::CClan']]],
-  ['has',['Has',['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#a2bf2ffeb478c3befe332031cd191c248',1,'CotCHelpers::CHJSON']]],
+  ['has',['Has',['../class_cot_c_helpers_1_1_c_h_j_s_o_n.html#a501e9374fdf75a5023e98fa2b831db7f',1,'CotCHelpers::CHJSON']]],
   ['hasfinished',['HasFinished',['../class_cot_c_helpers_1_1_c_thread.html#adeac3f68b5bf95f1a97c40c32b63be56',1,'CotCHelpers::CThread']]],
   ['hlcreatematch',['HLCreateMatch',['../struct_cloud_builder_1_1_c_match_manager.html#a66e8cb1816ea26e5ade82b4feff9c2db',1,'CloudBuilder::CMatchManager']]],
   ['hldestroymatch',['HLDestroyMatch',['../struct_cloud_builder_1_1_c_match_manager.html#a799dee58b5a0882968ad9ddc25dd61d3',1,'CloudBuilder::CMatchManager']]],
