@@ -59,7 +59,7 @@ namespace CloudBuilder
 
 			The optional keys are:
 			- "appFolder": used with the default CFileSystemHandler to set the folder in which
-			  the data will be saved. On Windows, it would be %USERPROFILE%\AppData\Roaming\<appFolder>\.
+			  the data will be saved. On Windows, it would be `%USERPROFILE%\AppData\Roaming\<appFolder>\`.
 			- "autoresume" : boolean to control if after a Setup the system has to proceed an automatic resumesession when possible.
 			- "autoRegisterForNotification": by default, RegisterForNotification is called right after login.
 			  By setting this key to 'false', you can manage when you want to register for notifications by

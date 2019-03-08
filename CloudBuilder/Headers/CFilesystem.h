@@ -162,7 +162,7 @@ namespace CloudBuilder {
 
 		/**
 		 * Reads a JSON persisted to the storage.
-		 * @param relativeName file name.
+		 * @param aRelativeName file name.
 		 * @return a JSON that you need to delete.
 		*/
 		CotCHelpers::CHJSON *ReadJson(const char *aRelativeName);

@@ -153,7 +153,7 @@ namespace CloudBuilder {
 		 * High level method which creates a match and passes it to the result handler in the form of a CMatch.
 		 * Memory management of #CMatch objects is described on the class itself.
          * @param aHandler match result handler, to be called when the operation is completed
-		 * @param aConfiguration configuration of the match, as described in #CreateMatch
+		 * @param aConfiguration configuration of the match, as described in CMatchManager#CreateMatch
 		 */
 		void HLCreateMatch(CMatchResultHandler *aHandler, const CHJSON *aConfiguration);
         
@@ -397,10 +397,10 @@ namespace CloudBuilder {
 		/**
 		 * Constructs a high level match object allowing to use high level functions to control your match.
 		 * You must call this with the result of one of the following calls:
-		 * - #CreateMatch (will result in a match that you are administrating)
-		 * - #JoinMatch (will result in a normal match, except if you actually created it)
-		 * - #FetchMatch (same as join, but works only for a match that you have actually joined/created first)
-		 * - #ListMatches, though you should avoid using it; it takes the last entry, so it works if you passed the `participating` parameter and are only participating to one match at a time.
+		 * - CMatchManager#CreateMatch (will result in a match that you are administrating)
+		 * - CMatchManager#JoinMatch (will result in a normal match, except if you actually created it)
+		 * - CMatchManager#FetchMatch (same as join, but works only for a match that you have actually joined/created first)
+		 * - CMatchManager#ListMatches, though you should avoid using it; it takes the last entry, so it works if you passed the `participating` parameter and are only participating to one match at a time.
 		 * You should never call this constructor by yourself, but instead get your object as a result of a call like HLCreateMatch.
 		 * @param matchManager current manager, used internally to prevent the use of this object after terminate
 		 * @param result result received from a previous call as documented above
@@ -457,7 +457,7 @@ namespace CloudBuilder {
 		 * @param aOptionalAdditionalData if not null, can contain additional configuration. Currently supported nodes are 'osn'.
 		 * Please see the definition of the CMatchManager class for more information about this.
 		 * @result if noErr, the json passed to the handler may contain:
-		 - "match" (object): updated match object as described in #CreateMatch.
+		 - "match" (object): updated match object as described in CMatchManager#CreateMatch.
 		 */
 		void PostMove(CMatchResultHandler *aHandler, const CHJSON *aMoveData, const CHJSON *aOptionalUpdatedGameState, const CHJSON *aOptionalAdditionalData);
 
@@ -468,8 +468,8 @@ namespace CloudBuilder {
 		 * @param aOptionalAdditionalData if not null, can contain additional configuration. Currently supported nodes are 'osn'.
 		 * Please see the definition of the CMatchManager class for more information about this.
 		 * @result if noErr, the json passed to the handler may contain:
-		 - "drawnItems" (array of objects): the objects drawn as passed in the shoe element at #CreateMatch.
-		 - "match" (object): updated match object as described in #CreateMatch.
+		 - "drawnItems" (array of objects): the objects drawn as passed in the shoe element at CMatchManager#CreateMatch.
+		 - "match" (object): updated match object as described in CMatchManager#CreateMatch.
 		 */
 		void DrawFromShoe(CMatchResultHandler *aHandler, int aCount, const CHJSON *aOptionalAdditionalData);
 
@@ -479,7 +479,7 @@ namespace CloudBuilder {
 		 * @param aOptionalAdditionalData if not null, can contain additional configuration. Currently supported nodes are 'osn'.
 		 * Please see the definition of the CMatchManager class for more information about this.
 		 * @result if noErr, the json passed to the handler may contain:
-		 - "match" (object): updated match object as described in #CreateMatch.
+		 - "match" (object): updated match object as described in CMatchManager#CreateMatch.
 		 */
 		void Leave(CMatchResultHandler *aHandler, const CHJSON *aOptionalAdditionalData);
 
@@ -490,7 +490,7 @@ namespace CloudBuilder {
 		 * @param aOptionalAdditionalData if not null, can contain additional configuration. Currently supported nodes are 'osn'.
 		 * Please see the definition of the CMatchManager class for more information about this.
 		 * @result if noErr, the json passed to the handler may contain:
-		 - "match" (object): updated match object as described in #CreateMatch if the match hasn't been deleted.
+		 - "match" (object): updated match object as described in CMatchManager#CreateMatch if the match hasn't been deleted.
 		 - "done" (number): set to 1 if the match has been successfully deleted as requested
 		 */
 		void Finish(CMatchResultHandler *aHandler, bool aDeleteToo, const CHJSON *aOptionalAdditionalData);

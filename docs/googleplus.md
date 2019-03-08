@@ -119,7 +119,7 @@ Add the following code in the onActivityResult method of your Activity:
     }
 ~~~
 
-Add the following entry in the AndroidManifest.xml inside the <application> tag:
+Add the following entry in the AndroidManifest.xml inside the `<application>` tag:
 ~~~
 <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
 ~~~
