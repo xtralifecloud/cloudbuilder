@@ -225,7 +225,7 @@ void MyGame::onMatchEventReceived(const CCloudResult *event) {
 	const char *type = event->GetJSON()->GetString("type");
 	const CHJSON *eventNode = event->GetJSON()->GetSafe("event");
 	if (IsEqual(type, "match.move")) {
-		// Perform a move event…
+		// Perform a move eventâ€¦
 	}
 }
 ~~~~
