@@ -5,7 +5,7 @@ Native C++ SDK for XtraLife (former Clan of the Cloud)
 
 Download the desired version (either in .7z form, requiring 7-zip to decompress, or in .zip form) from the [releases page](https://github.com/xtralifecloud/cloudbuilder/releases) below.
 
-Then, start with [the documentation](xtralifecloud.github.io/cloudbuilder/Docs/DoxygenGenerated/html/index.html) in order to start integrating the SDK in your own application.
+Then, start with [the documentation](http://xtralifecloud.github.io/cloudbuilder/Docs/DoxygenGenerated/html/index.html) in order to start integrating the SDK in your own application.
 
 This SDK works with XtraLife. For more information and configuring your application, visit https://xtralife.cloud/. Note that we also provide a [Unity SDK](https://github.com/xtralifecloud/unity-sdk), which is much easier to get started with.
 
